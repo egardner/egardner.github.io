@@ -1,0 +1,44 @@
+# Site Settings
+#==================================
+title: Site Title
+email: email@example.com
+description: Site Description
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+#==================================
+markdown: kramdown
+exclude: [Gemfile, Gemfile.lock, readme.md]
+
+# Permalinks
+#==================================
+permalink: pretty
+
+# Assets
+#==================================
+sass:
+  sass_dir: assets/styles/_scss  # default is _sass
+  style: compressed	 # set to compressed for production
+
+# Collections (uncomment if using)
+#==================================
+# collections:
+#  - projects
+
+
+# Front-matter Defaults
+#==================================
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "default"
+  # -
+  #   scope:
+  #     path: ""
+  #     type: "pages" 
+  #   values:
+  #     layout: "default"
