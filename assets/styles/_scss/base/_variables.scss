@@ -39,8 +39,7 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   margin: 1em 0 (-1*modular-scale(1rem, -4, $type-scale));
   line-height: $header-line-height;
-  text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 1px;
 }
 
 $h6-font-size: modular-scale(1rem, 0, $type-scale);
