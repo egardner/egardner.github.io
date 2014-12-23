@@ -1,15 +1,31 @@
 ---
 ---
-/*
- * This file should only comprise of @imports.
- * Place all styles in appropriately named files.
- */
 
 
 /* Bourbon, Bitters, & Neat
- * -----------------------------------------------------------------------------*/
+ * ---------------------------------------------------------------------------*/
 @import "lib/normalize";
 @import "lib/bourbon/bourbon";
 @import "base/grid-settings";
 @import "lib/neat/neat";
+
+/* Fonts
+ * ---------------------------------------------------------------------------*/
+// Merriweather
+@include font-face("Merriweather", '{{ site.baseurl }}/assets/fonts/merriweather-light', normal);
+@include font-face("Merriweather", '{{ site.baseurl }}/assets/fonts/merriweather-lightitalic', normal, italic);
+@include font-face("Merriweather", '{{ site.baseurl }}/assets/fonts/merriweather-bold', bold);
+@include font-face("Merriweather", '{{ site.baseurl }}/assets/fonts/merriweather-bolditalic', bold, italic);
+// Lato
+@include font-face("Lato", '{{ site.baseurl }}/assets/fonts/lato-light', normal);
+@include font-face("Lato", '{{ site.baseurl }}/assets/fonts/lato-lightitalic', normal, italic);
+@include font-face("Lato", '{{ site.baseurl }}/assets/fonts/lato-black', bold);
+@include font-face("Lato", '{{ site.baseurl }}/assets/fonts/lato-blackitalic', bold, italic);
+
+/* Globals
+ * ---------------------------------------------------------------------------*/
 @import "base/base";
+
+
+/* Layouts
+ * ---------------------------------------------------------------------------*/
