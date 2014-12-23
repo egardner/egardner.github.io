@@ -1,8 +1,6 @@
 # Project specific
 #======================
 _site
-assets/styles/_scss/lib/bourbon
-assets/styles/_scss/lib/neat
 .sass-cache
 
 # Compiled source

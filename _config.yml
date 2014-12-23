@@ -13,7 +13,7 @@ exclude: [Gemfile, Gemfile.lock, readme.md]
 
 # Permalinks
 #==================================
-permalink: /:categories/:title
+permalink: date
 
 # Assets
 #==================================
@@ -23,8 +23,10 @@ sass:
 
 # Collections (uncomment if using)
 #==================================
-# collections:
-#  - projects
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title
 
 
 # Front-matter Defaults
@@ -35,10 +37,10 @@ defaults:
       path: "" # an empty string here means all files in the project
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
-      layout: "default"
-  # -
-  #   scope:
-  #     path: ""
-  #     type: "pages"
-  #   values:
-  #     layout: "default"
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
