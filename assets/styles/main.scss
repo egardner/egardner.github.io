@@ -10,17 +10,17 @@
 /* Fonts
  * ---------------------------------------------------------------------------*/
 // Merriweather
-@include font-face("Merriweather", '/assets/fonts/merriweather-light', normal);
-@include font-face("Merriweather", '/assets/fonts/merriweather-lightitalic', normal, italic);
-@include font-face("Merriweather", '/assets/fonts/merriweather-bold', bold);
-@include font-face("Merriweather", '/assets/fonts/merriweather-bolditalic', bold, italic);
+@include font-face("Merriweather", '{{site.baseurl}}/assets/fonts/merriweather-light', normal);
+@include font-face("Merriweather", '{{site.baseurl}}/assets/fonts/merriweather-lightitalic', normal, italic);
+@include font-face("Merriweather", '{{site.baseurl}}/assets/fonts/merriweather-bold', bold);
+@include font-face("Merriweather", '{{site.baseurl}}/assets/fonts/merriweather-bolditalic', bold, italic);
 // Lato
-@include font-face("Lato", '/assets/fonts/lato-light', normal);
-@include font-face("Lato", '/assets/fonts/lato-lightitalic', normal, italic);
-@include font-face("Lato", '/assets/fonts/lato-black', bold);
-@include font-face("Lato", '/assets/fonts/lato-blackitalic', bold, italic);
+@include font-face("Lato", '{{site.baseurl}}/assets/fonts/lato-light', normal);
+@include font-face("Lato", '{{site.baseurl}}/assets/fonts/lato-lightitalic', normal, italic);
+@include font-face("Lato", '{{site.baseurl}}/assets/fonts/lato-black', bold);
+@include font-face("Lato", '{{site.baseurl}}/assets/fonts/lato-blackitalic', bold, italic);
 // League Spartan
-@include font-face("League Spartan", '/assets/fonts/leaguespartan-bold', bold);
+@include font-face("League Spartan", '{{site.baseurl}}/assets/fonts/leaguespartan-bold', bold);
 
 /* Globals
  * ---------------------------------------------------------------------------*/
