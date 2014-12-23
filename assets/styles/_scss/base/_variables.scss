@@ -1,21 +1,76 @@
 // Typography
-$sans-serif: $helvetica;
-$serif: $georgia;
-$base-font-family: $sans-serif;
-$header-font-family: $base-font-family;
+$sans-serif: "Lato" $helvetica;
+$serif: "Merriweather", $georgia;
+$base-font-family: $serif;
+$header-font-family: $sans-serif;
+
+// Modular Scale (http://codepen.io/ikoshowa/pen/KHcjd/?editors=110)
+$type-scale: 1.25; // major third
+
+// using 1rem and 1.125rem as the base values for a double stranded modular scale
+// the rem value varies between different devices:
+
+// 0px - 768px     : 1rem = 16px
+// 768px - 1152px  : 1rem = 18px
+// 1152px - 1536px : 1rem = 20px
+
+$base-font-size: 1em;
+$base-line-height: 1.75;
+$header-line-height: 1.125;
+
+html, body {
+  font-size: 16px;
+  line-height: $base-line-height;
+}
+
+@media (min-width: 48em) {
+  html, body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 72em) {
+  html, body {
+    font-size: 20px;
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 (-1*modular-scale(1rem, -4, $type-scale));
+  line-height: $header-line-height;
+}
+
+$h6-font-size: modular-scale(1rem, 0, $type-scale);
+$h5-font-size: modular-scale(1rem, 1, $type-scale);
+$h4-font-size: modular-scale(1rem, 2, $type-scale);
+$h3-font-size: modular-scale(1rem, 3, $type-scale);
+$h2-font-size: modular-scale(1rem, 4, $type-scale);
+$h1-font-size: modular-scale(1rem, 5, $type-scale);
+
+p {
+	font-size: modular-scale(1rem, 0, $type-scale);
+	margin: 1rem 0;
+}
+
+.largest  {  font-size: modular-scale(1rem, 2, $type-scale); }
+.larger   {  font-size: modular-scale(1rem, 1, $type-scale); }
+.smaller  {  font-size: modular-scale(1rem, -1, $type-scale); }
+.smallest {  font-size: modular-scale(1rem, -2, $type-scale); }
+
 
 // Font Sizes
-$base-font-size: 1em;
-$h1-font-size: $base-font-size * 2.25;
-$h2-font-size: $base-font-size * 2;
-$h3-font-size: $base-font-size * 1.75;
-$h4-font-size: $base-font-size * 1.5;
-$h5-font-size: $base-font-size * 1.25;
-$h6-font-size: $base-font-size;
+// $base-font-size: 1em;
+// $h1-font-size: modular-scale($base-font-size, 4, $minor-third);
+// $h2-font-size: modular-scale($base-font-size, 3, $minor-third);
+// $h3-font-size: modular-scale($base-font-size, 2, $minor-third);
+// $h4-font-size: modular-scale($base-font-size, 1, $minor-third);
+// $h5-font-size: modular-scale($base-font-size, 0, $minor-third);
+// $h6-font-size: modular-scale($base-font-size, -1, $minor-third);
 
 // Line height
-$base-line-height: 1.5;
-$header-line-height: 1.25;
+// $base-line-height: 1.5;
+// $header-line-height: 1.25;
 
 // Other Sizes
 $base-border-radius: 3px;
