@@ -13,7 +13,7 @@ exclude: [Gemfile, Gemfile.lock, readme.md]
 
 # Permalinks
 #==================================
-permalink: pretty
+permalink: /:categories/:title
 
 # Assets
 #==================================
@@ -39,6 +39,6 @@ defaults:
   # -
   #   scope:
   #     path: ""
-  #     type: "pages" 
+  #     type: "pages"
   #   values:
   #     layout: "default"
