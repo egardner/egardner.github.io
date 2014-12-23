@@ -1,5 +1,4 @@
 ---
-layout: project
 title:  Arts Restore LA Website
 categories: projects
 thumbnail: /assets/img/arla_thumb.jpg
@@ -21,4 +20,4 @@ In the fall of 2013, the Hammer Museum launched an initiative to transform Westw
 
 Arts Restore LA needed a robust site that could showcase the unique vendors and dozens of events which took place over the course of the initiative. The site also needed to be completely responsive since many visitors would be accessing it from mobile devices as they explored the neighborhood on foot. I handled both design and development for this project.
 
-Website visible here: [Arts Restore LA](http://artsrestore.la)  
+Website visible here: [Arts Restore LA](http://artsrestore.la)

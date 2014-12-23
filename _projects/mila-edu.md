@@ -1,5 +1,4 @@
 ---
-layout: project
 title:  Make in L.A.
 categories: projects
 thumbnail: /assets/img/mila_2014_edu_thumb.jpg

@@ -1,5 +1,4 @@
 ---
-layout: project
 title:  Various Posters
 categories: projects
 thumbnail: /assets/img/generatio_thumb.jpg

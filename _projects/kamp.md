@@ -1,5 +1,4 @@
 ---
-layout: project
 title:  K.A.M.P.
 categories: projects
 thumbnail: /assets/img/kamp_thumb.jpg

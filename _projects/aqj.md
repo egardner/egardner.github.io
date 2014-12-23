@@ -1,5 +1,4 @@
 ---
-layout: project
 title:  A. Quincy Jones
 categories: projects
 thumbnail: /assets/img/aqj_thumb.jpg
@@ -23,4 +22,4 @@ A. Quicy Jones: Building for Better Living was the first museum exhibition dedic
 
 I designed graphics and branding for this exhibition, working in collaboration with Chu + Gooding Architects. Exhibition materials included brochures, educational materials, a special Family Day event, merchandise, and more.
 
-The project also included an interactive gallery guide, which can be seen [here]({{ site.url }}/aqj-ipad). 
+The project also included an interactive gallery guide, which can be seen [here]({{ site.url }}/aqj-ipad).

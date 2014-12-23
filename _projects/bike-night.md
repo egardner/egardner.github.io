@@ -1,5 +1,4 @@
 ---
-layout: project
 title:  Bike Night at the Hammer!
 categories: projects
 thumbnail: /assets/img/bike_night_thumb.jpg

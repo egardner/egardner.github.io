@@ -1,5 +1,4 @@
 ---
-layout: project
 title:  Venice Beach Biennial
 categories: projects
 thumbnail: /assets/img/vbb_thumb.jpg
