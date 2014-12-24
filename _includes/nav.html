@@ -1,0 +1,9 @@
+<nav>
+  {% for page in site.data.nav %}
+  <ul>
+    <li>
+      <a href="{{site.baseurl}}{{page.href}}">{{page.title}}</a>
+    </li>
+  </ul>
+  {% endfor %}
+</nav>
