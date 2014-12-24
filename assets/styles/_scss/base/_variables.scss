@@ -3,6 +3,7 @@ $sans-serif: "League Spartan" $helvetica;
 $serif: "Merriweather", $georgia;
 $base-font-family: $serif;
 $header-font-family: $sans-serif;
+$base-letter-spacing: 1px;
 
 // Modular Scale (http://codepen.io/ikoshowa/pen/KHcjd/?editors=110)
 $type-scale: 1.25; // major third
@@ -32,6 +33,7 @@ html, body {
 @media (min-width: 72em) {
   html, body {
     font-size: 20px;
+    letter-spacing: $base-letter-spacing;
   }
 }
 
@@ -43,11 +45,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 $h6-font-size: modular-scale(1rem, 0, $type-scale);
-$h5-font-size: modular-scale(1rem, 1, $type-scale);
-$h4-font-size: modular-scale(1rem, 2, $type-scale);
-$h3-font-size: modular-scale(1rem, 3, $type-scale);
-$h2-font-size: modular-scale(1rem, 4, $type-scale);
-$h1-font-size: modular-scale(1rem, 5, $type-scale);
+$h5-font-size: modular-scale(1rem, 0, $type-scale);
+$h4-font-size: modular-scale(1rem, 1, $type-scale);
+$h3-font-size: modular-scale(1rem, 2, $type-scale);
+$h2-font-size: modular-scale(1rem, 3, $type-scale);
+$h1-font-size: modular-scale(1rem, 4, $type-scale);
 
 p {
 	font-size: modular-scale(1rem, 0, $type-scale);
