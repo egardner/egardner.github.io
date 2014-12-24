@@ -1,8 +1,6 @@
 ---
 title:  Various Posters
-categories: projects
 thumbnail: /assets/img/generatio_thumb.jpg
-permalink: various-posters
 
 client: Hammer Museum
 year: 2011-13

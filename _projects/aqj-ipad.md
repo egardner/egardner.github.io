@@ -1,8 +1,6 @@
 ---
 title:  A. Quincy Jones iPad Guide
-categories: projects
 thumbnail: /assets/img/aqj_ipad_thumb.jpg
-permalink: aqj-ipad
 
 client: Hammer Museum
 year: 2013

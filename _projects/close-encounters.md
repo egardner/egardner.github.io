@@ -1,8 +1,6 @@
 ---
 title:  Close Encounters
-categories: projects
 thumbnail: /assets/img/close_encounters_thumb.jpg
-permalink: close-encounters
 client: Hammer Museum
 year: 2014
 role: Art Direction

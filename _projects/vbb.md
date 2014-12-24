@@ -1,8 +1,6 @@
 ---
 title:  Venice Beach Biennial
-categories: projects
 thumbnail: /assets/img/vbb_thumb.jpg
-permalink: venice-beach-biennial
 
 client: Hammer Museum
 year: 2012

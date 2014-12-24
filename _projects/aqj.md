@@ -1,8 +1,6 @@
 ---
 title:  A. Quincy Jones
-categories: projects
 thumbnail: /assets/img/aqj_thumb.jpg
-permalink: a-quincy-jones
 
 client: Hammer Museum
 year: 2013

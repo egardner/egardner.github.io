@@ -1,8 +1,6 @@
 ---
 title:  HDTS 2013
-categories: projects
 thumbnail: /assets/img/hdts_thumb.jpg
-permalink: hdts-2013
 
 client: High Desert Test Sites
 year: 2013
