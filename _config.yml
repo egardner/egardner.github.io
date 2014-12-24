@@ -1,8 +1,8 @@
 # Site Settings
 #==================================
-title: Site Title
-email: email@example.com
-description: Site Description
+title: egardner.github.io
+email: gardner.ec@gmail.com
+description: Eric Gardner's Website
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
@@ -13,7 +13,7 @@ exclude: [Gemfile, Gemfile.lock, readme.md]
 
 # Permalinks
 #==================================
-permalink: date
+permalink: pretty
 
 # Assets
 #==================================
@@ -26,12 +26,18 @@ sass:
 collections:
   projects:
     output: true
-    permalink: /projects/:title
+    permalink: /projects/:path/
 
 
 # Front-matter Defaults
 #==================================
 defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
   -
     scope:
       path: "" # an empty string here means all files in the project
