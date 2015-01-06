@@ -1,13 +1,8 @@
-<button type="button" class="js-menu-trigger sliding-menu-button">
-  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
-</button>
-
-<nav class="js-menu sliding-menu-content">
+<a class="logo" href="{{site.baseurl}}/">Eric Gardner</a>
+<nav>
   <ul>
     {% for page in site.data.nav %}
     <li><a href="{{site.baseurl}}{{page.href}}">{{page.title}}</a></li>
     {% endfor %}
   </ul>
 </nav>
-
-<div class="js-menu-screen menu-screen"></div>
