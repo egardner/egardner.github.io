@@ -1,6 +1,6 @@
 ---
 title: Projects
-layout: default
+layout: post
 Permalink: /projects/
 ---
 Projects index goes here.
