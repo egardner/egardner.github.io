@@ -62,6 +62,10 @@ a {
   }
 }
 
+article a {
+  font-weight: bold;
+}
+
 hr {
   border-bottom: $base-border;
   border-left: none;
@@ -72,6 +76,10 @@ hr {
 
 article ul {
   margin: ($base-spacing / 2) 0;
+}
+
+p code {
+  font-size: $base-font-size * 1.125;
 }
 
 pre code {
@@ -87,13 +95,13 @@ picture {
 
 blockquote {
   border-left: 2px solid $base-border-color;
-  color: lighten($base-font-color, 15);
+  color: lighten($base-font-color, 35);
   margin: $base-spacing 0;
   padding-left: $base-spacing / 2;
 }
 
 cite {
-  color: lighten($base-font-color, 25);
+  color: lighten($base-font-color, 35);
   font-style: italic;
 
   &:before {
