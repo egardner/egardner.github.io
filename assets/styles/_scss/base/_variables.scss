@@ -1,9 +1,10 @@
-// Typography
+/* Typography
+=======================================================*/ 
 $sans-serif: "League Spartan" $helvetica;
 $serif: "Merriweather", $georgia;
 $base-font-family: $serif;
 $header-font-family: $sans-serif;
-$base-letter-spacing: 1px;
+$base-letter-spacing: 0px;
 
 // Modular Scale (http://codepen.io/ikoshowa/pen/KHcjd/?editors=110)
 $type-scale: 1.25; // major third
@@ -15,6 +16,8 @@ $type-scale: 1.25; // major third
 // 768px - 1152px  : 1rem = 18px
 // 1152px - 1536px : 1rem = 20px
 
+/* Font Sizes
+=======================================================*/ 
 $base-font-size: 1em;
 $base-line-height: 1.75;
 $header-line-height: 1.125;
@@ -26,20 +29,19 @@ html, body {
 
 @media (min-width: 48em) {
   html, body {
-    font-size: 18px;
+    font-size: 19px;
   }
 }
 
-@media (min-width: 72em) {
-  html, body {
-    font-size: 20px;
-    letter-spacing: $base-letter-spacing;
-  }
-}
-
+// @media (min-width: 72em) {
+//   html, body {
+//     font-size: 20px;
+//     letter-spacing: $base-letter-spacing;
+//   }
+// }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 1em 0 (-1*modular-scale(1rem, -4, $type-scale));
+  margin: 1.25em 0 (-1*modular-scale(1rem, -4, $type-scale));
   line-height: $header-line-height;
   letter-spacing: 1px;
 }
@@ -53,7 +55,6 @@ $h1-font-size: modular-scale(1rem, 4, $type-scale);
 
 p {
 	font-size: modular-scale(1rem, 0, $type-scale);
-	margin: 1rem 0;
 }
 
 .largest  {  font-size: modular-scale(1rem, 2, $type-scale); }
@@ -61,26 +62,13 @@ p {
 .smaller  {  font-size: modular-scale(1rem, -1, $type-scale); }
 .smallest {  font-size: modular-scale(1rem, -2, $type-scale); }
 
-
-// Font Sizes
-// $base-font-size: 1em;
-// $h1-font-size: modular-scale($base-font-size, 4, $minor-third);
-// $h2-font-size: modular-scale($base-font-size, 3, $minor-third);
-// $h3-font-size: modular-scale($base-font-size, 2, $minor-third);
-// $h4-font-size: modular-scale($base-font-size, 1, $minor-third);
-// $h5-font-size: modular-scale($base-font-size, 0, $minor-third);
-// $h6-font-size: modular-scale($base-font-size, -1, $minor-third);
-
-// Line height
-// $base-line-height: 1.5;
-// $header-line-height: 1.25;
-
 // Other Sizes
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $base-z-index: 0;
 
-// Colors
+/* Colors
+=======================================================*/ 
 $blue: #477DCA;
 $dark-gray: #333;
 $medium-gray: #999;
@@ -112,7 +100,8 @@ $success-color: $light-green;
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
-// Forms
+/* Forms
+=======================================================*/ 
 $form-border-color: $base-border-color;
 $form-border-color-hover: darken($base-border-color, 10);
 $form-border-color-focus: $base-accent-color;
