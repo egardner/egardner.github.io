@@ -21,7 +21,7 @@ sass:
   sass_dir: assets/styles/_scss  # default is _sass
   style: compressed	 # set to compressed for production
 
-# Collections (uncomment if using)
+# Collections
 #==================================
 collections:
   projects:
