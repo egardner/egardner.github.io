@@ -1,6 +1,6 @@
 ---
-Title: Asset Management in Jekyll
-Subtitle: "Or: Front-end development for the Grunt-Averse"
+title: Jekyll Asset Management
+subtitle: "Or: Front-end development for the Grunt-Averse"
 ---
 {% raw %}
 
