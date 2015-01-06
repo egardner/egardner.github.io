@@ -1,22 +1,10 @@
 ---
-title: How I built this Site
+Title: Asset Management in Jekyll
+Subtitle: "Or: Front-end development for the Grunt-Averse"
 ---
 {% raw %}
 
-## Things to include:
-
-- Jekyll and static site generation
-- Bourbon, Neat, and Bitters for baseline
-- Typographic scale (modular scale)
-- Git for version control
-- GH Pages deployment
-- Lack of complex build tools (yeoman, grunt, gulp, etc.) in favor of simple workflow.
-- Fonts in use
-- Optimization as part of design process
-- _data for navigation?
-- Custom collections (projects)
-
-## Assets
+> _This post is the first in a series discussing the ins and outs of building this website._
 
 Without a doubt, the biggest stumbling block in getting this site off the ground was figuring out how to best handle assets.  
 
@@ -182,44 +170,5 @@ document.addEventListener('DOMContentLoaded', function(){
 ### 5. Version Control
 
 One final point: **Commit all dependencies to source**---this is a no-no in some circles, but since this site is being deployed via GitHub Pages, everything needed to generate it (including various vendor files) must be committed to the source repo. I know this sounds obvious but I made this mistake myself when first getting started here.
-
-
----
-
-## Data-driven navigation
-One of the best-practices approaches I'm trying to implement is a data-driven navigation. The idea is to separate the data of how the site is organized from the nav markup. In terms of code, navigation is often one of the most complex features on a site. Digging into a dense thicket of code just to add a new menu item can quickly become a nightmare, so I want to use a more elegant and automated solution.  
-
-This site's data-driven navigation is a work in progress, based on [Dale Tournemille's tutorial](http://www.tournemille.com/blog/How-to-create-data-driven-navigation-in-Jekyll/).
-
----
-
-## Collections
-In `config.yml` the `permalinks` option can be set to a specified path. For "Projects" this is specified as follows:
-
-```yaml
-collections:
-  projects:
-    output: true
-    permalink: /projects/:path/
-```
-
-To create a top-level "Projects" page, there is a `projects.md` file in the root directory. This page needs to have a `permalink` defined manually, since it does not exist inside the `_projects` folder. YAML front-matter goes as follows:
-
-```yaml
----
-title: Projects
-layout: default
-Permalink: /projects/
----
-```
-
----
-
-#### Open Questions:
-- Is it possible to define a custom output directory for blog posts?
-
-#### Future things to add:
-
-- Prose.io integration
 
 {% endraw %}
