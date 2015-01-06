@@ -213,8 +213,9 @@ The `main.js` file calls jQuery via `include_relative`:
 ---
 library: jquery-2.1.3.min.js
 ---
+{% raw %}
 {% include_relative _lib/{{page.library}} %}
-
+{% endraw %}
 $(document).ready(function() {
     // code goes here
 });
