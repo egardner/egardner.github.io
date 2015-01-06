@@ -1,3 +1,16 @@
-article {
-	@include outer-container;
+// basic page margins
+body { margin: 1.5rem; }
+div#main { @include outer-container; }
+
+// responsive layout
+header.article-header{
+  margin-top: $base-font-size * 2 ;
+  margin-bottom: $base-font-size * 2;
+}
+
+@include media ($medium-screen-up) {
+  header.article-header{
+    margin-top: $base-font-size * 6;
+    margin-bottom: $base-font-size * 4.5;
+  }
 }
