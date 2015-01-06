@@ -8,7 +8,7 @@ Subtitle: "Or: Front-end development for the Grunt-Averse"
 
 Without a doubt, the biggest stumbling block in getting this site off the ground was figuring out how to best handle assets.  
 
-I'm a big fan of the [Bourbon](http://bourbon.io) front-end framework, which I think hits the sweet spot between minimalism and bloat in terms of features. Bootstrap and Foundation are great, but for most small projects I consider them to be overkill. And [Neat](http://neat.bourbon.io), the grid-system plug-in for Bourbon, has the added bonus of leaving your markup completely free of non-semantic
+I'm a big fan of the [Bourbon](http://bourbon.io) front-end framework, which I think hits the sweet spot between light weight and rich features. Bootstrap and Foundation are great, but for most small projects I consider them to be overkill. And [Neat](http://neat.bourbon.io), the grid-system plug-in for Bourbon, has the added bonus of leaving your markup completely free of non-semantic
 classes like `grid-col-4-med-2` (yuck!).
 
 In the Rails world, developers are spoiled by an asset pipeline that automatically handles fonts, images, and JS/CSS libraries. Someone has actually ported this feature to Jekyll as a plugin, [jekyll-assets](https://github.com/ixti/jekyll-assets).  
@@ -21,7 +21,7 @@ In what follows I'm going to outline the steps I took to organize assets using o
 
 ### 1. File Structure
 
-I prefer to work with a clearly-defined `assets` directory where all styles, fonts, and scripts live. This directory is organized as follows:
+I prefer to work with a clearly-defined `assets` directory where all styles, fonts, and scripts live. This directory (which lives in the root of the project) is organized as follows:
 
 ```
 assets
