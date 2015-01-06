@@ -1,6 +1,7 @@
 ---
 title: How I built this Site
 ---
+{% raw %}
 
 ## Things to include:
 
@@ -15,7 +16,6 @@ title: How I built this Site
 - _data for navigation?
 - Custom collections (projects)
 
----
 #### Assets
 
 Without a doubt, the biggest stumbling block in getting this site off the ground
@@ -148,7 +148,7 @@ which makes this process a lot less painful.
 
 **Fonts must be declared in the main.scss file** – there is no way around this in
 the current setup. This is because I'm relying on both a Bourbon mixin as well as
-Jekyll's `{%raw%}{{site.baseurl}}{%endraw%}` variable to be able to use a relative asset path to 
+Jekyll's `{{site.baseurl}}` variable to be able to use a relative asset path to 
 my `fonts` directory – so Jekyll needs to be aware of the file I'm making my 
 font declarations in.
 
@@ -213,9 +213,9 @@ The `main.js` file calls jQuery via `include_relative`:
 ---
 library: jquery-2.1.3.min.js
 ---
-{% raw %}
+
 {% include_relative _lib/{{page.library}} %}
-{% endraw %}
+
 $(document).ready(function() {
     // code goes here
 });
@@ -289,3 +289,5 @@ Permalink: /projects/
 #### Future things to add:
 
 - Prose.io integration
+
+{% endraw %}
