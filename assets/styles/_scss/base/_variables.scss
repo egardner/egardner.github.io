@@ -27,11 +27,12 @@ html, body {
   line-height: $base-line-height;
 }
 
-// @media (min-width: 48em) {
-//   html, body {
-//     font-size: 19px;
-//   }
-// }
+@include media ($medium-screen-up) {
+  html, body {
+    font-size: 18px;
+    letter-spacing: $base-letter-spacing;
+  }
+}
 
 @include media ($large-screen-up) {
   html, body {
