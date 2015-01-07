@@ -14,6 +14,7 @@ a.logo {
 nav {
   @include span-columns(4 of 4);
   ul {
+    font-size: $base-font-size * 0.9;
     list-style-type: none;
     text-align: center;
     margin: 0.25rem auto 0rem;
@@ -27,7 +28,6 @@ nav {
 
 // desktop nav
 @include media ($medium-screen-up) {
-
   a.logo {
     @include span-columns(3 of 8);
     text-align: left;
@@ -35,6 +35,7 @@ nav {
   nav {
     @include span-columns(5 of 8);
     ul {
+      font-size: $base-font-size;
       float: right;
       margin-top: 0;
     }
