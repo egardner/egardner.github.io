@@ -1,6 +1,5 @@
 ---
-title: ericgardner.github.io
-layout: page
+title: egardner.github.io
 ---
 
 Lorem ipsum dolor sic amet
