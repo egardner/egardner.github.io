@@ -1,6 +1,6 @@
 ---
 title: Writing
-layout: post
+layout: page
 ---
 
 {% for post in site.posts %}

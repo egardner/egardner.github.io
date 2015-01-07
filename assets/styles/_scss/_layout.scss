@@ -1,24 +1,38 @@
 // basic page margins
-body { margin: 1rem; }
-div#main { @include outer-container; }
+div.content { 
+  padding: 1rem;
+  @include outer-container;
+}
+
+div#top { 
+  color: white;
+  padding-top: 1rem;
+  //padding-bottom: 1rem;
+  width: 100%;
+  background-color: darken($base-accent-color, 24);
+}
+
+
+//div#main { @include outer-container; }
 
 header.article-header{
   margin-top: $base-font-size * 2 ;
   margin-bottom: $base-font-size * 2;
 }
 
+
 // responsive layout
 @include media ($medium-screen-up) {
-  body { margin: 2rem; }
+  //body { margin: 2rem; }
   header.article-header{
-    margin-top: $base-font-size * 6;
-    margin-bottom: $base-font-size * 4.5;
+    margin-top: $base-font-size * 4;
+    //margin-bottom: $base-font-size * 4.5;
   }
 }
 
 @include media ($large-screen-up) {
   header.article-header{
-    margin-top: $base-font-size * 8;
-    margin-bottom: $base-font-size * 4.5;
+    margin-top: $base-font-size * 6;
+    //margin-bottom: $base-font-size * 4.5;
   }
 }

@@ -1,12 +1,21 @@
 ---
 layout: default
 ---
-<header class="article-header">
-  <h1 class="title">{{page.title}}</h1>
-  {% if page.subtitle %}
-    <h4 class="subtitle">{{page.subtitle}}</h4>
-  {% endif %}
-</header>
-<article>
-	{{content}}
-</article>
+<div id="top">
+  <div class="content">
+    {% include nav.html %}
+    <header class="article-header">
+      <h1 class="title">{{page.title}}</h1>
+      {% if page.subtitle %}
+        <h4 class="subtitle">{{page.subtitle}}</h4>
+      {% endif %}
+    </header>
+  </div>
+</div>
+<div id="main">
+  <div class="content">
+    <article>
+      {{content}}
+    </article>
+  </div>
+</div>

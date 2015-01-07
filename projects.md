@@ -1,6 +1,6 @@
 ---
 title: Projects
-layout: post
+layout: page
 Permalink: /projects/
 ---
 Projects index goes here.

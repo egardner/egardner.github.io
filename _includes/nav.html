@@ -1,8 +1,10 @@
-<a class="logo" href="{{site.baseurl}}/">Eric Gardner</a>
-<nav>
-  <ul>
-    {% for page in site.data.nav %}
-    <li><a href="{{site.baseurl}}{{page.href}}">{{page.title}}</a></li>
-    {% endfor %}
-  </ul>
-</nav>
+<div id="nav">
+  <a class="logo" href="{{site.baseurl}}/">Eric Gardner</a>
+  <nav>
+    <ul>
+      {% for page in site.data.nav %}
+      <li><a href="{{site.baseurl}}{{page.href}}">{{page.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
