@@ -6,7 +6,7 @@ header#nav {
 }
 
 a.logo {
-  font-size: $base-font-size * 1.25;
+  font-size: $base-font-size * 1.125;
   @include span-columns(4 of 4);
   text-align: center;
 }
@@ -27,6 +27,7 @@ nav {
 
 // desktop nav
 @include media ($medium-screen-up) {
+
   a.logo {
     @include span-columns(3 of 8);
     text-align: left;

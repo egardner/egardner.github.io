@@ -1,5 +1,5 @@
 // basic page margins
-body { margin: 1.5rem; }
+body { margin: 2rem; }
 div#main { @include outer-container; }
 
 // responsive layout
@@ -11,6 +11,13 @@ header.article-header{
 @include media ($medium-screen-up) {
   header.article-header{
     margin-top: $base-font-size * 6;
+    margin-bottom: $base-font-size * 4.5;
+  }
+}
+
+@include media ($large-screen-up) {
+  header.article-header{
+    margin-top: $base-font-size * 8;
     margin-bottom: $base-font-size * 4.5;
   }
 }

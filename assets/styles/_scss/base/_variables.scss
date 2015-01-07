@@ -7,7 +7,7 @@ $header-font-family: $sans-serif;
 $base-letter-spacing: 0px;
 
 // Modular Scale (http://codepen.io/ikoshowa/pen/KHcjd/?editors=110)
-$type-scale: 1.333; // perfect fourth
+$type-scale: 1.3; // perfect fourth
 
 // using 1rem and 1.125rem as the base values for a double stranded modular scale
 // the rem value varies between different devices:
@@ -27,18 +27,18 @@ html, body {
   line-height: $base-line-height;
 }
 
-@media (min-width: 48em) {
-  html, body {
-    font-size: 19px;
-  }
-}
-
-// @media (min-width: 72em) {
+// @media (min-width: 48em) {
 //   html, body {
-//     font-size: 20px;
-//     letter-spacing: $base-letter-spacing;
+//     font-size: 19px;
 //   }
 // }
+
+@include media ($large-screen-up) {
+  html, body {
+    font-size: 20px;
+    letter-spacing: $base-letter-spacing;
+  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin: 1.25em 0 (-1*modular-scale(1rem, -4, $type-scale));
