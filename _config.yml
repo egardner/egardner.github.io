@@ -39,20 +39,17 @@ collections:
 # Front-matter Defaults
 #==================================
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       layout: "page"
-  -
-    scope:
+  - scope:
       path: ""
       type: "projects"
     values:
@@ -61,7 +58,6 @@ defaults:
 # Prose.io config
 #==================================
 prose:
-  rooturl: '_posts'
   siteurl: 'http://egardner.github.io/'
   media: 'assets/images'
   ignore:
