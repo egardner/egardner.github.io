@@ -1,13 +1,13 @@
 %body-text {
   @include media($medium-screen-up) {
-    font-size: $base-font-size * 1.25;
+    font-size: 1.25rem;
     line-height: 1.4;
     margin: 1em auto;
     max-width: 30em;
   }
 
   @include media($large-screen-up) {
-    font-size: $base-font-size * 1.35;
+    font-size: 1.35rem;
   }
 }
 

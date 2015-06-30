@@ -8,14 +8,7 @@ $fonts-dir: "{{site.baseurl}}/assets/fonts";
 @import "base/grid-settings";
 @import "vendor/neat/neat";
 
-//@import "fonts";
-@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Book-webfont", 400);
-@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Demi-webfont", 600);
-
-@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Book-webfont", 400, italic);
-@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Demi-webfont", 600, italic);
-
-
+@import "fonts";
 @import "base/base";
 @import "layout";
 
@@ -25,6 +18,7 @@ $fonts-dir: "{{site.baseurl}}/assets/fonts";
 @import "components/type";
 @import "components/grid";
 @import "components/page_header";
+@import "components/post_list";
 
 @import "vendor/highlightjs/styles/railscasts";
 @import "vendor/slick";

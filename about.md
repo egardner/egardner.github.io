@@ -1,5 +1,5 @@
 ---
-title: About
+title: Eric who?
 layout: page
 permalink: /about/
 ---

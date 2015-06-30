@@ -1,0 +1,10 @@
+<div class="post-list">
+  {% for post in site.posts %}
+  <ul>
+    <li class="post-entry">
+      <a class="post-entry-title" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a><br />
+      <span class="post-entry-date">{{post.date | date_to_long_string }}</span>
+    </li>
+  </ul>
+  {% endfor %}
+</div>
