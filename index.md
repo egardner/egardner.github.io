@@ -1,5 +1,3 @@
 ---
-title: egardner.github.io
+layout: cover
 ---
-
-Lorem ipsum dolor sic amet

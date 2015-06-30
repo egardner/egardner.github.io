@@ -1,0 +1,29 @@
+%body-text {
+  @include media($medium-screen-up) {
+    font-size: $base-font-size * 1.25;
+    line-height: 1.4;
+    margin: 1em auto;
+    max-width: 30em;
+  }
+
+  @include media($large-screen-up) {
+    font-size: $base-font-size * 1.35;
+  }
+}
+
+%inverse-link {
+  color: $inverse-color;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: transparentize($inverse-color, 0.35);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}

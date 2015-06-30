@@ -1,16 +1,16 @@
 ---
 title:  Make in L.A.
-thumbnail: /assets/img/mila_2014_edu_thumb.jpg
+thumbnail: mila_2014_edu_thumb.jpg
 client: Hammer Museum
 year: 2014
 role: Art Direction
 gallery:
- - image: /assets/img/mila_2014_edu_01.jpg
- - image: /assets/img/mila_2014_edu_02.jpg
- - image: /assets/img/mila_2014_edu_03.jpg
- - image: /assets/img/mila_2014_edu_04.jpg
- - image: /assets/img/mila_2014_edu_05.jpg
- - image: /assets/img/mila_2014_edu_06.jpg
+ - image: mila_2014_edu_01.jpg
+ - image: mila_2014_edu_02.jpg
+ - image: mila_2014_edu_03.jpg
+ - image: mila_2014_edu_04.jpg
+ - image: mila_2014_edu_05.jpg
+ - image: mila_2014_edu_06.jpg
 
 ---
 

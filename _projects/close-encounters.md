@@ -1,15 +1,15 @@
 ---
 title:  Close Encounters
-thumbnail: /assets/img/close_encounters_thumb.jpg
+thumbnail: close_encounters_thumb.jpg
 client: Hammer Museum
 year: 2014
 role: Art Direction
 gallery:
- - image: /assets/img/close_encounters_01.jpg
- - image: /assets/img/close_encounters_02.jpg
- - image: /assets/img/close_encounters_03.jpg
- - image: /assets/img/close_encounters_04.jpg
- - image: /assets/img/close_encounters_05.jpg
+ - image: close_encounters_01.jpg
+ - image: close_encounters_02.jpg
+ - image: close_encounters_03.jpg
+ - image: close_encounters_04.jpg
+ - image: close_encounters_05.jpg
 
 ---
 

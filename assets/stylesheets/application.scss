@@ -1,0 +1,30 @@
+---
+---
+$image-dir: "{{site.baseurl}}/assets/images";
+$fonts-dir: "{{site.baseurl}}/assets/fonts";
+
+@import "vendor/normalize";
+@import "vendor/bourbon/bourbon";
+@import "base/grid-settings";
+@import "vendor/neat/neat";
+
+//@import "fonts";
+@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Book-webfont", 400);
+@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Demi-webfont", 600);
+
+@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Book-webfont", 400, italic);
+@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Demi-webfont", 600, italic);
+
+
+@import "base/base";
+@import "layout";
+
+@import "components/transitions";
+@import "components/projects";
+@import "components/page_cover";
+@import "components/type";
+@import "components/grid";
+@import "components/page_header";
+
+@import "vendor/highlightjs/styles/railscasts";
+@import "vendor/slick";

@@ -1,0 +1,30 @@
+// FONTS.scss
+//===================================================================
+// This website will only support IE9+, so only two font formats are
+// required: WOFF (supported on all targeted browsers) and WOFF2
+// (preferred if available). WOFF2 files are often about 30% smaller
+// so they should be declared first.
+
+// For the moment the other fonts are included since Bourbon can provide all of
+// them by default.
+
+// References:
+// http://davidensinger.com/2014/10/update-your-font-face-file-formats-to-just-use-woff-and-woff2/
+// http://aokolish.me/blog/2011/12/24/at-font-face-with-the-asset-pipeline/
+
+// Asset Pipeline:
+// Bourbon supports an $asset-pipeline variable which changes how the @font-face
+// mixin works. By setting it to true, we can give urls relative to the global
+// assets folder (default is /_assets/).
+
+//-------------------------------------------------------------------
+//$asset-pipeline: true;
+
+// ionicons are imported in their own scss file (see vendor folder)
+
+// @include font-face("Franklin Gothic", "FranklinGothic-Book-webfont", 400);
+// @include font-face("Franklin Gothic", "FranklinGothic-Demi-webfont", 600);
+
+// @include font-face("Franklin Gothic", "FranklinGothic-Book-webfont", 400, italic);
+// @include font-face("Franklin Gothic", "FranklinGothic-Demi-webfont", 600, italic);
+

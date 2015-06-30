@@ -1,0 +1,15 @@
+.grid-container {
+  @extend %grid-container;
+}
+
+.project-grid {
+  @extend %grid;
+  @extend %grid--padding;
+}
+
+.project-item {
+  @extend %fadein;
+  @extend %grid-item;
+  @extend %grid-item--padding;
+  img { width: 100%; }
+}

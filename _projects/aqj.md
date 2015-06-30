@@ -1,16 +1,16 @@
 ---
 title:  A. Quincy Jones
-thumbnail: /assets/img/aqj_thumb.jpg
+thumbnail: aqj_thumb.jpg
 
 client: Hammer Museum
 year: 2013
 role: Art Direction
 gallery:
- - image: /assets/img/aqj_01.jpg
- - image: /assets/img/aqj_02.jpg
- - image: /assets/img/aqj_03.jpg
- - image: /assets/img/aqj_04.jpg
- - image: /assets/img/aqj_05.jpg
+ - image: aqj_01.jpg
+ - image: aqj_02.jpg
+ - image: aqj_03.jpg
+ - image: aqj_04.jpg
+ - image: aqj_05.jpg
 
 ---
 

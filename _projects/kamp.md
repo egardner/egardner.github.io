@@ -1,6 +1,6 @@
 ---
 title:  K.A.M.P.
-thumbnail: /assets/img/kamp_thumb.jpg
+thumbnail: kamp_thumb.jpg
 
 client: Hammer Museum
 year: 2013

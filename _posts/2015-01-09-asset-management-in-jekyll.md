@@ -23,7 +23,7 @@ In what follows I'm going to outline the steps I took to organize assets using o
 
 I prefer to work with a clearly-defined `assets` directory where all styles, fonts, and scripts live. This directory (which lives in the root of the project) is organized as follows:
 
-```
+```bash
 assets
 ├── fonts
 ├── img
@@ -47,7 +47,7 @@ One exception to this is how Sass partials are handled. Jekyll recongizes a spec
 
 By default Jekyll looks for Sass partials in the folder `_sass` in the project root. I want to change that so I can keep all my stylesheet files inside of my `assets` directory, so first I need to tell Jekyll where to look for Sass imports by updating the site's `_config.yml` file:
 
-```yaml
+```ruby
 # Assets
 #==================================
 sass:
@@ -57,7 +57,7 @@ sass:
 
 The `_scss` directory looks like this:
 
-```
+```bash
 assets/styles/_scss
 ├── _layout.scss
 ├── base
@@ -73,7 +73,7 @@ The `base` directory is used for Bitters defaults ([bitters.bourbon.io](http://b
 
 Finally, I need to import everything in my `main.scss` file. The beginning of this file looks like this (note the dashes for YAML front-matter---these are required here):
 
-```scss
+```sass
 ---
 ---
 /* Bourbon, Bitters, & Neat
@@ -96,26 +96,22 @@ Fortunatlely, Bourbon includes a `@font-face` [shorthand](http://bourbon.io/docs
 
 Ideally the `main.scss` file would consist of nothing but `@import`s. This solution is a compromise given the lack of more robust asset management when deploying to GitHub Pages. Fonts are loaded immediately after the frameworks in the file:
 
-```scss
-/* Fonts
- * ---------------------------------------------------------------------------*/
-// Merriweather
-@include font-face("Merriweather", '{{site.baseurl}}/assets/fonts/merriweather-light', normal);
-@include font-face("Merriweather", '{{site.baseurl}}/assets/fonts/merriweather-lightitalic', normal, italic);
-@include font-face("Merriweather", '{{site.baseurl}}/assets/fonts/merriweather-bold', bold);
-@include font-face("Merriweather", '{{site.baseurl}}/assets/fonts/merriweather-bolditalic', bold, italic);
-// Lato
-@include font-face("Lato", '{{site.baseurl}}/assets/fonts/lato-light', normal);
-@include font-face("Lato", '{{site.baseurl}}/assets/fonts/lato-lightitalic', normal, italic);
-@include font-face("Lato", '{{site.baseurl}}/assets/fonts/lato-black', bold);
-@include font-face("Lato", '{{site.baseurl}}/assets/fonts/lato-blackitalic', bold, italic);
-// League Spartan
-@include font-face("League Spartan", '{{site.baseurl}}/assets/fonts/leaguespartan-bold', bold);
+```sass
+$image-dir: "{{site.baseurl}}/assets/images";
+$fonts-dir: "{{site.baseurl}}/assets/fonts";
+
+//@import "fonts";
+@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Book-webfont", 400);
+@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Demi-webfont", 600);
+
+@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Book-webfont", 400, italic);
+@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Demi-webfont", 600, italic);
+
 ```
 
 After this I import the Bitters defaults, and then any other layout-specific or page-specific styles.
 
-```scss
+```sass
 /* Globals
  * ---------------------------------------------------------------------------*/
 @import "base/base";
@@ -131,7 +127,7 @@ To cut down on HTTP requests, I'm compiling all scripts into a single `main.js` 
 
 Here's what the `js` directory looks like with jQuery included as a library:
 
-```
+```bash
 assets/js
 ├── _lib
 │   └── jquery-2.1.3.min.js
@@ -142,10 +138,10 @@ The `main.js` file calls jQuery via `include_relative`:
 
 ```javascript
 ---
-library: jquery-2.1.3.min.js
+layout: null
 ---
 
-{% include_relative _lib/{{page.library}} %}
+{% include_relative vendor/jquery.min.js %}
 
 $(document).ready(function() {
     // code goes here

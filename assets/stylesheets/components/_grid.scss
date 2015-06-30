@@ -1,0 +1,43 @@
+$max-width: 950px;
+$gutter: 1.5em;
+
+%block {
+  width: 100%;
+}
+
+%block-inner {
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+
+%grid-container {
+  margin-right: $gutter;
+}
+
+%grid {
+  @include display(flex);
+  @include flex-wrap(wrap);
+}
+
+%grid--padding {
+  margin: -$gutter 0 $gutter -$gutter;
+}
+
+%grid-item {
+  @include media($small-screen) {
+    @include flex(0 0 100%);
+  }
+
+  @include media($medium-screen-up) {
+    @include flex(0 0 50%);
+  }
+
+  @include media($large-screen-up) {
+    @include flex(0 0 33.3333%);
+  }
+}
+
+%grid-item--padding {
+  padding: $gutter 0 0 $gutter;
+}

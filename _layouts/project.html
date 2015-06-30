@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<div class="project-gallery">
+{% for item in page.gallery %}
+  <a data-featherlight="image" href="{{site.baseurl}}/{{site.image_dir}}/{{item.image}}">
+    <img class="gallery-item" src="{{site.baseurl}}/{{site.image_dir}}/{{item.image}}">
+  </a>
+{% endfor %}
+</div>
+<article class="page-content-main">
+  {{ content }}
+</article>

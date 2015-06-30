@@ -1,16 +1,16 @@
 ---
 title:  Arts Restore LA Website
-thumbnail: /assets/img/arla_thumb.jpg
+thumbnail: arla_thumb.jpg
 
 client: Hammer Museum
 year: 2013
 role: Web Design & Development
 gallery:
- - image: /assets/img/arla_01.jpg
- - image: /assets/img/arla_02.jpg
- - image: /assets/img/arla_03.jpg
- - image: /assets/img/arla_04.jpg
- - image: /assets/img/arla_06.jpg
+ - image: arla_01.jpg
+ - image: arla_02.jpg
+ - image: arla_03.jpg
+ - image: arla_04.jpg
+ - image: arla_06.jpg
 
 ---
 

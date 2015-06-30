@@ -1,13 +1,5 @@
 ---
-title: Projects
-Permalink: /projects/
+layout: default
+permalink: /projects/
 ---
-Projects index goes here.
-
-{% for project in site.projects %}
-  <ul>
-  	<li>
-  		<a href="{{site.baseurl}}{{project.url}}">{{project.title}}</a>
-  	</li>
-  </ul>
-{% endfor %}
+{% include project_grid.html %}

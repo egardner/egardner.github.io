@@ -1,0 +1,16 @@
+body.cover {
+  background-color: $dark-gray;
+}
+
+.page-cover {
+  @extend %fadein;
+  @include background-image(url("#{$image-dir}/cover_01.jpg"));
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  z-index: -10;
+}
+
+.page-cover-inner {
+
+}

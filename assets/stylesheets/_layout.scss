@@ -1,0 +1,37 @@
+body {
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100vh;
+}
+
+.page-header,
+.page-content,
+.page-footer {
+  @extend %block;
+}
+
+.page-header-inner,
+.page-content-inner {
+  @extend %block-inner;
+}
+
+.page-content {
+  @include flex(1);
+}
+
+.page-content-inner {
+  @extend %fadein;
+  padding-bottom: $gutter;
+  padding-top: $gutter;
+}
+
+.page-content-main {
+  @extend %body-text;
+  margin: 0 $gutter;
+}
+
+.page-footer {
+  @extend %fadein;
+  background-color: $light-gray;
+  height: 100px;
+}

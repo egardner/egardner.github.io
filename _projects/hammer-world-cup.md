@@ -1,19 +1,19 @@
 ---
 title:  World Cup 2014
-thumbnail: /assets/img/worldcup_thumb.jpg
+thumbnail: worldcup_thumb.jpg
 
 client: Hammer Museum
 year: 2014
 role: Art Direction
 gallery:
- - image: /assets/img/worldcup_04.jpg
- - image: /assets/img/worldcup_01.jpg
- - image: /assets/img/worldcup_02.jpg
- - image: /assets/img/worldcup_03.jpg
- - image: /assets/img/worldcup_05.jpg
- - image: /assets/img/worldcup_06.jpg
- - image: /assets/img/worldcup_07.jpg
- - image: /assets/img/worldcup_08.jpg
+ - image: worldcup_04.jpg
+ - image: worldcup_01.jpg
+ - image: worldcup_02.jpg
+ - image: worldcup_03.jpg
+ - image: worldcup_05.jpg
+ - image: worldcup_06.jpg
+ - image: worldcup_07.jpg
+ - image: worldcup_08.jpg
 
 ---
 

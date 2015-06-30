@@ -1,0 +1,67 @@
+.page-header {
+  background-color: $dark-gray;
+  color: $light-gray;
+  z-index: 50;
+  
+  @include media($medium-screen-up) {
+    height: 120px;
+  }
+}
+
+.cover .page-header {
+  @extend %fadein--slow;
+  @include background-image(linear-gradient(
+    hsla(0, 0%, 0%, 0.5) 0%, 
+    hsla(0, 0%, 0%, 0) 100%));
+  position: absolute;
+  background-color: transparent;
+
+  @include media($medium-screen-up) {
+    height: 200px;
+  }
+}
+
+.page-header-inner {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include align-items(baseline);
+  color: #fff;
+  padding: $gutter;
+  margin-bottom: $gutter / 2;
+  margin-top: 1rem;
+
+  a {
+    @extend %inverse-link;
+  }
+}
+
+.site-title {
+  @include flex(0 0 100%);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+
+  @include media ($medium-screen-up) {
+    @include flex(0 0 60%);
+  }
+}
+
+.page-header-links {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include flex(0 0 100%);
+  @include media($medium-screen-up) {
+    @include flex(0 0 40%);
+  }
+}
+
+.page-header-links-item {
+  @include flex(0 0 100%);
+  text-align: left;
+  line-height: 2;
+
+  @include media($medium-screen-up) {
+    @include flex(1);
+    text-align: right;
+  }
+}
