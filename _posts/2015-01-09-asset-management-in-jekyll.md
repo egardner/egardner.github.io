@@ -1,8 +1,13 @@
 ---
+layout: page
 title: Jekyll Asset Management
 subtitle: "Or: Front-end development for the Grunt-Averse"
+published: true
 ---
+
 {% raw %}
+
+![aqj_01.jpg]({{site.baseurl}}/assets/images/aqj_01.jpg)
 
 > _This post is the first in a series discussing the ins and outs of building this website._
 
