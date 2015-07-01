@@ -10,6 +10,6 @@
 @include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Book-webfont", 400);
 @include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Demi-webfont", 600);
 
-@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Bookit-webfont", 400, italic);
-@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Demiit-webfont", 600, italic);
+@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-bookit-webfont", 400, italic);
+@include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-DemiIt-webfont", 600, italic);
 
