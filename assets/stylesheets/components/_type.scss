@@ -18,6 +18,16 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  h1, h2, h3, h4, h5 {
+    margin-top: .75em;
+  }
+
+  h1 {font-size: 2em}
+  h2 {font-size: 1.75em}
+  h3 {font-size: 1.25em}
+  h4 {font-size: 1.125em}
+  h5 {font-size: 2em}
 }
 
 %inverse-link {

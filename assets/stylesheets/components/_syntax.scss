@@ -6,19 +6,26 @@
   background: #232323;
   color: #e6e1dc;
   -webkit-text-size-adjust: none;
+
+  @include media($large-screen-up) {
+    width: 120%;
+    margin-left: -10%;
+  }
 }
 
+$comment: #666;
+
 .highlight .hll { background-color: #e6e1dc; }
-.highlight .c { color: #bc9458 } /* Comment */
+.highlight .c { color: $comment } /* Comment */
 .highlight .err { color: #e6e1dc; background-color: #1e0010 } /* Error */
 .highlight .k { color: #6d9cbe } /* Keyword */
 .highlight .l { color: #a5c261 } /* Literal */
 .highlight .n { color: #f8f8f2 } /* Name */
 .highlight .o { color: #6d9cbe } /* Operator */
 .highlight .p { color: #f8f8f2 } /* Punctuation */
-.highlight .cm { color: #bc9458 } /* Comment.Multiline */
+.highlight .cm { color: $comment } /* Comment.Multiline */
 .highlight .cp { color: #bc9458 } /* Comment.Preproc */
-.highlight .c1 { color: #bc9458 } /* Comment.Single */
+.highlight .c1 { color: $comment } /* Comment.Single */
 .highlight .cs { color: #bc9458 } /* Comment.Special */
 .highlight .ge { font-style: italic } /* Generic.Emph */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
@@ -43,7 +50,7 @@
 .highlight .nn { color: #f8f8f2 } /* Name.Namespace */
 .highlight .nx { color: #a6e22e } /* Name.Other */
 .highlight .py { color: #f8f8f2 } /* Name.Property */
-.highlight .nt { color: #6d9cbe } /* Name.Tag */
+.highlight .nt { color: $comment } /* Name.Tag */
 .highlight .nv { color: #f8f8f2 } /* Name.Variable */
 .highlight .ow { color: #6d9cbe } /* Operator.Word */
 .highlight .w { color: #f8f8f2 } /* Text.Whitespace */

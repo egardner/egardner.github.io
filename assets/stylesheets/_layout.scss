@@ -15,11 +15,17 @@ body {
   @extend %block-inner;
 }
 
-.page-title {
+.page-content .page-title {
   @include media($small-screen) { font-size: 2.5rem; }
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 400;
   text-align: center;
+}
+
+.page-content .page-date {
+  text-align: center;
+  margin-top: -1.5rem;
+  margin-bottom: 3rem;
 }
 
 .page-content {
