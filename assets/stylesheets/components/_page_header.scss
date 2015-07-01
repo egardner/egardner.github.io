@@ -21,7 +21,7 @@
   @include flex-wrap(wrap);
   @include align-items(baseline);
   padding: $gutter;
-  margin-bottom: $gutter / 2;
+  //margin-bottom: $gutter / 2;
   margin-top: 1rem;
 }
 

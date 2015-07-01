@@ -8,9 +8,17 @@
     <div class="page-header">
       {% include page_header.html %}
     </div>
+    {% if page.cover %}
+    <div class="page-cover-image" style="background-image:url({{site.baseurl}}/{{site.image_dir}}/{{page.cover}});"></div>
+    {% endif %}
     <div class="page-content" id="main">
       <div class="page-content-inner">
         {{ content }}
+      </div>
+    </div>
+    <div class="page-footer">
+      <div class="page-footer-inner">
+        
       </div>
     </div>
     <script type="text/javascript" src="{{site.baseurl}}/assets/javascripts/application.js"></script>

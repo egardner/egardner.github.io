@@ -2,6 +2,7 @@
 title: Eric who?
 layout: page
 permalink: /about/
+cover: cover_06.jpg
 ---
 Hello world.
 I'm Eric Gardner, a graphic designer and developer living in Los Angeles. I'm
