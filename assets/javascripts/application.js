@@ -4,6 +4,7 @@ layout: null
 {% include_relative vendor/jquery.min.js %}
 {% include_relative vendor/jquery.smoothState.js %}
 {% include_relative vendor/slick.min.js %}
+{% include_relative vendor/featherlight.min.js %}
 
 // Helper Functions
 var changeBackground, getRandomImage, slickSetup;
@@ -50,9 +51,7 @@ $(document).ready(function() {
     changeBackground($cover, randomImage);
   }
   slickSetup();
-  return $("#main").smoothState({
-    blacklist: '.no-smoothState',
-    onAfter: function($container, $newContent) {
-    }
-  });
+  // return $("#main").smoothState({
+  //   blacklist: '.no-smoothState'
+  // });
 });
