@@ -1,13 +1,22 @@
 %body-text {
   @include media($medium-screen-up) {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.4;
     margin: 1em auto;
-    max-width: 30em;
+    max-width: 31em;
   }
 
   @include media($large-screen-up) {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
+  }
+
+  blockquote {
+    border-left: 4px solid lighten($base-font-color, 65%);
+    color: lighten($base-font-color, 40%);
+    margin: 0;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
