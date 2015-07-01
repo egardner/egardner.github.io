@@ -2,7 +2,6 @@
 layout: null
 ---
 {% include_relative vendor/jquery.min.js %}
-{% include_relative vendor/highlight.pack.js %}
 {% include_relative vendor/jquery.smoothState.js %}
 {% include_relative vendor/slick.min.js %}
 
@@ -51,8 +50,9 @@ $(document).ready(function() {
     changeBackground($cover, randomImage);
   }
   slickSetup();
-  hljs.initHighlightingOnLoad();
   return $("#main").smoothState({
-    blacklist: '.no-smoothState'
+    blacklist: '.no-smoothState',
+    onAfter: function($container, $newContent) {
+    }
   });
 });

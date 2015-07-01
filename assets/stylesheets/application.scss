@@ -19,6 +19,6 @@ $fonts-dir: "{{site.baseurl}}/assets/fonts";
 @import "components/grid";
 @import "components/page_header";
 @import "components/post_list";
+@import "components/syntax";
 
-@import "vendor/highlightjs/styles/railscasts";
 @import "vendor/slick";
