@@ -21,6 +21,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 1rem;
 
   @include media($small-screen) {height: 200px;}
 }
