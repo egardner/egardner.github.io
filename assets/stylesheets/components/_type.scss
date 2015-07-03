@@ -2,7 +2,7 @@
   @include media($medium-screen-up) {
     font-size: 1.125rem;
     line-height: 1.4;
-    margin: 1em auto;
+    margin: 0 auto 1em auto;
     max-width: 31em;
   }
 

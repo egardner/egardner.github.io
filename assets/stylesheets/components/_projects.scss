@@ -13,3 +13,13 @@
   @extend %grid-item--padding;
   img { width: 100%; }
 }
+
+.project-gallery {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+
+  @include media($large-screen-up) {
+    width: 120%;
+    margin-left: -10%;
+  }
+}
