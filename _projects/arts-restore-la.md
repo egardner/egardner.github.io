@@ -1,18 +1,19 @@
 ---
-title:  Arts Restore LA Website
+layout: project
+title: Arts Restore LA
 thumbnail: arla_thumb.jpg
-
 client: Hammer Museum
 year: 2013
-role: Web Design & Development
-gallery:
- - image: arla_01.jpg
- - image: arla_02.jpg
- - image: arla_03.jpg
- - image: arla_04.jpg
- - image: arla_06.jpg
-
+role: "Web Design & Development"
+gallery: 
+  - image: arla_01.jpg
+  - image: arla_02.jpg
+  - image: arla_03.jpg
+  - image: arla_04.jpg
+  - image: arla_06.jpg
+published: true
 ---
+
 
 In the fall of 2013, the Hammer Museum launched an initiative to transform Westwood Village in L.A. For three weeks, artists and artisans took over storefront spaces in Westwood and transformed the neighborhood.
 
