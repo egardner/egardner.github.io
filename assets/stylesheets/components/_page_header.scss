@@ -4,7 +4,7 @@
     hsla(0, 0%, 0%, 0.5) 0%, 
     hsla(0, 0%, 0%, 0) 100%));
   color: #fff;
-  position: relative;
+  position: absolute;
   background-color: transparent;
   z-index: 50;
 
@@ -25,7 +25,7 @@
 }
 
 .site-title {
-  @include flex(0 0 100%);
+  @include flex(0 0 60%);
   font-size: 1.35rem;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -38,16 +38,17 @@
 .page-header-links {
   @include display(flex);
   @include flex-wrap(wrap);
-  @include flex(0 0 100%);
+  @include align-content(flex-end);
+  @include flex(0 0 40%);
   @include media($medium-screen-up) {
     @include flex(0 0 40%);
   }
 }
 
 .page-header-links-item {
-  @include flex(0 0 50%);
+  @include flex(0 0 100%);
   font-size: 1.125rem;
-  text-align: left;
+  text-align: right;
   line-height: 2;
 
   @include media($medium-screen-up) {

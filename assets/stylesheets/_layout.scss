@@ -1,3 +1,6 @@
+$cover-image-height: 650px;
+$cover-image-mobile-height: 400px;
+
 body {
   @include display(flex);
   @include flex-direction(column);
@@ -15,9 +18,31 @@ body {
   @extend %block-inner;
 }
 
+.page-title {
+  font-size: 3.25rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 0rem;
+  @include media($small-screen) {
+    font-size: 1.75rem;
+  }
+}
+
+.page-subtitle {
+  font-family: "Libre Bodoni";
+  font-style: italic;
+  line-height: 1.4;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  font-size: 2.125rem;
+  letter-spacing: 1px;
+}
+
+
+
 .page-cover-image {
   @extend %fadein;
-  height: 700px;
+  height: $cover-image-height;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,43 +52,64 @@ body {
   align-items: center;
   justify-content: center;
 
-  @include media($small-screen) {height: 400px;}
-}
+  @include media($small-screen) {height: $cover-image-mobile-height;}
 
-
-.fullbleed-project .title-block {
-  color: #fff;
-  text-align: center;
-  max-width: 50rem;
-  z-index: 20;
-
-  .page-title {
-    font-size: 3.25rem;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    margin-bottom: 0rem;
-  }
-
-  .page-subtitle {
-    font-family: "Libre Bodoni";
-    font-style: italic;
-    line-height: 1.4;
-    font-weight: 400;
-    margin-top: 0.5rem;
-    font-size: 2.125rem;
-    letter-spacing: 1px;
+  .title-block {
+    color: #fff;
+    text-align: center;
+    max-width: 50rem;
+    z-index: 20;
   }
 }
 
 .page-cover-overlay {
   width: 100%;
-  height: 700px;
-  left: 0;
+  height: $cover-image-height;
   background-color: #333;
-  opacity: 0.65;
+  opacity: 0.6;
   position: absolute;
+  left: 0;
 
-  @include media($small-screen) {height: 400px;}
+  @include media($small-screen) {
+    height: $cover-image-mobile-height;
+  }
+}
+
+.page-cover-slideshow {
+  width: 100%;
+  height: $cover-image-height;
+  position: relative;
+  background-color: #333;
+
+  @include media($small-screen) {height: $cover-image-mobile-height;}
+
+  .page-cover-overlay {
+    opacity: 0.1;
+  }
+}
+
+.slick-track, .slick-list {
+  height: 100%;
+}
+
+.page-cover-slide {
+  height: $cover-image-height;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include media($small-screen) {height: $cover-image-mobile-height;}
+
+  .title-block {
+    position: relative;
+    text-align: center;
+    z-index: 20;
+    top: 250px;
+    color: #fff;
+    max-width: 50em;
+    margin: 0 auto;
+    a {@extend %inverse-link;}
+    @include media($small-screen) {top: 175px;}
+  }
 }
 
 .page-content .page-date {

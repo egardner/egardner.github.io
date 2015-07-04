@@ -7,7 +7,11 @@
   <body class="fullbleed-project">
     <!-- begin page header -->
     {% include page_header.html %}
+    {% if page.slideshow %}
+    {% include cover_slideshow.html %}
+    {% else %}
     {% include cover_image.html %}
+    {% endif %}
     <!-- end page header -->
     <!-- begin page content -->
     <div class="page-content" id="main">

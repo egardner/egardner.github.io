@@ -27,13 +27,13 @@ changeBackground = function($el, imageURL) {
 };
 
 slickSetup = function() {
-  if ($('.project-gallery').length) {
-    return $('.project-gallery').slick({
+  if ($('.page-cover-slideshow').length) {
+    return $('.page-cover-slideshow').slick({
       autoplay: true,
-      autoplaySpeed: 5000,
-      arrows: true,
+      autoplaySpeed: 6000,
+      arrows: false,
       mobileFirst: true,
-      pauseOnHover: true,
+      pauseOnHover: false,
       prevArrow: '<i class="ion-chevron-left slick-prev"></i>',
       nextArrow: '<i class="ion-chevron-right slick-next"></i>'
     });

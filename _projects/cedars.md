@@ -1,5 +1,5 @@
 ---
-title: Cedars-Sinai Hospital Conservancy Exhibit
+title: Cedars-Sinai Conservancy Exhibit
 thumbnail: cedars_01.jpg
 cover: cedars_01.jpg
 year: 2014
