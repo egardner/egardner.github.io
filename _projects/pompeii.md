@@ -1,4 +1,5 @@
 ---
+title: Pompeii
 layout: project
 published: true
 thumbnail: pompeii_01.jpg
