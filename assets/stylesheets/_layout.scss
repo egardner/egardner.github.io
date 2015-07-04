@@ -93,6 +93,7 @@ body {
 }
 
 .page-cover-slide {
+  //@extend %fadein;
   height: $cover-image-height;
   background-position: center center;
   background-size: cover;
@@ -100,6 +101,7 @@ body {
   @include media($small-screen) {height: $cover-image-mobile-height;}
 
   .title-block {
+    @extend %fadein--slow;
     position: relative;
     text-align: center;
     z-index: 20;
