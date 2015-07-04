@@ -1,5 +1,5 @@
 ---
-title: Obsidian Mirrors
+title: Obsidian Mirror Travels
 thumbnail: obsidian_hero.jpg
 cover: obsidian_hero.jpg
 description: Exhibition at the J. Paul Getty Villa
