@@ -4,11 +4,14 @@
     hsla(0, 0%, 0%, 0.5) 0%, 
     hsla(0, 0%, 0%, 0) 100%));
   color: #fff;
-  position: absolute;
+  position: relative;
   background-color: transparent;
   z-index: 50;
 
-  @include media($medium-screen-up) { height: 200px;}
+  @include media($medium-screen-up) { 
+    height: 200px;
+    position: absolute;
+  }
   a { @extend %inverse-link; }
 }
 
