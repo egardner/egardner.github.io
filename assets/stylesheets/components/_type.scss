@@ -14,11 +14,13 @@
     color: lighten($action-color, 15%);
     margin: 0;
     margin-bottom: 1.5rem;
-    font-size: 1.35rem;
     line-height: 1.6;
-    //font-family: "Libre Bodoni";
     font-style: italic;
     font-weight: 400;
+
+    @include media($medium-screen-up){
+      font-size: 1.35rem;
+    }
   }
 
   h1, h2, h3, h4, h5 {
