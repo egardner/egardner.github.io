@@ -28,7 +28,7 @@
 }
 
 .site-title {
-  @include flex(0 0 60%);
+  @include flex(0 0 70%);
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -43,7 +43,7 @@
   @include display(flex);
   @include flex-wrap(wrap);
   @include align-content(flex-end);
-  @include flex(0 0 40%);
+  @include flex(0 0 30%);
   @include media($medium-screen-up) {
     @include flex(0 0 40%);
   }
