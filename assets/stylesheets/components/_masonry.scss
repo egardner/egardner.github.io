@@ -1,0 +1,17 @@
+.masonry-grid {
+  margin-top: 1.5rem;
+
+  -moz-column-count: 2;
+  -moz-column-gap: 10px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 10px;
+  column-count: 2;
+  column-gap: 10px;
+  width: 100%;
+
+  .masonry-item {   
+      display: inline-block;
+      padding: 0.5rem;
+      width: 100%;
+  }
+}

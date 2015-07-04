@@ -1,0 +1,11 @@
+{% if page.gallery %}
+<div class="project-gallery">
+  {% for item in page.gallery %}
+  <!-- begin gallery image -->
+  <a data-featherlight="image" href="{{site.baseurl}}/{{site.image_dir}}/{{item.image}}">
+    <img class="gallery-item" src="{{site.baseurl}}/{{site.image_dir}}/{{item.image}}">
+  </a>
+  <!-- end gallery image -->
+  {% endfor %}
+</div>
+{% endif %}

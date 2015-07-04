@@ -6,6 +6,8 @@
 // though Jekyll is not processing this file directly.
 
 // ionicons are imported in their own scss file (see vendor folder)
+@include font-face("League Spartan", "#{$fonts-dir}/leaguespartan-bold", 600);
+
 
 @include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Book-webfont", 400);
 @include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Demi-webfont", 600);

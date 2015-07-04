@@ -1,4 +1,4 @@
-$max-width: 1024px;
+$max-width: 960px;
 $gutter: 1.5rem;
 
 %block {
@@ -33,9 +33,9 @@ $gutter: 1.5rem;
     @include flex(0 0 50%);
   }
 
-  @include media($large-screen-up) {
-    @include flex(0 0 33.3333%);
-  }
+  // @include media($large-screen-up) {
+  //   @include flex(0 0 33.3333%);
+  // }
 }
 
 %grid-item--padding {

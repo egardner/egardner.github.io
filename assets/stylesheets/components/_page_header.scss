@@ -1,9 +1,4 @@
 .page-header {
-  color: $light-gray;
-  z-index: 50;
-}
-
-.cover .page-header {
   @extend %fadein--slow;
   @include background-image(linear-gradient(
     hsla(0, 0%, 0%, 0.5) 0%, 
@@ -11,6 +6,7 @@
   color: #fff;
   position: absolute;
   background-color: transparent;
+  z-index: 50;
 
   @include media($medium-screen-up) { height: 200px;}
   a { @extend %inverse-link; }
@@ -20,7 +16,7 @@
   @include display(flex);
   @include flex-wrap(wrap);
   @include align-items(baseline);
-  padding: $gutter;
+  padding: $gutter $gutter * 2;
   //margin-bottom: $gutter / 2;
   //margin-top: 1rem;
 }
@@ -46,15 +42,10 @@
 }
 
 .page-header-links-item {
-  @include flex(0 0 33.3333%);
+  @include flex(0 0 50%);
   font-size: 1.125rem;
   text-align: left;
   line-height: 2;
-
-  @include media($small-screen) {
-    &:nth-of-type(2) { text-align: center; }
-    &:nth-of-type(3) { text-align: right; }
-  }
 
   @include media($medium-screen-up) {
     @include flex(1);

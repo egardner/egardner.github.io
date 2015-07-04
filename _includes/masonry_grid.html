@@ -1,0 +1,11 @@
+{% if page.gallery %}
+<div class="masonry-grid">
+  {% for item in page.gallery %}
+  <div class="masonry-item">
+    <a data-featherlight="image" href="{{site.baseurl}}/{{site.image_dir}}/{{item.image}}">
+      <img src="{{site.baseurl}}/{{site.image_dir}}/{{item.image}}">
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
