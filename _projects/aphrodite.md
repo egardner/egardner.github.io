@@ -12,6 +12,7 @@ gallery:
  - image: aphrodite_05.jpg
  - image: aphrodite_06.jpg
  - image: aphrodite_07.jpg
+ - image: aphrodite_hero.jpg
 ---
 > “Her creative flair and critical eye have been fundamental success of the show, and her ideas to make use of fabric - be it real or suggested - as a recurrent motif endowed both the exhibition and its promotional materials with sophistication and seductive elegance.” ~Dr. Dave Saunders
 
