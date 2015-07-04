@@ -1,3 +1,5 @@
 ---
-layout: cover
+layout: default
+title: Projects
 ---
+{% include project_grid.html %}
