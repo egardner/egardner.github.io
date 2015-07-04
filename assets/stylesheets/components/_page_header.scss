@@ -22,16 +22,20 @@
   padding: $gutter $gutter * 2;
   //margin-bottom: $gutter / 2;
   //margin-top: 1rem;
+  @include media($small-screen) {
+    padding: $gutter;
+  }
 }
 
 .site-title {
   @include flex(0 0 60%);
-  font-size: 1.35rem;
+  font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 
   @include media ($medium-screen-up) {
     @include flex(0 0 60%);
+    font-size: 1.35rem;
   }
 }
 
