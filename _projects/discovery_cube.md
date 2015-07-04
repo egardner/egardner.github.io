@@ -1,6 +1,6 @@
 ---
 title: Making the Grade
-description: "Discovery Cube, Los Angeles | STEM Educational Exhibit"
+description: "Discovery Cube, Los Angeles <br>STEM Educational Exhibit"
 thumbnail: dsc_01.jpg
 cover: dsc_01.jpg
 year: 2015
