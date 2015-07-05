@@ -2,6 +2,6 @@
 title: About Laurel
 layout: page
 permalink: /about/
-cover: cover_06.jpg
+video: true
 ---
 Lorem ipsum dolor sic amet

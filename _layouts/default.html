@@ -9,6 +9,8 @@
     {% include page_header.html %}
     {% if page.slideshow %}
     {% include cover_slideshow.html %}
+    {% elsif page.video %}
+    {% include cover_video.html %}
     {% else %}
     {% include cover_image.html %}
     {% endif %}

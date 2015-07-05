@@ -5,6 +5,7 @@ layout: null
 {% include_relative vendor/jquery.smoothState.js %}
 {% include_relative vendor/slick.min.js %}
 {% include_relative vendor/featherlight.min.js %}
+{% include_relative vendor/jquery.vide.min.js %}
 
 // Helper Functions
 var changeBackground, getRandomImage, slickSetup;
@@ -51,7 +52,9 @@ $(document).ready(function() {
     changeBackground($cover, randomImage);
   }
   slickSetup();
-  // return $("#main").smoothState({
-  //   blacklist: '.no-smoothState'
-  // });
+  $('#video').vide({
+    mp4: "/assets/video/redsky.mov",
+    webm: "/assets/video/redsky.webm",
+    poster: "/assets/video/redsky.jpg"
+  });
 });

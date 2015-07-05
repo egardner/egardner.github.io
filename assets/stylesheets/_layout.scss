@@ -96,7 +96,7 @@ body {
   height: 100%;
 }
 
-.page-cover-slide {
+.page-cover-slide, .page-cover-video {
   //@extend %fadein;
   height: $cover-image-height;
   background-position: center center;
