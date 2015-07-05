@@ -1,6 +1,8 @@
 %body-text {
+  font-size: 1.125rem;
+  margin-top: 1rem;
+
   @include media($medium-screen-up) {
-    font-size: 1.125rem;
     line-height: 1.4;
     margin: 1.5rem auto 1em auto;
     max-width: 31em;
