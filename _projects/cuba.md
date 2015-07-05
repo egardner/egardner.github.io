@@ -8,11 +8,14 @@ description: Photography Exhibition at the J. Paul Getty
 year: 2011
 gallery: 
   - image: cuba_01.jpg
-  - image: watercolor_02.jpg
-  - image: watercolor_03.jpg
-  - image: watercolor_04.jpg
-  - image: watercolor_05.jpg
-  - image: watercolor_06.jpg
+  - image: cuba_02.jpg
+  - image: cuba_03.jpg
+  - image: cuba_04.jpg
+  - image: cuba_05.jpg
+  - image: cuba_06.jpg
+  - image: cuba_07.jpg
+  - image: cuba_08.jpg
+  - image: cuba_09.jpg
 ---
 
 
