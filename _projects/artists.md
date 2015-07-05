@@ -16,8 +16,8 @@ gallery:
 
 Images of the Artist, examines ways in which artists have represented themselves, their fellow artists, their activity, or their surroundings over the past five centuries. 
 
-Because it was a unique subject matter for a drawings exhibition, our small design team pushed the envelope when it came to color. During one creative meeting, we must have carried at least 15 painted foam core “swatches”, 4 ft square in size, into the lofty gallery in order to determine which shades of green could work harmoniously throughout the exhibition. The chosen colors–a light mint green and a fresh olive green–provided a perfect backdrop to the smaller drawings framed with generous margins of eggshell colored matts. 
+Because it was a unique subject matter for a drawings exhibition, our small design team pushed the envelope when it came to color. During one creative meeting, we must have carried at least 15 very large (about 4ft square) painted foam core “swatches” into the lofty gallery in order to determine which shades of green could work harmoniously throughout the exhibition. The chosen colors–a mint green and an olive green–provided a colorful backdrop to the smaller drawings framed with generously-sized eggshell colored matts. 
 
-The serif font with tall ascenders served to reflect the artists’ ego and ambitions in representing themselves and their activities. For the title, a superscript “the” created a swash through the ‘A’ in Artists. This was a nod to conventions of period handwriting and the artists signature.  
+For the title treatment, the serif font with tall ascenders served to reflect the artists’ ego and ambitions. A superscript “the” with an elegant swash through the ‘A’ in Artists was a nod to the conventions of period handwriting and the unique flourish of an artists signature.  
 
 My roll on this exhibition was to design a custom logotype, site signage, gallery graphics, and object labels. I also assisted vendors ad the in-house preparations crew during installation. 
