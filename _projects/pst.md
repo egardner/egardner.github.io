@@ -20,4 +20,4 @@ gallery:
 
 ## A New Post
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+> ”Part of Laurel's talent as a designer is her far-reaching curiosity and diverse design interests. These various interests are what make Laurel great to work with, especially at the beginning of the project because she incorporates all of these sources into the brainstorming phase. She organizes her ideas in a thoughtful manner and is easy to talk to about where the project can go.” –Emily Morishita, Senior Designer at J. Paul Getty Museum
