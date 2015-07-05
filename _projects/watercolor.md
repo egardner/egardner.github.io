@@ -13,7 +13,6 @@ gallery:
   - image: watercolor_04.jpg
   - image: watercolor_05.jpg
   - image: watercolor_06.jpg
-  - image: watercolor_07.jpg
 ---
 
 
