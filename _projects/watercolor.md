@@ -4,7 +4,7 @@ layout: project
 published: true
 thumbnail: watercolor_01.jpg
 cover: watercolor_01.jpg
-description: Exhibition at the J. Paul Getty
+description: Exhibition at the J. Paul Getty Villa
 year: 2011
 gallery: 
   - image: watercolor_01.jpg
