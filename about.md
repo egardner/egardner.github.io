@@ -1,10 +1,14 @@
 ---
-title: About
+title:
 layout: page
 permalink: /about/
 video: true
 ---
 <<<<<<< HEAD
+
+=======
+
+>>>>>>> origin/master
 
 Laurel Bybee is a designer of environments and experiences.
 
@@ -16,7 +20,3 @@ In addition to her work in the field of environmental design, Laurel is a passio
 
 Laurel graduated with honors from UCLA’s Design | Media Arts program. Upon graduation she went to New York to complete a design internship at Columbia University’s Ed Lab, where she was introduced to electronics and programming as an educational tool. That same year, she presented at the Intel Developer Forum and was awarded for “Most Innovative Design.” She went on to complete an internship at a boutique lighting design studio in Melbourne Australia. She currently lives in Los Angeles.
 
-
-=======
-
->>>>>>> origin/master
