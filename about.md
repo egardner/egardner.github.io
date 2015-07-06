@@ -23,3 +23,5 @@ and participates in L.A.'s growing DIY scene.
 Laurel graduated with honors from UCLA's Design | Media Arts program in 2009. The
 same year, she presented at the Intel Developer Forum and was awarded for "Most Innovative Design."
 She lives in Los Angeles.
+
+![]("{{site.baseurl}}/{{site.image_dir}}/bio.jpg")
