@@ -54,6 +54,7 @@ defaults:
       type: "projects"
     values:
       layout: "project"
+      order: 0
 
 # Prose.io config
 #==================================
