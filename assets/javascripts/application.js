@@ -53,8 +53,9 @@ $(document).ready(function() {
   }
   slickSetup();
   $('#video').vide({
-    mp4: "/assets/video/redsky.mov",
+    mp4: "/assets/video/redsky.mp4",
     webm: "/assets/video/redsky.webm",
+    ogv: "/assets/video/redsky.ogv",
     poster: "/assets/video/redsky.jpg"
   });
 });
