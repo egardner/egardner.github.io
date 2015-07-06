@@ -1,15 +1,16 @@
 ---
-title:
+title:about laurel 
+description: A designer of environments and experiences
 layout: page
 permalink: /about/
 video: true
----
+
 <<<<<<< HEAD
 
 =======
-
 >>>>>>> origin/master
-
+---
+ 
 Laurel Bybee is a designer of environments and experiences.
 
 Currently she is the Senior Exhibition Designer at Cinnabar California, where she helps museums and cultural institutions translate their ideas into built environments. From curation to fabrication, she brings a broad set of design skills to bear on her clients’ challenges.
