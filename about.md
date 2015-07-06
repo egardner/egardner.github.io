@@ -1,14 +1,10 @@
 ---
-title:
+title: About Laurel
+description: A designer of environments and experiences
 layout: page
 permalink: /about/
 video: true
 ---
-<<<<<<< HEAD
-
-=======
-
->>>>>>> origin/master
 
 Laurel Bybee is a designer of environments and experiences.
 
