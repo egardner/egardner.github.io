@@ -15,12 +15,10 @@ gallery:
  - image: dsc_07.jpg
  - image: dsc_08.jpg
  - image: dsc_09.jpg
-order: 3
+order: 2
 ---
-> Cynthia Lleremas, 10, peered through a telescope to see a model of the Scorpius constellation. Lleremas, a fifth-grader at North Hollywood’s Julie Korenstein Elementary School, gave the display a nod of approval. Before running off to join her classmates, Lleremas gave the  new museum her review: “It’s awesome.” –Los Angeles Times [San Fernando Valley’s Discovery Cube L.A. opens in once-vacant museum](http://www.latimes.com/local/	california/la-me-1114-valley-museum-20141114-story.html “link to article”)
+> “Cynthia Lleremas, 10, peered through a telescope to see a model of the Scorpius constellation. Lleremas, a fifth-grader at North Hollywood’s Julie Korenstein Elementary School, gave the display a nod of approval. Before running off to join her classmates, Lleremas gave the  new museum her review: “It’s awesome.” –Los Angeles Times [San Fernando Valley’s Discovery Cube L.A. opens in once-vacant museum](http://www.latimes.com/local/	california/la-me-1114-valley-museum-20141114-story.html “link to article”)
 
-_Making the Grade_ was a fun exhibit to design because it caters to 4th-6th grade students learning about science. I worked in tandem with Cinnabar’s in-house Technical Designers and  Interactive Developer to create didactic and instructional graphics. Interactive exhibits included a wave form table, a sound tube, molecules game, topography sand pit, constellations viewer, animal features, predator/prey viewer and the materials lab. These steel framed exhibits had to be modular and adaptable for both the Los Angeles and Orange County museums.
+For _Making the Grade_ I worked in tandem with Cinnabar’s in-house Technical Designers and  Interactive Developer to create educational and instructional graphics for a suite of modular exhibits catering to 4th-6th graders. These interactive STEM exhibits included a wave form table, sound tube, molecules game, topography sand pit, constellations viewer, animal features, predator/prey viewer and the materials lab. All exhibits had to adapt to move between the Los Angeles and Orange County Discovery Cube locations.
 
-When designing, I had to be thoughtful about the material choices with younger visitors who find playful ways to destruct exhibit materials. Working with multiple graphics vendors we produced all the graphic panels and printed vinyl here in Los Angeles. 
-
-I assisted with concept development, designed text panels & didactics, designed environmental way-finding and entrance signage.	
+I was the lead designer for _Making the Grade_ and designed all graphic panels, object labels, environmental way-finding, and entrance signage. In addition, I managed the production schedule and graphics budget and assisted with concept development and materials research. During the design process, we had to be thoughtful about the materials because younger visitors find playful ways to test their limits. Further, all graphics panels and instructions were typeset to accommodate both English and Spanish. Working with multiple graphics vendors we produced all the graphics through local vendors in Los Angeles.	
