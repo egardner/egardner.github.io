@@ -1,5 +1,5 @@
 ---
-title: Luminous Paper British Watercolors & Drawings
+title: Luminous Paper
 layout: project
 published: true
 thumbnail: watercolor_01.jpg
@@ -17,7 +17,7 @@ order: 8
 ---
 
 > “Laurel is an extremely thoughtful and creative designer, who rises to challenges with aplomb. I appreciate her enthusiasm for every project, and the sensitivity with which she finds solutions. I enjoy working with her, and would recommend her highly to anyone looking for a designer with a great attitude and skill set.” 
-–Nicole Trudeau, Senior Designer at the J. Paul Getty Museum
+	–Nicole Trudeau, Senior Designer at the J. Paul Getty Museum
 
 ”Watercolor is regarded as one of the most challenging artistic techniques. Its liquid nature is capable of extraordinary effects of luminosity, but is often challenging for an artist to control. This exhibition presents works of the 1700s and 1800s by some of the greatest British masters of the medium, including Thomas Gainsborough, J.M.W. Turner, and William Blake. It explores their innovative working methods, and looks at the sketching and study of the period.” [gett.edu](http://www.getty.edu/art/exhibitions/luminous_paper/)
 
