@@ -14,7 +14,7 @@ gallery:
   - image: pst_05.jpg
   - image: pst_06.jpg
   - image: pst_07.jpg
-
+order: 6
 ---
 
 

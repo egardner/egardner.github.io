@@ -16,6 +16,7 @@ gallery:
   - image: cuba_07.jpg
   - image: cuba_08.jpg
   - image: cuba_09.jpg
+order: 2
 ---
 
 

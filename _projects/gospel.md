@@ -9,6 +9,7 @@ gallery:
  - image: gos_02.jpg
  - image: gos_03.jpg
  - image: gos_04.jpg
+order: 4
 ---
 > “Working with Laurel, one is sure to find not only creative but smart design solutions. Laurel has a keen eye for detail and readily attacks any posed design solution with excitement. She takes the initiative of researching and sourcing reference materials for inspiration-a great asset to any design team. Laurel is a gem, both in person and as a designer.” –Davina Wolter, Senior Designer at the J. Paul Getty Museum
 

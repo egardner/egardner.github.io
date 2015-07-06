@@ -1,6 +1,7 @@
 <div class="grid-container">
   <ul class="project-grid">
-    {% for project in site.projects %}
+    {% assign sorted_projects = (site.projects | sort: 'order') %}
+    {% for project in sorted_projects %}
     <li class="project-item">
       <a href="{{project.url}}">
         <img src="{{site.baseurl}}/{{site.image_dir}}/{{project.thumbnail}}">
