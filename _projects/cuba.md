@@ -19,8 +19,8 @@ order: 4
 ---
 _A Revolutionary Project: Cuba from Walker Evans to Now_ looks at three critical periods in Cuba’s history as witnessed by photographers before, during, and after the country's 1959 Revolution.
 
-For this project I started the creative process with the idea of _flaneur_, inspired by Walker Evan’s street scenes in 1930’s Cuba. The most striking photograph representing this idea is Evan’s “Stevedore” (1933), which would become the main promotional photograph we used in street banners and marketing material. In this photograph a man in a straw hat squints into the sun with a freshly lit cigar hanging out of his mouth. 
+For this project I started the creative process with the idea of _flaneur_, inspired by Walker Evan’s street scenes in 1930’s Cuba. The most striking photograph representing this idea was Evans’ “Stevedore” (1933), which became the main promotional photograph used for marketing the exhibition. In this particular photograph a stevedore in a straw hat squints into the sun with a freshly lit cigar hanging out of his mouth. 
 
-For the title wall graphics, I developed a vintage cuban cigar box motif inspired by Stevedore. With further development, this motif extended throughout all exhibition graphics. 
+For the title wall graphics, I developed a vintage cuban cigar box motif inspired by “Stevedore.” With further development, this motif extended throughout all exhibition graphics. 
 
-I worked on all aspects of the exhibition, from the introductory title wall, street banners, and way-finding signage, to printed invitations, press packets, web banners, wall text, and object labels. In addition, I oversaw vendors during graphic installation.
+I worked on all aspects of the exhibition, from the introductory title wall, street banners, and way-finding signage, to printed invitations, press packets, web banners, wall text, and object labels. 
