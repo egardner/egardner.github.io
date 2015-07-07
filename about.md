@@ -1,6 +1,6 @@
 ---
-title: Hi there! I’m Laurel
-description: a designer of environments and experiences
+title: ~~
+description: Hi there, I’m Laurel, a designer of environments and experiences living in Los Angeles. 
 layout: page
 permalink: /about/
 video: true
