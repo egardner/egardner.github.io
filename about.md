@@ -1,6 +1,6 @@
 ---
 title:
-description: Hi there, I’m Laurel, a designer of environments and experiences. 
+description: Hi there! I’m Laurel, a designer of environments and experiences. 
 layout: page
 permalink: /about/
 video: true
