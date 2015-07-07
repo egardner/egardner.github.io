@@ -6,6 +6,8 @@ permalink: /about/
 video: true
 ---
 
+<br />
+
 Currently I’m the Senior Exhibition Designer at Cinnabar California, where I help museums and cultural institutions translate their ideas into built environments. From curation to fabrication, I bring a broad set of design skills to bear on clients’ challenges.
 
 Prior to this, I worked as a designer at the J. Paul Getty Museum, where my projects included designing museum exhibits, creating marketing collateral, and installing graphics.
@@ -14,3 +16,4 @@ In addition to my work in the field of environmental design, I’m a passionate 
 
 I currently live and work in Los Angeles. If you’d like to get in touch, shoot me an email at lebybee@gmail.com. Or [download my resume]({{site.baseurl}}/assets/files/lb_resume.pdf). 
 
+<br />
