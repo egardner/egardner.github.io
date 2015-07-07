@@ -1,5 +1,5 @@
 ---
-title: Hi, I’m Laurel
+title: Hi there! I’m Laurel
 description: a designer of environments and experiences
 layout: page
 permalink: /about/
