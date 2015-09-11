@@ -48,7 +48,7 @@ $(document).ready(function() {
     $cover = $("#cover");
     $collection = $("#cover-list li");
     randomImage = getRandomImage($collection);
-    changeBackground($cover, randomImage);
+    //changeBackground($cover, randomImage);
   }
   slickSetup();
   // return $("#main").smoothState({

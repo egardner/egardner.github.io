@@ -1,16 +1,63 @@
-body.cover {
-  background-color: $dark-gray;
+%dark-gradient {
+  @include background-image(linear-gradient(
+    hsla(0, 0%, 0%, 0.5) 0%,
+    hsla(0, 0%, 0%, 0) 100%));
 }
 
 .page-cover {
   @extend %fadein;
-  @include background-image(url("#{$image-dir}/cover_01.jpg"));
+  @extend %block;
+  background-color: $light-gray;
+  //@include background-image(url("#{$image-dir}/cover_01.jpg"));
   background-position: center center;
   background-size: cover;
-  height: 100vh;
+  height: 23rem;
   z-index: -10;
 }
 
 .page-cover-inner {
+  @extend %block-inner;
+  padding: 1.5rem;
+  padding-top: 16rem;
+}
 
+.page-cover-title {
+  font-size: 2.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.page-cover-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.page-cover-content {
+  @extend %block;
+  margin-bottom: 4rem;
+}
+
+.page-cover-content-inner {
+  @extend %block-inner;
+}
+
+.cover-text {
+  @extend %body-text;
+  border-top: $base-border;
+  margin: 1.5rem;
+  margin-top: 2.5rem;
+  &:first-of-type { border: none; }
+}
+
+.cover .page-header {
+  @extend %fadein--slow;
+  position: absolute;
+  background-color: transparent;
+
+  @include media($medium-screen-up) { height: 200px;}
+  // a { @extend %inverse-link; }
 }

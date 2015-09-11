@@ -1,8 +1,13 @@
 <header class="page-header-inner">
-  <h1 class="site-title"><a href="{{site.baseurl}}/">{{site.title}}</a></h1>
+  {% unless page.layout == "cover" %}
+    <h1 class="site-title"><a href="{{site.baseurl}}/">{{site.title}}</a></h1>
+  {% endunless %}
   <ul class="page-header-links">
     <li class="page-header-links-item">
-      <a href="{{site.baseurl}}/projects/">Projects</a>
+      <a href="{{site.baseurl}}/projects/">Work</a>
+    </li>
+    <li class="page-header-links-item">
+      <a href="{{site.baseurl}}/photography/">Photography</a>
     </li>
     <li class="page-header-links-item">
       <a href="{{site.baseurl}}/writing/">Writing</a>

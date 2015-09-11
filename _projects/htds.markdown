@@ -1,7 +1,7 @@
 ---
 title:  HDTS 2013
 thumbnail: hdts_thumb.jpg
-
+featured: true
 client: High Desert Test Sites
 year: 2013
 role: Photography

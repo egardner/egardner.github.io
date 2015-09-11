@@ -2,14 +2,14 @@
 #==================================
 title: Eric Gardner
 email: gardner.ec@gmail.com
-description: Eric Gardner's Website
+description: Designer & Developer
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 # Build settings
 #==================================
 markdown: redcarpet
-redcarpet: 
+redcarpet:
   extensions: ["smart", "strikethrough"]
 
 highlighter: pygments

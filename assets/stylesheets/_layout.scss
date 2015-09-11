@@ -26,21 +26,6 @@ body {
   @include media($small-screen) {height: 200px;}
 }
 
-.page-content .page-title {
-  @include media($small-screen) { font-size: 2.5rem; }
-  font-size: 4rem;
-  font-weight: 400;
-  margin-top: 0.5rem;
-  margin-bottom: 1.25rem;
-  text-align: center;
-}
-
-.page-content .page-date {
-  text-align: center;
-  margin-top: -0.5rem;
-  margin-bottom: 3rem;
-}
-
 .page-content {
   @include flex(1);
 }
@@ -52,7 +37,9 @@ body {
 
 .page-content-main {
   @extend %body-text;
+  @extend %page-margins;
   margin: 0 $gutter;
+  padding-top: $gutter;
 }
 
 .page-footer {

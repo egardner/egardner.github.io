@@ -1,25 +1,31 @@
 .page-header {
-  color: $light-gray;
+  background-color: $light-gray;
+  color: $dark-gray;
+  height: 23rem;
   z-index: 50;
 }
 
-.cover .page-header {
-  @extend %fadein--slow;
-  @include background-image(linear-gradient(
-    hsla(0, 0%, 0%, 0.5) 0%, 
-    hsla(0, 0%, 0%, 0) 100%));
-  color: #fff;
-  position: absolute;
-  background-color: transparent;
+.page-header .page-title {
+  font-size: 3.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  text-align: center;
 
-  @include media($medium-screen-up) { height: 200px;}
-  a { @extend %inverse-link; }
+  @include media($small-screen) { font-size: 2.5rem; }
+}
+
+.page-header .page-date {
+  text-align: center;
+  margin-top: -0.5rem;
+  margin-bottom: 3rem;
 }
 
 .page-header-inner {
   @include display(flex);
   @include flex-wrap(wrap);
   @include align-items(baseline);
+  @include justify-content(flex-end);
   padding: $gutter;
   //margin-bottom: $gutter / 2;
   //margin-top: 1rem;
@@ -32,7 +38,7 @@
   letter-spacing: 0.5px;
 
   @include media ($medium-screen-up) {
-    @include flex(0 0 60%);
+    @include flex(0 0 40%);
   }
 }
 
@@ -41,24 +47,29 @@
   @include flex-wrap(wrap);
   @include flex(0 0 100%);
   @include media($medium-screen-up) {
-    @include flex(0 0 40%);
+    @include flex(0 0 60%);
+    @include justify-content(flex-end);
   }
 }
 
 .page-header-links-item {
-  @include flex(0 0 33.3333%);
+  //@include flex(0 0 25%);
   font-size: 1.125rem;
   text-align: left;
   line-height: 2;
 
   @include media($small-screen) {
-    &:nth-of-type(2) { text-align: center; }
-    &:nth-of-type(3) { text-align: right; }
+    @include flex(1);
+    text-align: center;
+    &:first-of-type { text-align: left; }
+    &:last-of-type { text-align: right; }
   }
 
   @include media($medium-screen-up) {
-    @include flex(1);
+    //@include flex(1);
+    margin-right: 2rem;
     text-align: right;
+    &:last-of-type { margin-right: 0; }
   }
 
 }

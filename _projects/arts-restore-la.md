@@ -5,7 +5,7 @@ thumbnail: arla_thumb.jpg
 client: Hammer Museum
 year: 2013
 role: "Web Design & Development"
-gallery: 
+gallery:
   - image: arla_01.jpg
   - image: arla_02.jpg
   - image: arla_03.jpg

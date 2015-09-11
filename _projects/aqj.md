@@ -1,7 +1,7 @@
 ---
 title:  A. Quincy Jones
 thumbnail: aqj_thumb.jpg
-
+featured: true
 client: Hammer Museum
 year: 2013
 role: Art Direction
