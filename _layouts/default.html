@@ -7,17 +7,14 @@
   <body>
     <div class="page-header">
       {% include page_header.html %}
-      <h1 class="page-title">{{page.title}}</h1>
-      {% if page.date %}<h4 class="page-date">{{page.date | date_to_long_string}}</h4>{% endif %}
+      <div class="cover-inner">
+        <h1 class="page-title">{{page.title}}</h1>
+        {% if page.date %}<h4 class="page-date">{{page.date | date_to_long_string}}</h4>{% endif %}
+      </div>
     </div>
     <div class="page-content" id="main">
       <div class="page-content-inner">
         {{ content }}
-      </div>
-    </div>
-    <div class="page-footer">
-      <div class="page-footer-inner">
-
       </div>
     </div>
     <script type="text/javascript" src="{{site.baseurl}}/assets/javascripts/application.js"></script>

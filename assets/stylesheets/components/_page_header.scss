@@ -1,17 +1,21 @@
 .page-header {
+  @extend %fadein;
+  @extend %block;
   background-color: $light-gray;
-  color: $dark-gray;
-  height: 23rem;
-  z-index: 50;
+  //@include background-image(url("#{$image-dir}/cover_01.jpg"));
+  background-position: center center;
+  background-size: cover;
+  height: 20rem;
+
+  @include media($small-screen) {
+    height: 24rem;
+  }
 }
 
-.page-header .page-title {
+.page-title {
   font-size: 3.25rem;
   font-weight: 400;
-  margin-bottom: 2rem;
-  margin-top: 3rem;
   text-align: center;
-
   @include media($small-screen) { font-size: 2.5rem; }
 }
 
@@ -35,7 +39,6 @@
   @include flex(0 0 100%);
   font-size: 1.35rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
 
   @include media ($medium-screen-up) {
     @include flex(0 0 40%);

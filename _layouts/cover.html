@@ -4,20 +4,19 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body class="cover">
+  <body class="cover-page">
     <ul id="cover-list">
       {% for image in site.data.covers %}
-      <li data-cover-image="{{site.baseurl}}/{{site.image_dir}}/{{image.url}}" data-cover-desc="{{image.desc}}"></li>
+      <li data-cover-image="{{site.baseurl}}/{{site.image_dir}}/{{image.url}}"
+          data-cover-desc="{{image.desc}}"></li>
       {% endfor %}
     </ul>
     <div class="page">
       <div class="page-header">
         {% include page_header.html %}
-      </div>
-      <div class="page-cover" id="cover">
-        <div class="page-cover-inner">
-          <h1 class="page-cover-title">{{site.title}}</h1>
-          <h2 class="page-cover-subtitle">{{site.description}}</h2>
+        <div class="cover-inner">
+          <h1 class="cover-title">{{site.title}}</h1>
+          <h2 class="cover-subtitle">{{site.description}}</h2>
         </div>
       </div>
       <div class="page-cover-content">

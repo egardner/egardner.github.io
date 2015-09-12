@@ -4,24 +4,14 @@
     hsla(0, 0%, 0%, 0) 100%));
 }
 
-.page-cover {
-  @extend %fadein;
-  @extend %block;
-  background-color: $light-gray;
-  //@include background-image(url("#{$image-dir}/cover_01.jpg"));
-  background-position: center center;
-  background-size: cover;
-  height: 23rem;
-  z-index: -10;
-}
-
-.page-cover-inner {
+.cover-inner {
   @extend %block-inner;
+  position: relative;
+  top: 3rem;
   padding: 1.5rem;
-  padding-top: 16rem;
 }
 
-.page-cover-title {
+.cover-title {
   font-size: 2.75rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -29,7 +19,7 @@
   text-transform: uppercase;
 }
 
-.page-cover-subtitle {
+.cover-subtitle {
   font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 2px;
@@ -38,11 +28,13 @@
 
 .page-cover-content {
   @extend %block;
+  @extend %fadein;
   margin-bottom: 4rem;
 }
 
 .page-cover-content-inner {
   @extend %block-inner;
+  @extend %fadein--slow;
 }
 
 .cover-text {
@@ -53,11 +45,11 @@
   &:first-of-type { border: none; }
 }
 
-.cover .page-header {
-  @extend %fadein--slow;
-  position: absolute;
-  background-color: transparent;
-
-  @include media($medium-screen-up) { height: 200px;}
-  // a { @extend %inverse-link; }
-}
+// .cover-page .page-header {
+//   @extend %fadein--slow;
+//   position: absolute;
+//   background-color: transparent;
+//
+//   @include media($medium-screen-up) { height: 200px;}
+//   // a { @extend %inverse-link; }
+// }

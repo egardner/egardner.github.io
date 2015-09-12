@@ -6,10 +6,14 @@
 // though Jekyll is not processing this file directly.
 
 // ionicons are imported in their own scss file (see vendor folder)
+@include font-face("Karla", "#{$fonts-dir}/karla-regular", 400);
+@include font-face("Karla", "#{$fonts-dir}/karla-italic", 400, italic);
+
+@include font-face("Karla", "#{$fonts-dir}/karla-bold", 600);
+@include font-face("Karla", "#{$fonts-dir}/karla-bolditalic", 600, italic);
 
 @include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Book-webfont", 400);
 @include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-Demi-webfont", 600);
 
 @include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-BookIt-webfont", 400, italic);
 @include font-face("Franklin Gothic", "#{$fonts-dir}/FranklinGothic-DemiIt-webfont", 600, italic);
-

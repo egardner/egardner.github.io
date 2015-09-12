@@ -1,4 +1,4 @@
-$max-width: 1200px;
+$max-width: 1080px;
 $gutter: 1.618rem;
 
 %block {
@@ -8,11 +8,15 @@ $gutter: 1.618rem;
 %block-inner {
   margin: 0 auto;
   max-width: $max-width;
+  @include media($small-screen) {
+    padding: 0 1rem;
+  }
 }
 
 
 %grid-container {
   margin-right: $gutter;
+  margin-top: 3rem;
 }
 
 %grid {
