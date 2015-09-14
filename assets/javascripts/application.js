@@ -4,7 +4,7 @@ layout: null
 {% include_relative vendor/jquery.min.js %}
 {% include_relative vendor/jquery.smoothState.js %}
 {% include_relative vendor/slick.min.js %}
-{% include_relative vendor/featherlight.min.js %}
+{% include_relative vendor/jquery.fluidbox.min.js %}
 
 // Helper Functions
 var changeBackground, getRandomImage, slickSetup;
@@ -50,7 +50,8 @@ $(document).ready(function() {
     randomImage = getRandomImage($collection);
     //changeBackground($cover, randomImage);
   }
-  slickSetup();
+  $(".project-gallery a").fluidbox();
+  // slickSetup();
   // return $("#main").smoothState({
   //   blacklist: '.no-smoothState'
   // });
