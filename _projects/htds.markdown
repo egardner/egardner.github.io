@@ -6,12 +6,16 @@ client: High Desert Test Sites
 year: 2013
 role: Photography
 gallery:
- - image: hdts_small_01.jpg
- - image: hdts_small_02.jpg
- - image: hdts_small_03.jpg
- - image: hdts_small_04.jpg
- - image: hdts_small_05.jpg
- - image: hdts_small_06.jpg
+ - row:
+   - image: hdts_small_01.jpg
+ - row:
+   - image: hdts_small_02.jpg
+   - image: hdts_small_03.jpg
+ - row:
+   - image: hdts_small_04.jpg
+   - image: hdts_small_05.jpg
+ - row:
+   - image: hdts_small_06.jpg
 
 ---
 

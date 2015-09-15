@@ -32,7 +32,7 @@
 }
 
 // Grid system
-$gutter: 1.618rem;
+$gutter: 1rem;
 
 %grid {
   @include display(flex);
@@ -59,3 +59,19 @@ $gutter: 1.618rem;
 .site-content { @include flex(1); }
 
 .page-content-inner { @extend %text-column; }
+
+.gallery {
+  @extend %grid;
+  @extend %grid--padding;
+  margin-right: $gutter;
+}
+
+.gallery-row {
+  @include flex(0 0 100%);
+  @include display(flex);
+}
+
+.gallery-item {
+  @extend %grid-item--padding;
+  @include flex(1);
+}

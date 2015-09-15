@@ -53,7 +53,7 @@ defaults:
       path: ""
       type: "projects"
     values:
-      layout: "page"
+      layout: "article"
 
 # Prose.io config
 #==================================
