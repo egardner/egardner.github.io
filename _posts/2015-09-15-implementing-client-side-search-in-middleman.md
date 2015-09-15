@@ -166,8 +166,50 @@ function contentList(data) {
 ```
 
 #### 4. Present the results to the User
+Once we have the results of the user's search, we need to display them in a way that is informative and responsive. Rather than having a dedicated search page, I wanted the search results component to be immedately available anywhere. **Handlebars.js** provided an elegant solution here.
 
+In a server-side app, I'd just define a partial in whatever templating language I was using and render that as needed. Since my app is static (content comes fully rendered from the server), there is not an obvious place to put results for searches that may happen in the future. Enter Handlebars.
 
+Handlebars is a Javascript templating language which can be used on either the client or the server. The simplest way of using it is to create a partial template inside of `<script>` tags that live in the normal HTML pages of the site. The code inside of these tags is immediately ready for use but won't actually render until Handlebars grabs it (injecting whatever data it needs at runtime).
+
+It would certainly be possible to append search results manually to the DOM using jQuery, but that approach sounded very tedious and I wanted to try a new piece of technology. By using Handlebars, we are spared from painful JS string concatenation and don't have to maintain HTML inside of our javascript files.
+
+In Middleman, I've defined my template as a partial. Middleman does not allow straight HTML partials, so I've defined it as `_results.html.erb` – however, no ruby processing takes place inside of this file.
+
+{% raw %}
+```html
+<script id="results-template" type="text/x-handlebars-template">
+	<li class="result-item">
+    	<a href="{{url}}">{{title}}</a><br />
+    </li>
+</script>
+```
+{% endraw %}
+
+Pretty simple, right? This template lives in my HTML as an inert `<script>` tag until called at runtime. That happens like this (a lot of event handlers/UI code has been omitted from this function):
+
+```javascript
+function searchSetup(index, contents){
+  // Set up Handlebars template
+  var resultsTemplate = Handlebars.compile($("#results-template").html());
+
+  // various event handlers...
+  
+  $("#search-field").bind("keyup", debounce(function(){
+    $(".search-results").empty();
+    if ($(this).val() < 2) return;
+    var query = $(this).val();
+    var results = index.search(query);
+    $.each(results, function(index, result){
+      //console.log(JSON.stringify(contents[result.ref]));
+      $(".search-results").append(resultsTemplate({
+        title: contents[result.ref].title,
+        url: contents[result.ref].url
+      }));
+    });
+  }));
+}
+```
 
 
 
