@@ -1,0 +1,25 @@
+.gallery-container {
+  margin-right: $gutter * 2;
+
+  @include media($large-screen-up) {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+}
+
+.gallery {
+  @extend %grid;
+  @extend %grid--padding;
+}
+
+.gallery-row {
+  @extend %grid-item--padding;
+  @include display(flex);
+  @include flex(0 0 100%);
+  padding-top: 0;
+}
+
+.gallery-item {
+  @extend %grid-item--padding;
+  @include flex(1);
+}

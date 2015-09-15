@@ -50,7 +50,7 @@ $(document).ready(function() {
     randomImage = getRandomImage($collection);
     //changeBackground($cover, randomImage);
   }
-  $(".project-gallery a").fluidbox();
+  $(".gallery-item a").fluidbox();
   // slickSetup();
   // return $("#main").smoothState({
   //   blacklist: '.no-smoothState'

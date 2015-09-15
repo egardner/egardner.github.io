@@ -8,12 +8,12 @@
   @include media($medium-screen-up) { margin: 0 2rem; }
   @include media($large-screen-up) {
     margin: 0 auto;
-    max-width: 50rem;
+    max-width: 60rem;
   }
 }
 
 %text-column {
-  margin: 0 1rem;
+  margin: 0 2rem;
 
   @include media($medium-screen-up) {
     font-size: 1.125em;
@@ -58,20 +58,7 @@ $gutter: 1rem;
 
 .site-content { @include flex(1); }
 
-.page-content-inner { @extend %text-column; }
-
-.gallery {
-  @extend %grid;
-  @extend %grid--padding;
-  margin-right: $gutter;
-}
-
-.gallery-row {
-  @include flex(0 0 100%);
-  @include display(flex);
-}
-
-.gallery-item {
-  @extend %grid-item--padding;
-  @include flex(1);
+.page-content-inner {
+  @extend %text-column;
+  margin-bottom: 3rem;
 }
