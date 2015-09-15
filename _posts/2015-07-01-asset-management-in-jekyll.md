@@ -7,7 +7,7 @@ published: true
 
 > _This post is the first in a series discussing the ins and outs of building this website._
 
-## Asset Management for the Grunt-Averse
+### Asset Management for the Grunt-Averse
 
 Without a doubt, the biggest challenge in building this site was figuring out how to deal with assets.
 
@@ -17,7 +17,7 @@ _This is not what I signed up for._
 
 ---
 
-## Tools of choice
+### Tools of choice
 
 I'm a big fan of the [Bourbon](http://bourbon.io) front-end framework, which I think hits the sweet spot between light weight and rich features. The accompanying grid system [Neat](http://neat.bourbon.io) has the added bonus of leaving your markup completely free of non-semantic
 classes like `grid-col-4-med-2` (yuck!).
@@ -31,7 +31,7 @@ Many developers would use [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.c
 In what follows I'm going to outline the steps I took to organize assets using only Jekyll's built-in tools.
 
 ---
-## 1. File Structure
+### 1. File Structure
 
 I prefer to work with a clearly-defined `assets` directory where all styles, fonts, and scripts live. This directory (which lives in the root of the project) is organized as follows:
 
@@ -54,7 +54,7 @@ Jekyll works by copying all files inside the root folder, processing them where 
 In this setup, all component SCSS and JS lives inside of underscore-prefixed directories (`stylesheets` and `vendor`, respectively). This means that only compiled code will be copied to the production site.
 
 ---
-## 2. Sass
+### 2. Sass
 
 Jekyll processes Sass the way it handles all other files. This means that any Sass files beginning with YAML front matter (even just two lines of `---` at the start of the file) will be "transformed" into a CSS file of the same name. So `application.scss` becomes `application.css` when it is copied into the `_site` folder.
 
@@ -108,7 +108,7 @@ Finally, I need to import everything in my `application.scss` file. The beginnin
 ```
 
 ---
-## 3. Fonts
+### 3. Fonts
 
 Web design is 95% typography, so using good typefaces is essential. There are a lot of sources for free and non-free webfonts of excellent quality, and one of the easiest ways to load webfonts is through a CDN, by way of a `<link>` tag in the HTML head of your pages.
 
@@ -154,7 +154,7 @@ After this I import the Bitters defaults, and then any other layout-specific or 
 @import "layout";
 ```
 ---
-## 4. JavaScript
+### 4. JavaScript
 
 To cut down on HTTP requests, I'm compiling all scripts into a single `application.js` file, similar to the way Sass is handled. Jekyll does not currently support a simple way to define a site-wide plugin directory the way it can handle Sass partials. However, as of version 2.4, Jekyll supports an `include_relative` tag ([docs here](http://jekyllrb.com/docs/templates/#including-files-relative-to-another-file)), which allows library files to be included without having to be copied to the production site.
 
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 ```
 ---
-## 5. Version Control
+### 5. Version Control
 
 One final point: **Commit all dependencies to source**---this is a no-no in some circles, but since this site is being deployed via GitHub Pages, everything needed to generate it (including various vendor files) must be committed to the source repo. I know this sounds obvious but I made this mistake myself when first getting started here.
 

@@ -58,6 +58,10 @@ $gutter: 1rem;
 
 .site-content { @include flex(1); }
 
+.page-title {
+  margin-bottom: 0.25rem;
+}
+
 .page-content-inner {
   @extend %text-column;
   margin-bottom: 3rem;
