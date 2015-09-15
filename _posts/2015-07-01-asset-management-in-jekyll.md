@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Jekyll Asset Management
 published: true
 ---
@@ -55,11 +54,11 @@ Jekyll works by copying all files inside the root folder, processing them where 
 In this setup, all component SCSS and JS lives inside of underscore-prefixed directories (`stylesheets` and `vendor`, respectively). This means that only compiled code will be copied to the production site.
 
 ---
-## 2. Sass 
+## 2. Sass
 
 Jekyll processes Sass the way it handles all other files. This means that any Sass files beginning with YAML front matter (even just two lines of `---` at the start of the file) will be "transformed" into a CSS file of the same name. So `application.scss` becomes `application.css` when it is copied into the `_site` folder.
 
-One exception to this is how Sass partials are handled. Jekyll recongizes a special directory for Sass partials. All files in the partials directory are ignored by Jekyll except for resolving `@import` directives. Stylesheets from a 3rd-party framework like Bourbon or Bootstrap can live here without bloating up the final site; the final `application.css` file will be a single, minified stylesheet that contains all necessary code, eliminating extra HTTP requests and speeding up load time. 
+One exception to this is how Sass partials are handled. Jekyll recongizes a special directory for Sass partials. All files in the partials directory are ignored by Jekyll except for resolving `@import` directives. Stylesheets from a 3rd-party framework like Bourbon or Bootstrap can live here without bloating up the final site; the final `application.css` file will be a single, minified stylesheet that contains all necessary code, eliminating extra HTTP requests and speeding up load time.
 
 By default Jekyll looks for Sass partials in the folder `_sass` in the project root. I want to change that so I can keep all my stylesheet files inside of my `assets` directory, so first I need to tell Jekyll where to look for Sass imports by updating the site's `_config.yml` file:
 

@@ -1,49 +1,11 @@
-body {
+// Flexbox sticky footer
+
+.site {
   @include display(flex);
   @include flex-direction(column);
   min-height: 100vh;
 }
 
-.page-header,
-.page-content,
-.page-footer {
-  @extend %block;
-}
-
-.page-header-inner,
-.page-content-inner {
-  @extend %block-inner;
-}
-
-.page-cover-image {
-  @extend %fadein;
-  height: 400px;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: 1rem;
-
-  @include media($small-screen) {height: 200px;}
-}
-
-.page-content {
+.site-content {
   @include flex(1);
-}
-
-.page-content-inner {
-  @extend %fadein;
-  padding-bottom: $gutter;
-}
-
-.page-content-main {
-  @extend %body-text;
-  @extend %page-margins;
-  margin: 0 $gutter;
-  padding-top: $gutter;
-}
-
-.page-footer {
-  @extend %fadein;
-  background-color: $medium-gray;
-  height: 100px;
 }

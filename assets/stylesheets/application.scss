@@ -10,17 +10,9 @@ $fonts-dir: "{{site.baseurl}}/assets/fonts";
 
 @import "fonts";
 @import "base/base";
-@import "layout";
 
 @import "components/transitions";
-@import "components/projects";
-@import "components/page_cover";
-@import "components/type";
-@import "components/grid";
-@import "components/page_header";
-@import "components/post_list";
 @import "components/syntax";
 
-@import "vendor/slick";
 @import "vendor/featherlight.min.css";
 @import "vendor/fluidbox";

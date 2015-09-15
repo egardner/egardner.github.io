@@ -1,5 +1,4 @@
 ---
-layout: project
 title: Arts Restore LA
 thumbnail: arla_thumb.jpg
 client: Hammer Museum
