@@ -68,10 +68,10 @@ Expressed as pseudo-code, here's the logic used to assemble the index:
 1. Find all pages that should be included in the search
 2. Create an array of index `entries` (empty to begin)
 3. Iterate through the array of all pages and...
-	a. create a blank `entry` hash
-    b. assign various values to the hash (`:id`, `:title`, `:url`, etc.) and store relevant date from the page
-    c. Append this hash to the `entries` array and repeat
-4. Use Ruby's handy `to_json` method to convert the `entries` array into a properly formatted JSON object.
+   - create a blank `entry` hash
+   - assign various values to the hash (`:id`, `:title`, `:url`, etc.) and store relevant date from the page
+   - Append this hash to the `entries` array and repeat
+   - Use Ruby's handy `to_json` method to convert the `entries` array into a properly formatted JSON object.
 
 
 
