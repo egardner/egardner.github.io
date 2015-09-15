@@ -76,6 +76,7 @@ Expressed as pseudo-code, here's the logic used to assemble the index:
 In my case, I am not using Middleman's blog extension, so I don't have a convenient site-wide collection of `articles` to grab. Instead I'm searching the `sitemap` object to find all resources with a `source_file` in Markdown (all raw text content, in this project). The `contents.json.erb` file looks like this (simplified here):
 
 ```erb
+# contents.json.erb
 <%
 pages = sitemap.resources.find_all { |p| p.source_file.match(/\.md/) }
 entries = []
@@ -93,6 +94,14 @@ pages.each_with_index do |page, index|
 end
 %><%= entries.to_json %>
 ```
+
+A note on how the `:content` field is populated: Each object in the `pages` array is a `Middleman::Sitemap::Resource` object. The `Resource` object comes with a `render` method, which converts the source file into HTML output. By passing an option of `{:layout => false}` when the method is called, we leave behind all extraneous header/footer/nav elements, etc. To strip down our index even more, a call to `gsub` with a crude regular expression strips out most HTML tags. Since this is just an index, the content doesn't have to be 100% perfect (end users will never see it directly). But this technique helps to remove some clutter before we start running queries.
+
+Now, every time we build our site, `contents.json.erb` becomes `contents.json`, a single JSON file that includes both metadata and full text content for every page that exists. In my case (a large academic book with several lengthy essays), this file came out to about 650KB – similar to the size of a large image.
+
+### Searching in the Browser
+
+
 
 
 
