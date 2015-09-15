@@ -15,6 +15,14 @@
 %text-column {
   margin: 0 2rem;
 
+  ol {
+    @extend %default-ol;
+  }
+
+  ul {
+    @extend %default-ul;
+  }
+
   @include media($medium-screen-up) {
     font-size: 1.125em;
     margin: 0 auto;
