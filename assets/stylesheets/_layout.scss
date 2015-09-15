@@ -1,3 +1,11 @@
+// Global type sizes
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: modular-scale((6 - $i), 1em, $minor-third);
+  }
+}
+
+
 // Flexbox sticky footer
 
 .site {
@@ -8,4 +16,13 @@
 
 .site-content {
   @include flex(1);
+}
+
+.page-header {
+  background-color: $light-gray;
+  height: 500px;
+}
+
+.page-content {
+
 }

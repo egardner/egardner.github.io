@@ -11,6 +11,8 @@ $fonts-dir: "{{site.baseurl}}/assets/fonts";
 @import "fonts";
 @import "base/base";
 
+@import "layout";
+
 @import "components/transitions";
 @import "components/syntax";
 
