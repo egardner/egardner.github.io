@@ -177,7 +177,7 @@ It would certainly be possible to append search results manually to the DOM usin
 In Middleman, I've defined my template as a partial. Middleman does not allow straight HTML partials, so I've defined it as `_results.html.erb` – however, no ruby processing takes place inside of this file.
 
 {% raw %}
-```html
+```handlebars
 <script id="results-template" type="text/x-handlebars-template">
 	<li class="result-item">
     	<a href="{{url}}">{{title}}</a><br />
