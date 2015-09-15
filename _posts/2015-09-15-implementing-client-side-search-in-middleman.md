@@ -58,7 +58,6 @@ When you run this query, Lunr returns an array of results (in descending order o
 A lot more is possible (just check the [documentation](http://lunrjs.com/docs/) to get a sense), but I was able to get a fully-functioning implementation working without doing much more than what I've just shown here. Lunr is a great example of a library that does one thing and does it very well.
 
 ### Generating a JSON Index
-
 So Lunr makes it easy to run a client-side search, but we still need to actually _generate_ the index that it will use to search the site. This means we need to automatically build a JSON version of our content (the content we want to search, anyway) and then feed that into Lunr when necessary.
 
 From Middleman's perspective, this is no different than processing any other template for a static page – we are just compiling the final output as JSON instead of HTML in this particular case. The simplest way to do this is to create a page in the `source` folder called `contents.json.erb`.
@@ -100,6 +99,35 @@ A note on how the `:content` field is populated: Each object in the `pages` arra
 Now, every time we build our site, `contents.json.erb` becomes `contents.json`, a single JSON file that includes both metadata and full text content for every page that exists. In my case (a large academic book with several lengthy essays), this file came out to about 650KB – similar to the size of a large image.
 
 ### Searching in the Browser
+Now we have a static JSON index of our site, compiled at build time. To make our site searchable, we need to go through the following steps (again, in pseudocode first):
+
+1. Load the JSON file asynchronously in the background (before the user starts searching)
+2. Feed the contents of this file to Lunr to create a searchable index
+3. Hang on to a copy of this data to cross-reference our results with (i.e., when Lunr returns a result of `ref: 4`, we need to look up `element[4]` of the site contents to show the user the title/URL of their search result.
+4. Present the search results to the user as they type (we'll use a Handlebars template for this).
+
+I'll go through each step in more detail below.
+
+#### Asynchronous Loading
+Learning to think asynchronously in Javascript can come with a pretty steep curve. This technique is essential for most sophisticated user interactions, but it can be very counter-intuitive to think this way – especially starting out.
+
+Asynchronous functions can feel a little like time-travel. Before you make an asynchronous function call, you can move in linear order from one statement to the next. Values get assigned in the way you expec them to and are available later on in the program. But once you've made that call, you step into an uncertain future. There is no way to know just how much time will pass until the call returns – meanwhile control continues to flow down the program, oblivious.
+
+When you need to work with data that will not be available until an async request resolves, all subsequent work must be done in a callback function — leave the traditional control flow behind at this point.
+
+The code to load our index looks like this:
+
+```javascript
+// various function declarations and set-up has happened already at this point
+$.getJSON("/contents.json", function(data) {
+	var index = populateIndex(data);
+    var contents = contentList(data);
+    searchSetup(index, contents);
+    // other code for app below - anything that needs search functionality
+    // lives inside of this callback
+    // ...
+});
+```
 
 
 
