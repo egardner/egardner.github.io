@@ -1,6 +1,6 @@
 ---
 layout: article
-published: false
+published: true
 title: "Client-side Search in Middleman"
 ---
 
