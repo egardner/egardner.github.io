@@ -214,6 +214,9 @@ This function (which needs to be called inside of the callback after the index h
 
 All actual search queries happen as a result of this input. A Lunr search is executed on each keyup event which takes the results of the query, checks them against the contents array (`contents[result.ref].title`, etc.), and appends these results to the Handlebars template. Search results appear instantly, as the user types.
 
+#### Closing Thoughts
+Implementing this feature took some time but the process is fairly straightforward in hindsight. One thing to note here – this approach is loading the search index on each pageload. For a standard site this would be an unacceptable performance burden. But this is an area where using the Smoothstate library to structure the site like a single-page app really pays off. The index is loaded when the user first arrives at the site. As they move between pages, there is no need to request this resource again, and the full text content of the site is accessable at any time.
+
 
 
 
