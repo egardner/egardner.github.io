@@ -108,7 +108,7 @@ Now we have a static JSON index of our site, compiled at build time. To make our
 
 I'll go through each step in more detail below.
 
-#### Asynchronous Loading
+#### 1. Asynchronous Loading
 Learning to think asynchronously in Javascript can come with a pretty steep curve. This technique is essential for most sophisticated user interactions, but it can be very counter-intuitive to think this way – especially starting out.
 
 Asynchronous functions can feel a little like time-travel. Before you make an asynchronous function call, you can move in linear order from one statement to the next. Values get assigned in the way you expec them to and are available later on in the program. But once you've made that call, you step into an uncertain future. There is no way to know just how much time will pass until the call returns – meanwhile control continues to flow down the program, oblivious.
@@ -118,7 +118,8 @@ When you need to work with data that will not be available until an async reques
 The code to load our index looks like this:
 
 ```javascript
-// various function declarations and set-up has happened already at this point
+// various function declarations and set-up 
+// has happened already at this point
 $.getJSON("/contents.json", function(data) {
 	var index = populateIndex(data);
     var contents = contentList(data);
@@ -129,7 +130,42 @@ $.getJSON("/contents.json", function(data) {
 });
 ```
 
+All search-related code happens inside an anonymous callback function after $.getJSON() resolves. The returned `data` is passed around as a parameter into other functions below.
 
+#### 2. Set up the Lunr Index
+The first function called inside of our callback sets up a new Lunr index with the contents of `contents.json`. The function which does that looks like this:
+
+```javascript
+// Feed data into an empty lunr index and return the populated result
+function populateIndex(data) {
+  var index = lunr(function(){
+    this.field('title', { boost: 10 });
+    this.field('content');
+    this.ref('id');
+  });
+  data.forEach(function(item) {
+    index.add(item);
+  });
+  return index;
+}
+```
+Since `data` is a JSON array, we can iterate through it and add each object as a document to the Lunr index. That's it – Lunr takes care of the rest here.
+
+#### 3. Keep a content list to cross-reference results against
+The next line in our callback creates a `contents` variable with a `contentList()` function. As mentioned above, Lunr searches only return a `ref` and a `score` – we want to know the actual title, URL, etc. of whatever pages are coming up in the results. So stashing the search data into a `contents` array gives us something to reference.
+
+```javascript
+// Create an array of contents to reference our search results against
+function contentList(data) {
+  var contents = [];
+  data.forEach(function(item) {
+    contents.push(item);
+  });
+  return contents;
+}
+```
+
+#### 4. Present the results to the User
 
 
 
