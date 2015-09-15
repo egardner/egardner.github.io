@@ -201,7 +201,6 @@ function searchSetup(index, contents){
     var query = $(this).val();
     var results = index.search(query);
     $.each(results, function(index, result){
-      //console.log(JSON.stringify(contents[result.ref]));
       $(".search-results").append(resultsTemplate({
         title: contents[result.ref].title,
         url: contents[result.ref].url
@@ -210,6 +209,11 @@ function searchSetup(index, contents){
   }));
 }
 ```
+
+This function (which needs to be called inside of the callback after the index has loaded) accepts two sources of data – the Lunr index and the contents array from above. When it first runs, it compiles the Handlebars template and sets up an event handler to deal with search input.
+
+All actual search queries happen as a result of this input. A Lunr search is executed on each keyup event which takes the results of the query, checks them against the contents array (`contents[result.ref].title`, etc.), and appends these results to the Handlebars template. Search results appear instantly, as the user types.
+
 
 
 
