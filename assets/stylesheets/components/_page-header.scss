@@ -1,0 +1,51 @@
+// Page Header Classes
+.page-header {
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include media($medium-screen-up) { margin: 0 2rem; }
+}
+
+.page-navigation {
+  @include display(flex);
+  @include flex(0 0 100%);
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  @include media($medium-screen-up) { margin-bottom: 8rem; }
+}
+
+.site-title {
+  @include flex(0 0 100%);
+  margin-bottom: 1rem;
+  text-align: center;
+
+  @include media($medium-screen-up) {
+    @include flex(0 0 50%);
+    margin: 0;
+    text-align: left;
+  }
+
+  @include media($large-screen-up) { @include flex(0 0 60%); }
+}
+
+.page-navigation-links {
+  @include display(flex);
+  @include justify-content(space-between);
+  @include flex(0 0 100%);
+  @include media($medium-screen-up) { @include flex(0 0 50%); }
+  @include media($large-screen-up) { @include flex(0 0 40%); }
+}
+
+.page-navigation-links-item {
+  @include flex(1);
+  text-align: center;
+  @include media($medium-screen-up) { text-align: center; }
+}
+
+.page-header-inner {
+  @include flex(0 0 100%);
+  margin-bottom: 1rem;
+  text-align: center;
+  @include media($medium-screen-up) { margin-bottom: 5rem; }
+}

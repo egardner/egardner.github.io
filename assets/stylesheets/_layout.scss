@@ -1,28 +1,61 @@
 // Global type sizes
 @for $i from 1 through 6 {
-  h#{$i} {
-    font-size: modular-scale((6 - $i), 1em, $minor-third);
+  h#{$i} { font-size: modular-scale((6 - $i), 1em, $major-third); }
+}
+
+%container {
+  margin: 0 1rem;
+  @include media($medium-screen-up) { margin: 0 2rem; }
+  @include media($large-screen-up) {
+    margin: 0 auto;
+    max-width: 50rem;
   }
 }
 
+%text-column {
+  margin: 0 1rem;
+
+  @include media($medium-screen-up) {
+    font-size: 1.125em;
+    margin: 0 auto;
+    max-width: 34em;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 2rem;
+    }
+  }
+}
+
+// Grid system
+$gutter: 1.618rem;
+
+%grid {
+  @include display(flex);
+  @include flex-wrap(wrap);
+}
+
+%grid-item {
+  @include media($small-screen) { @include flex(0 0 100%); }
+  @include media($medium-screen-up) { @include flex(0 0 50%); }
+  @include media($large-screen-up) { @include flex(0 0 33.3333%); }
+}
+
+%grid--padding { margin: -$gutter 0 $gutter -$gutter; }
+%grid-item--padding { padding: $gutter 0 0 $gutter; }
+
 
 // Flexbox sticky footer
-
 .site {
   @include display(flex);
   @include flex-direction(column);
   min-height: 100vh;
 }
 
-.site-content {
-  @include flex(1);
-}
+.site-content { @include flex(1); }
 
-.page-header {
-  background-color: $light-gray;
-  height: 500px;
-}
-
-.page-content {
-
-}
+.page-content-inner { @extend %text-column; }

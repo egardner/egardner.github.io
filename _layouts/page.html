@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="page-header">
   <div class="page-navigation">
-    <h1 class="site-title">{{site.title}}</h1>
+    <h5 class="site-title">{{site.title}}</h5>
     <ul class="page-navigation-links">
       <li class="page-navigation-links-item">
         <a href="{{site.baseurl}}/projects/">Work</a>
@@ -12,11 +12,16 @@ layout: default
         <a href="{{site.baseurl}}/writing/">Writing</a>
       </li>
       <li class="page-navigation-links-item">
+        <a href="{{site.baseurl}}/photography/">Photography</a>
+      </li>
+      <li class="page-navigation-links-item">
         <a href="{{site.baseurl}}/about/">About</a>
       </li>
     </ul>
   </div>
-  <h1 class="page-title">{{page.title}}</h1>
+  <div class="page-header-inner">
+    <h1 class="page-title">{{page.title}}</h1>
+  </div>
 </div>
 <div class="page-content">
   {{content}}
