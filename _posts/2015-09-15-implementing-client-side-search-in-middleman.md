@@ -73,6 +73,27 @@ Expressed as pseudo-code, here's the logic used to assemble the index:
    - Append this hash to the `entries` array and repeat
    - Use Ruby's handy `to_json` method to convert the `entries` array into a properly formatted JSON object.
 
+In my case, I am not using Middleman's blog extension, so I don't have a convenient site-wide collection of `articles` to grab. Instead I'm searching the `sitemap` object to find all resources with a `source_file` in Markdown (all raw text content, in this project). The `contents.json.erb` file looks like this (simplified here):
+
+```erb
+<%
+pages = sitemap.resources.find_all { |p| p.source_file.match(/\.md/) }
+entries = []
+
+pages.each_with_index do |page, index|
+	object = {}
+    # ... some specifics ommitted
+    entry = {
+    	:id 	 => index,
+        :title	 => page.data.title,
+        :url	 => page.url,
+        :content => page.render({:layout => false }).gsub( %r{</?[^>]+?>}, '' )
+    }
+    entries << entry
+end
+%><%= entries.to_json %>
+```
+
 
 
 
