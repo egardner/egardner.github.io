@@ -1,6 +1,6 @@
 ---
 title:
-description: :)
+description: I create engaging educational environments using new and traditional media. My passion is to find exciting new ways to tell stories.
 layout: page
 permalink: /about/
 video: true
