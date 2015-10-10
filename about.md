@@ -1,6 +1,6 @@
 ---
 title:
-description: I create engaging educational environments using new and traditional media. My passion is to find exciting new ways to tell stories.
+description: I am an environmental designer. My passion is to find exciting new ways to create educational experiences for museums and cultural institutions. 
 layout: page
 permalink: /about/
 video: true
