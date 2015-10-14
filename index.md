@@ -2,7 +2,7 @@
 title:
 description: I am an environmental designer. My passion is to find exciting new ways to create educational experiences for museums and cultural institutions. 
 layout: page
-permalink: /projects/
+permalink: /
 video: true
 ---
 
