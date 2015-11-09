@@ -1,3 +1,9 @@
+body {
+  @include font-feature-settings("kern", "liga", "pnum", "smcp");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 // Global type sizes
 @for $i from 1 through 6 {
   h#{$i} { font-size: modular-scale((6 - $i), 1em, $major-third); }
@@ -15,6 +21,11 @@
 %text-column {
   margin: 0 1rem;
 
+  a {
+    border-bottom: 1px solid tint($action-color, 90%);
+    &:hover { border-bottom: 1px solid tint($action-color, 60%); }
+  }
+
   @include media($medium-screen-up) {
     font-size: 1.125em;
     margin: 0 auto;
@@ -29,6 +40,11 @@
       margin-top: 2rem;
     }
   }
+}
+
+%base-type {
+  @extend %default-ul;
+  @extend %default-ol;
 }
 
 // Grid system
@@ -58,7 +74,16 @@ $gutter: 1rem;
 
 .site-content { @include flex(1); }
 
-.page-content-inner { @extend %text-column; }
+.page-header-inner {
+  @include media($small-screen) { font-size: .65em; }
+}
+
+.page-content-inner {
+  @extend %text-column;
+  margin-bottom: $base-spacing * 2;
+  ul { @extend %default-ul; }
+  ol { @extend %default-ol; }
+}
 
 .gallery {
   @extend %grid;
