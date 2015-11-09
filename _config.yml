@@ -80,7 +80,7 @@ prose:
       - name: "layout"
         field:
           element: "hidden"
-          value: "page"
+          value: "article"
       - name: "tags"
         field:
           element: "multiselect"
