@@ -52,5 +52,6 @@
   margin: 1rem auto 2rem;
   max-width: 30rem;
   text-align: center;
+  @include media($small-screen) { font-size: .85em; max-width: 23rem; }
   @include media($medium-screen-up) { margin-bottom: 2rem; }
 }

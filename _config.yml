@@ -72,15 +72,23 @@ prose:
     - Gemfile.lock
   metadata:
     _projects:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
       - name: "layout"
         field:
           element: "hidden"
-          value: "project"
+          value: "page"
     _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
       - name: "layout"
         field:
           element: "hidden"
-          value: "article"
+          value: "page"
       - name: "tags"
         field:
           element: "multiselect"

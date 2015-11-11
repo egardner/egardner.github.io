@@ -14,6 +14,8 @@ $fonts-dir: "{{site.baseurl}}/assets/fonts";
 @import "layout";
 @import "components/page-header";
 @import "components/project-grid";
+@import "components/posts";
+@import "components/gallery";
 
 @import "components/transitions";
 @import "components/syntax";

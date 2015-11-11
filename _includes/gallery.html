@@ -1,0 +1,17 @@
+{% if page.gallery %}
+<div class="gallery-container">
+  <div class="gallery">
+    {% for item in page.gallery %}
+    <div class="gallery-row">
+      {% for image in item.row %}
+        <div class="gallery-item">
+          <a href="{{site.baseurl}}/{{site.image_dir}}/{{image.link}}">
+            <img src="{{site.baseurl}}/{{site.image_dir}}/{{image.image}}">
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
