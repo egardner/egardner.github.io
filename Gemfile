@@ -8,3 +8,5 @@ gem "middleman-deploy"
 gem "middleman-livereload"
 gem "bourbon"
 gem "neat"
+
+gem "middleman-blog"

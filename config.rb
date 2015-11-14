@@ -11,6 +11,11 @@ set :images_dir, "assets/images"
 set :fonts_dir, "assets/fonts"
 set :layout, "layouts/application"
 
+activate :blog do |blog|
+  #set options here
+end
+
+
 configure :development do
  activate :livereload
 end
