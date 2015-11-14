@@ -1,6 +1,0 @@
-{% capture page_category %}
-  {{ page.path | split: '/' | first | remove_first: '_' }}
-{% endcapture %}
-{% if page_category contains 'posts' %}
-  <span class="back-to-list"><a href="{{site.baseurl}}/writing">&larr; Posts</a></span>
-{% endif %}
