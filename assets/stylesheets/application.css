@@ -1,0 +1,1361 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@import url(vendor/syntax.css);
+/* line 10, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+/* line 20, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 34, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 55, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 68, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 78, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 90, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 98, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 110, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 118, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 127, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 136, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 145, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 154, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 162, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 170, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+sup {
+  top: -0.5em; }
+
+/* line 174, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 185, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 193, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 204, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 212, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 222, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 230, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 253, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 267, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 278, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 291, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 303, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 312, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 323, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 335, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 347, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 358, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 371, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 380, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 391, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 400, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 409, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 420, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 425, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/normalize.css */
+td,
+th {
+  padding: 0; }
+
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/merriweather-light.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-light.woff2") format("woff2"), url("../fonts/merriweather-light.woff") format("woff"), url("../fonts/merriweather-light.ttf") format("truetype"), url("../fonts/merriweather-light.svg#Merriweather") format("svg"); }
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/merriweather-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-regular.woff2") format("woff2"), url("../fonts/merriweather-regular.woff") format("woff"), url("../fonts/merriweather-regular.ttf") format("truetype"), url("../fonts/merriweather-regular.svg#Merriweather") format("svg"); }
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/merriweather-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-bold.woff2") format("woff2"), url("../fonts/merriweather-bold.woff") format("woff"), url("../fonts/merriweather-bold.ttf") format("truetype"), url("../fonts/merriweather-bold.svg#Merriweather") format("svg"); }
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/merriweather-black.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-black.woff2") format("woff2"), url("../fonts/merriweather-black.woff") format("woff"), url("../fonts/merriweather-black.ttf") format("truetype"), url("../fonts/merriweather-black.svg#Merriweather") format("svg"); }
+@font-face {
+  font-family: "Merriweather";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/merriweather-lightitalic.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-lightitalic.woff2") format("woff2"), url("../fonts/merriweather-lightitalic.woff") format("woff"), url("../fonts/merriweather-lightitalic.ttf") format("truetype"), url("../fonts/merriweather-lightitalic.svg#Merriweather") format("svg"); }
+@font-face {
+  font-family: "Merriweather";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/merriweather-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-italic.woff2") format("woff2"), url("../fonts/merriweather-italic.woff") format("woff"), url("../fonts/merriweather-italic.ttf") format("truetype"), url("../fonts/merriweather-italic.svg#Merriweather") format("svg"); }
+@font-face {
+  font-family: "Merriweather";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/merriweather-bolditalic.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-bolditalic.woff2") format("woff2"), url("../fonts/merriweather-bolditalic.woff") format("woff"), url("../fonts/merriweather-bolditalic.ttf") format("truetype"), url("../fonts/merriweather-bolditalic.svg#Merriweather") format("svg"); }
+@font-face {
+  font-family: "Montreal";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montreal-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montreal-regular.woff2") format("woff2"), url("../fonts/montreal-regular.woff") format("woff"), url("../fonts/montreal-regular.ttf") format("truetype"), url("../fonts/montreal-regular.svg#Montreal") format("svg"); }
+@font-face {
+  font-family: "Montreal";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montreal-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/montreal-bold.woff2") format("woff2"), url("../fonts/montreal-bold.woff") format("woff"), url("../fonts/montreal-bold.ttf") format("truetype"), url("../fonts/montreal-bold.svg#Montreal") format("svg"); }
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/karla-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-regular.woff2") format("woff2"), url("../fonts/karla-regular.woff") format("woff"), url("../fonts/karla-regular.ttf") format("truetype"), url("../fonts/karla-regular.svg#Karla") format("svg"); }
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/karla-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-bold.woff2") format("woff2"), url("../fonts/karla-bold.woff") format("woff"), url("../fonts/karla-bold.ttf") format("truetype"), url("../fonts/karla-bold.svg#Karla") format("svg"); }
+@font-face {
+  font-family: "Karla";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/karla-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-italic.woff2") format("woff2"), url("../fonts/karla-italic.woff") format("woff"), url("../fonts/karla-italic.ttf") format("truetype"), url("../fonts/karla-italic.svg#Karla") format("svg"); }
+@font-face {
+  font-family: "Karla";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/karla-bolditalic.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-bolditalic.woff2") format("woff2"), url("../fonts/karla-bolditalic.woff") format("woff"), url("../fonts/karla-bolditalic.ttf") format("truetype"), url("../fonts/karla-bolditalic.svg#Karla") format("svg"); }
+/* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_buttons.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"],
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-font-smoothing: antialiased;
+  background-color: #0074D9;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Merriweather";
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  /* line 21, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_buttons.scss */
+  button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
+  button:hover,
+  button:focus {
+    background-color: #004b8d;
+    color: #fff; }
+  /* line 27, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_buttons.scss */
+  button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+
+/* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+fieldset {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  margin: 0 0 0.8625em;
+  padding: 1.725em; }
+
+/* line 8, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "Merriweather";
+  font-size: 1em; }
+
+/* line 16, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+label {
+  font-weight: 600;
+  margin-bottom: 0.43125em; }
+  /* line 20, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+  label.required::after {
+    content: "*"; }
+  /* line 24, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+  label abbr {
+    display: none; }
+
+/* line 29, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
+select[multiple=multiple],
+textarea {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  font-family: "Merriweather";
+  font-size: 1em;
+  margin-bottom: 0.8625em;
+  padding: 0.575em;
+  -webkit-transition: border-color;
+          transition: border-color;
+  width: 100%; }
+  /* line 44, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+  input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
+  select[multiple=multiple]:hover,
+  textarea:hover {
+    border-color: #c4c4c4; }
+  /* line 48, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+  input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
+  select[multiple=multiple]:focus,
+  textarea:focus {
+    border-color: #0074D9;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(0, 102, 192, 0.7);
+    outline: none; }
+
+/* line 55, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+textarea {
+  resize: vertical; }
+
+/* line 59, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
+/* line 63, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.43125em; }
+
+/* line 69, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+input[type="file"] {
+  padding-bottom: 0.8625em;
+  width: 100%; }
+
+/* line 74, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_forms.scss */
+select {
+  margin-bottom: 1.725em;
+  max-width: 100%;
+  width: auto; }
+
+/* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_lists.scss */
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  /* line 7, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_lists.scss */
+  .page-header ul, .page-content ul, .media-text-block ul, .cover-inner ul, .post-index ul {
+    list-style-type: disc;
+    margin-bottom: 0.8625em;
+    padding-left: 1.725em; }
+  /* line 13, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_lists.scss */
+  .page-header ol,
+  .page-content ol,
+  .media-text-block ol,
+  .cover-inner ol,
+  .post-index ol {
+    list-style-type: decimal;
+    margin-bottom: 0.8625em;
+    padding-left: 1.725em; }
+
+/* line 20, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_lists.scss */
+dl {
+  margin-bottom: 0.8625em; }
+  /* line 23, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_lists.scss */
+  dl dt {
+    font-weight: bold;
+    margin-top: 0.8625em; }
+  /* line 28, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_lists.scss */
+  dl dd {
+    margin: 0; }
+
+/* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_tables.scss */
+table {
+  -webkit-font-feature-settings: "kern", "liga", "tnum";
+  -moz-font-feature-settings: "kern", "liga", "tnum";
+  -ms-font-feature-settings: "kern", "liga", "tnum";
+  font-feature-settings: "kern", "liga", "tnum";
+  border-collapse: collapse;
+  margin: 0.8625em 0;
+  table-layout: fixed;
+  width: 100%; }
+
+/* line 9, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_tables.scss */
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: 600;
+  padding: 0.8625em 0;
+  text-align: left; }
+
+/* line 16, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_tables.scss */
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.8625em 0; }
+
+/* line 21, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_tables.scss */
+tr,
+td,
+th {
+  vertical-align: middle; }
+
+/* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_typography.scss */
+body {
+  -webkit-font-feature-settings: "kern", "liga", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
+  color: #333;
+  font-family: "Merriweather";
+  font-size: 1em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.725; }
+
+/* line 11, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Karla";
+  font-size: 1em;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0 0 0.8625em; }
+
+/* line 24, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_typography.scss */
+p {
+  margin: 0 0 0.8625em; }
+
+/* line 28, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_typography.scss */
+a {
+  color: #0074D9;
+  text-decoration: none;
+  -webkit-transition: all 0.3s linear;
+          transition: all 0.3s linear; }
+  /* line 33, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_typography.scss */
+  a:active, a:focus, a:hover {
+    color: #00305a; }
+  /* line 39, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_typography.scss */
+  a:active, a:focus {
+    outline: none; }
+
+/* line 45, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.725em 0; }
+
+/* line 53, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_typography.scss */
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+/* line 59, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/base/_typography.scss */
+pre,
+code {
+  margin: 0; }
+
+/* line 4, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box; }
+
+/* line 9, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+.nav {
+  max-width: 61.25em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Karla";
+  padding: 1.725em 0.8625em; }
+  /* line 20, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+  .nav::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/* line 8, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+.nav-logo {
+  text-align: center; }
+  @media screen and (min-width: 38.75em) {
+    /* line 8, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+    .nav-logo {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      text-align: left; }
+      /* line 89, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+      .nav-logo:last-child {
+        margin-right: 0; } }
+
+/* line 17, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+.nav-links {
+  text-align: center; }
+  @media screen and (min-width: 38.75em) {
+    /* line 17, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+    .nav-links {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-right: 0;
+      text-align: right; }
+      /* line 89, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+      .nav-links:last-child {
+        margin-right: 0; } }
+  /* line 26, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+  .nav-links li {
+    display: inline-block;
+    margin-left: 1.725em; }
+
+/* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+.page-header, .page-content, .media-text-block, .cover-inner, .post-index {
+  margin: 1.725em 0.8625em; }
+  /* line 7, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+  .page-header h1, .page-content h1, .media-text-block h1, .cover-inner h1, .post-index h1 {
+    font-size: 2.13623em; }
+  /* line 7, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+  .page-header h2, .page-content h2, .media-text-block h2, .cover-inner h2, .post-index h2 {
+    font-size: 1.70898em; }
+  /* line 7, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+  .page-header h3, .page-content h3, .media-text-block h3, .cover-inner h3, .post-index h3 {
+    font-size: 1.36719em; }
+  /* line 7, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+  .page-header h4, .page-content h4, .media-text-block h4, .cover-inner h4, .post-index h4 {
+    font-size: 1.09375em; }
+  /* line 7, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+  .page-header h5, .page-content h5, .media-text-block h5, .cover-inner h5, .post-index h5 {
+    font-size: 0.875em; }
+  /* line 7, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+  .page-header h6, .page-content h6, .media-text-block h6, .cover-inner h6, .post-index h6 {
+    font-size: 0.7em; }
+  @media screen and (min-width: 38.75em) {
+    /* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+    .page-header, .page-content, .media-text-block, .cover-inner, .post-index {
+      font-size: 1.125em;
+      margin: 0 auto;
+      max-width: 32em; }
+      /* line 15, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+      .page-header h1, .page-content h1, .media-text-block h1, .cover-inner h1, .post-index h1,
+      .page-header h2,
+      .page-content h2,
+      .media-text-block h2,
+      .cover-inner h2,
+      .post-index h2,
+      .page-header h3,
+      .page-content h3,
+      .media-text-block h3,
+      .cover-inner h3,
+      .post-index h3,
+      .page-header h4,
+      .page-content h4,
+      .media-text-block h4,
+      .cover-inner h4,
+      .post-index h4,
+      .page-header h5,
+      .page-content h5,
+      .media-text-block h5,
+      .cover-inner h5,
+      .post-index h5,
+      .page-header h6,
+      .page-content h6,
+      .media-text-block h6,
+      .cover-inner h6,
+      .post-index h6 {
+        margin-top: 2rem; } }
+  /* line 25, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+  .page-header a, .page-content a, .media-text-block a, .cover-inner a, .post-index a {
+    border-bottom: solid 2px #e6f1fb;
+    color: #333; }
+    /* line 29, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+    .page-header a:hover, .page-content a:hover, .media-text-block a:hover, .cover-inner a:hover, .post-index a:hover {
+      border-bottom: solid 2px #0074D9;
+      color: #0074D9; }
+
+/* line 39, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+.page-header-wrapper {
+  margin-bottom: 1.725em;
+  padding: 0.8625em 0;
+  width: 100%; }
+
+/* line 45, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+.page-header {
+  margin: 3.45em auto;
+  text-align: center; }
+
+/* line 55, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+.page-date {
+  font-weight: 400;
+  opacity: 0.65; }
+
+/* line 63, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
+.page-content .highlight {
+  border-radius: 3px;
+  margin-bottom: 1.725em;
+  padding: 0.8625em 1.725em; }
+
+/* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
+.media {
+  max-width: 61.25em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 20, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+  .media::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/* line 5, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
+.media-text-block {
+  margin-bottom: 1.725em;
+  margin-top: 1.725em; }
+
+/* line 11, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
+.media-unit {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* line 15, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
+.media-item {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: solid 8px #fff; }
+
+/* line 4, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_cover.scss */
+.cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  margin-bottom: 1.725em; }
+  @media screen and (max-width: 37.75em) {
+    /* line 4, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_cover.scss */
+    .cover {
+      height: 30vh; } }
+
+/* line 16, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_cover.scss */
+.cover-overlay {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  background-image: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.75) 100%);
+  background-image: -webkit-linear-gradient(to, rgba(0, 0, 0, 0.75) 100%);
+  background-image: linear-gradient(to   , rgba(0, 0, 0, 0.75) 100%);
+  background-image: -moz-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.75) 100%);
+  height: 60vh; }
+  @media screen and (max-width: 37.75em) {
+    /* line 16, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_cover.scss */
+    .cover-overlay {
+      height: 30vh; } }
+
+/* line 33, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_cover.scss */
+.cover-inner {
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center; }
+  @media screen and (max-width: 37.75em) {
+    /* line 33, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_cover.scss */
+    .cover-inner {
+      font-size: 1em; } }
+  /* line 43, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_cover.scss */
+  .cover-inner .page-title {
+    margin: 0; }
+
+/* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_project_grid.scss */
+.project-grid {
+  max-width: 61.25em;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto; }
+  /* line 20, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+  .project-grid::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/* line 6, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_project_grid.scss */
+.project-grid-item {
+  margin-bottom: 1.725em; }
+  @media screen and (max-width: 37.75em) {
+    /* line 6, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_project_grid.scss */
+    .project-grid-item {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      /* line 89, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+      .project-grid-item:last-child {
+        margin-right: 0; }
+      /* line 78, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+      .project-grid-item:nth-child(2n) {
+        margin-right: 0; }
+      /* line 83, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+      .project-grid-item:nth-child(2n+1) {
+        clear: left; } }
+  @media screen and (min-width: 38.75em) {
+    /* line 6, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_project_grid.scss */
+    .project-grid-item {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      /* line 89, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+      .project-grid-item:last-child {
+        margin-right: 0; }
+      /* line 78, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+      .project-grid-item:nth-child(3n) {
+        margin-right: 0; }
+      /* line 83, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+      .project-grid-item:nth-child(3n+1) {
+        clear: left; } }
+
+/* line 4, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_post_index.scss */
+.post-index ul {
+  line-height: 2;
+  list-style-type: none;
+  padding-left: 0; }
+
+/* line 11, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_post_index.scss */
+.post-index-year {
+  border-bottom: 1px solid #ddd;
+  font-weight: 400;
+  padding-bottom: 0.8625em;
+  text-align: center; }
+
+/* line 18, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_post_index.scss */
+.post-index-item {
+  text-align: left; }
+
+/*
+   SKINS
+   - Backgrounds
+   - Colors
+   - Border colors
+   - SVG fills
+   - SVG Strokes
+*/
+/* Backgrounds */
+/* line 14, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-navy {
+  background-color: #001F3F; }
+
+/* line 15, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-blue {
+  background-color: #0074D9; }
+
+/* line 16, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-aqua {
+  background-color: #7FDBFF; }
+
+/* line 17, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-teal {
+  background-color: #39CCCC; }
+
+/* line 18, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-olive {
+  background-color: #3D9970; }
+
+/* line 19, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-green {
+  background-color: #2ECC40; }
+
+/* line 20, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-lime {
+  background-color: #01FF70; }
+
+/* line 21, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-yellow {
+  background-color: #FFDC00; }
+
+/* line 22, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-orange {
+  background-color: #FF851B; }
+
+/* line 23, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-red {
+  background-color: #FF4136; }
+
+/* line 24, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-fuchsia {
+  background-color: #F012BE; }
+
+/* line 25, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-purple {
+  background-color: #B10DC9; }
+
+/* line 26, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-maroon {
+  background-color: #85144B; }
+
+/* line 27, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-white {
+  background-color: #fff; }
+
+/* line 28, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-gray {
+  background-color: #aaa; }
+
+/* line 29, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-silver {
+  background-color: #ddd; }
+
+/* line 30, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.bg-black {
+  background-color: #111; }
+
+/* Colors */
+/* line 35, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.navy {
+  color: #001F3F; }
+
+/* line 36, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.blue {
+  color: #0074D9; }
+
+/* line 37, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.aqua {
+  color: #7FDBFF; }
+
+/* line 38, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.teal {
+  color: #39CCCC; }
+
+/* line 39, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.olive {
+  color: #3D9970; }
+
+/* line 40, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.green {
+  color: #2ECC40; }
+
+/* line 41, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.lime {
+  color: #01FF70; }
+
+/* line 42, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.yellow {
+  color: #FFDC00; }
+
+/* line 43, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.orange {
+  color: #FF851B; }
+
+/* line 44, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.red {
+  color: #FF4136; }
+
+/* line 45, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fuchsia {
+  color: #F012BE; }
+
+/* line 46, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.purple {
+  color: #B10DC9; }
+
+/* line 47, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.maroon {
+  color: #85144B; }
+
+/* line 48, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.white {
+  color: #fff; }
+
+/* line 49, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.silver {
+  color: #ddd; }
+
+/* line 50, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.gray {
+  color: #aaa; }
+
+/* line 51, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.black {
+  color: #111; }
+
+/* Border colors
+   Use with another border utility that sets border-width and style
+   i.e .border { border-width: 1px; border-style: solid; }
+*/
+/* line 59, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--navy {
+  border-color: #001F3F; }
+
+/* line 60, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--blue {
+  border-color: #0074D9; }
+
+/* line 61, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--aqua {
+  border-color: #7FDBFF; }
+
+/* line 62, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--teal {
+  border-color: #39CCCC; }
+
+/* line 63, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--olive {
+  border-color: #3D9970; }
+
+/* line 64, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--green {
+  border-color: #2ECC40; }
+
+/* line 65, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--lime {
+  border-color: #01FF70; }
+
+/* line 66, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--yellow {
+  border-color: #FFDC00; }
+
+/* line 67, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--orange {
+  border-color: #FF851B; }
+
+/* line 68, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--red {
+  border-color: #FF4136; }
+
+/* line 69, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--fuchsia {
+  border-color: #F012BE; }
+
+/* line 70, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--purple {
+  border-color: #B10DC9; }
+
+/* line 71, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--maroon {
+  border-color: #85144B; }
+
+/* line 72, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--white {
+  border-color: #fff; }
+
+/* line 73, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--gray {
+  border-color: #aaa; }
+
+/* line 74, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--silver {
+  border-color: #ddd; }
+
+/* line 75, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.border--black {
+  border-color: #111; }
+
+/* Fills for SVG */
+/* line 80, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-navy {
+  fill: #001F3F; }
+
+/* line 81, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-blue {
+  fill: #0074D9; }
+
+/* line 82, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-aqua {
+  fill: #7FDBFF; }
+
+/* line 83, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-teal {
+  fill: #39CCCC; }
+
+/* line 84, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-olive {
+  fill: #3D9970; }
+
+/* line 85, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-green {
+  fill: #2ECC40; }
+
+/* line 86, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-lime {
+  fill: #01FF70; }
+
+/* line 87, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-yellow {
+  fill: #FFDC00; }
+
+/* line 88, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-orange {
+  fill: #FF851B; }
+
+/* line 89, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-red {
+  fill: #FF4136; }
+
+/* line 90, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-fuchsia {
+  fill: #F012BE; }
+
+/* line 91, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-purple {
+  fill: #B10DC9; }
+
+/* line 92, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-maroon {
+  fill: #85144B; }
+
+/* line 93, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-white {
+  fill: #fff; }
+
+/* line 94, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-gray {
+  fill: #aaa; }
+
+/* line 95, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-silver {
+  fill: #ddd; }
+
+/* line 96, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.fill-black {
+  fill: #111; }
+
+/* Strokes for SVG */
+/* line 100, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-navy {
+  stroke: #001F3F; }
+
+/* line 101, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-blue {
+  stroke: #0074D9; }
+
+/* line 102, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-aqua {
+  stroke: #7FDBFF; }
+
+/* line 103, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-teal {
+  stroke: #39CCCC; }
+
+/* line 104, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-olive {
+  stroke: #3D9970; }
+
+/* line 105, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-green {
+  stroke: #2ECC40; }
+
+/* line 106, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-lime {
+  stroke: #01FF70; }
+
+/* line 107, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-yellow {
+  stroke: #FFDC00; }
+
+/* line 108, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-orange {
+  stroke: #FF851B; }
+
+/* line 109, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-red {
+  stroke: #FF4136; }
+
+/* line 110, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-fuchsia {
+  stroke: #F012BE; }
+
+/* line 111, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-purple {
+  stroke: #B10DC9; }
+
+/* line 112, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-maroon {
+  stroke: #85144B; }
+
+/* line 113, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-white {
+  stroke: #fff; }
+
+/* line 114, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-gray {
+  stroke: #aaa; }
+
+/* line 115, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-silver {
+  stroke: #ddd; }
+
+/* line 116, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/vendor/_clrs_skins.scss */
+.stroke-black {
+  stroke: #111; }

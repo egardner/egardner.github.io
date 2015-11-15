@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>Client-side Search in Middleman</title>
+<link href="../../../assets/stylesheets/application.css" rel="stylesheet" />
+</head>
+<body class='posts posts_2015 posts_2015_implementing-client-side-search-in-middleman posts_2015_implementing-client-side-search-in-middleman_index'>
+<header class='nav'>
+<h2 class='nav-logo'><a href="/">Eric Gardner</a></h2>
+<ul class='nav-links'>
+<li><a class="" href="/work/">Work</a></li>
+<li><a class="" href="#">Photography</a></li>
+<li><a class="" href="/writing/">Writing</a></li>
+<li><a class="" href="#">About</a></li>
+</ul>
+</header>
+
+<div class='bg-navy page-header-wrapper white'>
+<div class='page-header'>
+<h1 class='page-title'>Client-side Search in Middleman</h1>
+<h4 class='page-date'>September 15, 2015</h4>
+</div>
+</div>
+
+<div class='page-content'>
+<h3 id="tools-used">Tools Used</h3>
+<ul>
+  <li>Middleman static site generator</li>
+  <li>YAML &amp; Markdown files for human-readable source material</li>
+  <li>Javascript (ES5) + jQuery</li>
+  <li><a href="http://lunrjs.com/">Lunr.js</a></li>
+  <li><a href="http://handlebarsjs.com/">Handlebars.js</a></li>
+</ul>
+
+<h3 id="overview">Overview</h3>
+<p>Static web publishing tools have come a long way in the last few years. For a long time I've been a huge fan of <a href="http://jekyllrb.com/">Jekyll</a>(which powers this website). More recently I have been making use of <a href="https://middlemanapp.com">Middleman</a>, which offers a bit more flexibility for non-blog use-cases. Both Middleman and Jekyll are built in Ruby, but similar static-site generators exist for <a href="https://www.staticgen.com/">a bewildering array of other ecosystems</a>. For lots of applications, there is simply no reason to rely on a live server or database – and the advantages of simplifying are big (no need to keep track of security/maintenance updates, a much longer shelf-life, speed &amp; performance, etc.).</p>
+
+<p>Search is one feature that used to be a deal-breaker in building a static site. If the user expects to easily search through content at a granular level (an increasingly common expectation), what can you do without a database to query based on their requests?</p>
+
+<h3 id="client-side-search">Client-side Search</h3>
+<p>Client-side search tools are a way to provide this functionality without relying on a back-end to do the querying. There are several libraries for this; currently the best one available is <a href="http://lunrjs.com/"><strong>Lunr.js</strong></a>, by Oliver Nightingale. Lunr is, in the words of it's creator, “A bit like Solr, but much smaller and not as bright”.</p>
+
+<p>Lunr works by taking documents which you have added to its index, and making them searchable. Some algorithms are included behind the scenes to exclude very common words and to reduce related words to a common “stem”, providing higher-quality results than just a dumb match would. All of this occurs directly inside the user's browser, so the process is very fast. It could even work off-line if you had an app set up in something like Cordova.</p>
+
+<p>The most simple implementation of Lunr looks like this (taken from the website). First, create an <code>index</code> with fields matching the documents you intend to add:</p>
+
+<pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">lunr</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">field</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="p">{</span><span class="na">boost</span><span class="p">:</span> <span class="mi">10</span><span class="p">});</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">field</span><span class="p">(</span><span class="s1">'body'</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">ref</span><span class="p">(</span><span class="s1">'id'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+
+<p>Next, add “documents” to the Index – these are JSON representations of the content of your site. I'll describe my method for generating such an index later in this post.</p>
+
+<pre class="highlight javascript"><code><span class="nx">index</span><span class="p">.</span><span class="nx">add</span><span class="p">({</span>
+  <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s2">"Foo"</span><span class="p">,</span>
+  <span class="na">body</span><span class="p">:</span> <span class="s2">"Foo foo foo!"</span>
+<span class="p">});</span>
+
+<span class="nx">index</span><span class="p">.</span><span class="nx">add</span><span class="p">({</span>
+  <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s2">"Bar"</span><span class="p">,</span>
+  <span class="na">body</span><span class="p">:</span> <span class="s2">"Bar bar bar!"</span>
+<span class="p">});</span>
+</code></pre>
+
+<p>Documents can be added either one by one, or all at once as a JSON array of objects. To search the index once some documents have been added, you just call:</p>
+
+<pre class="highlight javascript"><code><span class="nx">index</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">"foo"</span><span class="p">);</span>
+</code></pre>
+
+<p>When you run this query, Lunr returns an array of results (in descending order of relevance). Each result object contains a <code>ref</code> property which matches the <code>id</code> of the matching document, and a <code>score</code> value (between 0 and 1) that represents the closeness of the match. The <code>boost</code> option seen above will help determine how this score is calculated.</p>
+
+<p>A lot more is possible (just check the <a href="http://lunrjs.com/docs/">documentation</a> to get a sense), but I was able to get a fully-functioning implementation working without doing much more than what I've just shown here. Lunr is a great example of a library that does one thing and does it very well.</p>
+
+<h3 id="generating-a-json-index">Generating a JSON Index</h3>
+<p>So Lunr makes it easy to run a client-side search, but we still need to actually <em>generate</em> the index that it will use to search the site. This means we need to automatically build a JSON version of our content (the content we want to search, anyway) and then feed that into Lunr when necessary.</p>
+
+<p>From Middleman's perspective, this is no different than processing any other template for a static page – we are just compiling the final output as JSON instead of HTML in this particular case. The simplest way to do this is to create a page in the <code>source</code> folder called <code>contents.json.erb</code>.</p>
+
+<p>Expressed as pseudo-code, here's the logic used to assemble the index:</p>
+
+<ol>
+  <li>Find all pages that should be included in the search</li>
+  <li>Create an array of index <code>entries</code> (empty to begin)</li>
+  <li>Iterate through the array of all pages and…
+    <ul>
+      <li>create a blank <code>entry</code> hash</li>
+      <li>assign various values to the hash (<code>:id</code>, <code>:title</code>, <code>:url</code>, etc.) and store relevant date from the page</li>
+      <li>Append this hash to the <code>entries</code> array and repeat</li>
+      <li>Use Ruby's handy <code>to_json</code> method to convert the <code>entries</code> array into a properly formatted JSON object.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>In my case, I am not using Middleman's blog extension, so I don't have a convenient site-wide collection of <code>articles</code> to grab. Instead I'm searching the <code>sitemap</code> object to find all resources with a <code>source_file</code> in Markdown (all raw text content, in this project). The <code>contents.json.erb</code> file looks like this (simplified here):</p>
+
+<pre class="highlight erb"><code># contents.json.erb
+<span class="cp">&lt;%</span>
+<span class="n">pages</span> <span class="o">=</span> <span class="n">sitemap</span><span class="p">.</span><span class="nf">resources</span><span class="p">.</span><span class="nf">find_all</span> <span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="nb">p</span><span class="p">.</span><span class="nf">source_file</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span><span class="sr">/\.md/</span><span class="p">)</span> <span class="p">}</span>
+<span class="n">entries</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">pages</span><span class="p">.</span><span class="nf">each_with_index</span> <span class="k">do</span> <span class="o">|</span><span class="n">page</span><span class="p">,</span> <span class="n">index</span><span class="o">|</span>
+  <span class="n">object</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="c1"># ... some specifics ommitted</span>
+    <span class="n">entry</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="ss">:id</span>    <span class="o">=&gt;</span> <span class="n">index</span><span class="p">,</span>
+      <span class="ss">:title</span> <span class="o">=&gt;</span> <span class="n">page</span><span class="p">.</span><span class="nf">data</span><span class="p">.</span><span class="nf">title</span><span class="p">,</span>
+      <span class="ss">:url</span>   <span class="o">=&gt;</span> <span class="n">page</span><span class="p">.</span><span class="nf">url</span><span class="p">,</span>
+      <span class="ss">:content</span> <span class="o">=&gt;</span> <span class="n">page</span><span class="p">.</span><span class="nf">render</span><span class="p">({</span><span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="kp">false</span> <span class="p">}).</span><span class="nf">gsub</span><span class="p">(</span>
+        <span class="sr">%r{&lt;/?[^&gt;]+?&gt;}</span><span class="p">,</span> <span class="s1">''</span> <span class="p">)</span>
+    <span class="p">}</span>
+  <span class="n">entries</span> <span class="o">&lt;&lt;</span> <span class="n">entry</span>
+<span class="k">end</span>
+<span class="cp">%&gt;&lt;%=</span> <span class="n">entries</span><span class="p">.</span><span class="nf">to_json</span> <span class="cp">%&gt;</span>
+</code></pre>
+
+<p>A note on how the <code>:content</code> field is populated: Each object in the <code>pages</code> array is a <code>Middleman::Sitemap::Resource</code> object. The <code>Resource</code> object comes with a <code>render</code> method, which converts the source file into HTML output. By passing an option of <code>{:layout =&gt; false}</code> when the method is called, we leave behind all extraneous header/footer/nav elements, etc. To strip down our index even more, a call to <code>gsub</code> with a crude regular expression strips out most HTML tags. Since this is just an index, the content doesn't have to be 100% perfect (end users will never see it directly). But this technique helps to remove some clutter before we start running queries.</p>
+
+<p>Now, every time we build our site, <code>contents.json.erb</code> becomes <code>contents.json</code>, a single JSON file that includes both metadata and full text content for every page that exists. In my case (a large academic book with several lengthy essays), this file came out to about 650KB – similar to the size of a large image.</p>
+
+<h3 id="searching-in-the-browser">Searching in the Browser</h3>
+<p>Now we have a static JSON index of our site, compiled at build time. To make our site searchable, we need to go through the following steps (again, in pseudocode first):</p>
+
+<ol>
+  <li>Load the JSON file asynchronously in the background (before the user starts searching)</li>
+  <li>Feed the contents of this file to Lunr to create a searchable index</li>
+  <li>Hang on to a copy of this data to cross-reference our results with (i.e., when Lunr returns a result of <code>ref: 4</code>, we need to look up <code>element[4]</code> of the site contents to show the user the title/URL of their search result.</li>
+  <li>Present the search results to the user as they type (we'll use a Handlebars template for this).</li>
+</ol>
+
+<p>I'll go through each step in more detail below.</p>
+
+<h4 id="asynchronous-loading">1. Asynchronous Loading</h4>
+<p>Learning to think asynchronously in Javascript can come with a pretty steep curve. This technique is essential for most sophisticated user interactions, but it can be very counter-intuitive to think this way – especially starting out.</p>
+
+<p>Asynchronous functions can feel a little like time-travel. Before you make an asynchronous function call, you can move in linear order from one statement to the next. Values get assigned in the way you expec them to and are available later on in the program. But once you've made that call, you step into an uncertain future. There is no way to know just how much time will pass until the call returns – meanwhile control continues to flow down the program, oblivious.</p>
+
+<p>When you need to work with data that will not be available until an async request resolves, all subsequent work must be done in a callback function — leave the traditional control flow behind at this point.</p>
+
+<p>The code to load our index looks like this:</p>
+
+<pre class="highlight javascript"><code><span class="c1">// various function declarations and set-up</span>
+<span class="c1">// has happened already at this point</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s2">"/contents.json"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">populateIndex</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">contents</span> <span class="o">=</span> <span class="nx">contentList</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+  <span class="nx">searchSetup</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">contents</span><span class="p">);</span>
+  <span class="c1">// other code for app below - anything that needs search functionality</span>
+  <span class="c1">// lives inside of this callback</span>
+  <span class="c1">// ...</span>
+<span class="p">});</span>
+</code></pre>
+
+<p>All search-related code happens inside an anonymous callback function after $.getJSON() resolves. The returned <code>data</code> is passed around as a parameter into other functions below.</p>
+
+<h4 id="set-up-the-lunr-index">2. Set up the Lunr Index</h4>
+<p>The first function called inside of our callback sets up a new Lunr index with the contents of <code>contents.json</code>. The function which does that looks like this:</p>
+
+<pre class="highlight javascript"><code><span class="c1">// Feed data into an empty lunr index and return the populated result</span>
+<span class="kd">function</span> <span class="nx">populateIndex</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">lunr</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">field</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="p">{</span> <span class="na">boost</span><span class="p">:</span> <span class="mi">10</span> <span class="p">});</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">field</span><span class="p">(</span><span class="s1">'content'</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">ref</span><span class="p">(</span><span class="s1">'id'</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">index</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="k">return</span> <span class="nx">index</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<p>Since <code>data</code> is a JSON array, we can iterate through it and add each object as a document to the Lunr index. That's it – Lunr takes care of the rest here.</p>
+
+<h4 id="keep-a-content-list-to-cross-reference-results-against">3. Keep a content list to cross-reference results against</h4>
+<p>The next line in our callback creates a <code>contents</code> variable with a <code>contentList()</code> function. As mentioned above, Lunr searches only return a <code>ref</code> and a <code>score</code> – we want to know the actual title, URL, etc. of whatever pages are coming up in the results. So stashing the search data into a <code>contents</code> array gives us something to reference.</p>
+
+<pre class="highlight javascript"><code><span class="c1">// Create an array of contents to reference our search results against</span>
+<span class="kd">function</span> <span class="nx">contentList</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">contents</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="nx">data</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">contents</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="k">return</span> <span class="nx">contents</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+
+<h4 id="present-the-results-to-the-user">4. Present the results to the User</h4>
+<p>Once we have the results of the user's search, we need to display them in a way that is informative and responsive. Rather than having a dedicated search page, I wanted the search results component to be immedately available anywhere. <strong>Handlebars.js</strong> provided an elegant solution here.</p>
+
+<p>In a server-side app, I'd just define a partial in whatever templating language I was using and render that as needed. Since my app is static (content comes fully rendered from the server), there is not an obvious place to put results for searches that may happen in the future. Enter Handlebars.</p>
+
+<p>Handlebars is a Javascript templating language which can be used on either the client or the server. The simplest way of using it is to create a partial template inside of <code>&lt;script&gt;</code> tags that live in the normal HTML pages of the site. The code inside of these tags is immediately ready for use but won't actually render until Handlebars grabs it (injecting whatever data it needs at runtime).</p>
+
+<p>It would certainly be possible to append search results manually to the DOM using jQuery, but that approach sounded very tedious and I wanted to try a new piece of technology. By using Handlebars, we are spared from painful JS string concatenation and don't have to maintain HTML inside of our javascript files.</p>
+
+<p>In Middleman, I've defined my template as a partial. Middleman does not allow straight HTML partials, so I've defined it as <code>_results.html.erb</code> – however, no ruby processing takes place inside of this file.</p>
+
+<pre class="highlight plaintext"><code>&lt;script id="results-template" type="text/x-handlebars-template"&gt;
+  &lt;li class="result-item"&gt;
+    &lt;a href="{{url}}"&gt;{{title}}&lt;/a&gt;&lt;br /&gt;
+  &lt;/li&gt;
+&lt;/script&gt;
+</code></pre>
+
+<p>Pretty simple, right? This template lives in my HTML as an inert <code>&lt;script&gt;</code> tag until called at runtime. That happens like this (a lot of event handlers/UI code has been omitted from this function):</p>
+
+<pre class="highlight javascript"><code><span class="kd">function</span> <span class="nx">searchSetup</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">contents</span><span class="p">){</span>
+  <span class="c1">// Set up Handlebars template</span>
+  <span class="kd">var</span> <span class="nx">resultsTemplate</span> <span class="o">=</span> <span class="nx">Handlebars</span><span class="p">.</span><span class="nx">compile</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#results-template"</span><span class="p">).</span><span class="nx">html</span><span class="p">());</span>
+
+  <span class="c1">// various event handlers...</span>
+
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"#search-field"</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s2">"keyup"</span><span class="p">,</span> <span class="nx">debounce</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">".search-results"</span><span class="p">).</span><span class="nx">empty</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">results</span> <span class="o">=</span> <span class="nx">index</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">query</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">results</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">result</span><span class="p">){</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s2">".search-results"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">resultsTemplate</span><span class="p">({</span>
+        <span class="na">title</span><span class="p">:</span> <span class="nx">contents</span><span class="p">[</span><span class="nx">result</span><span class="p">.</span><span class="nx">ref</span><span class="p">].</span><span class="nx">title</span><span class="p">,</span>
+        <span class="na">url</span><span class="p">:</span> <span class="nx">contents</span><span class="p">[</span><span class="nx">result</span><span class="p">.</span><span class="nx">ref</span><span class="p">].</span><span class="nx">url</span>
+      <span class="p">}));</span>
+    <span class="p">});</span>
+  <span class="p">}));</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>This function (which needs to be called inside of the callback after the index has loaded) accepts two sources of data – the Lunr index and the contents array from above. When it first runs, it compiles the Handlebars template and sets up an event handler to deal with search input.</p>
+
+<p>All actual search queries happen as a result of this input. A Lunr search is executed on each keyup event which takes the results of the query, checks them against the contents array (<code>contents[result.ref].title</code>, etc.), and appends these results to the Handlebars template. Search results appear instantly, as the user types.</p>
+
+<h4 id="closing-thoughts">Closing Thoughts</h4>
+<p>Implementing this feature took some time but the process is fairly straightforward in hindsight. One thing to note here – this approach is loading the search index on each pageload. For a standard site this would be an unacceptable performance burden. But this is an area where using the Smoothstate library to structure the site like a single-page app really pays off. The index is loaded when the user first arrives at the site. As they move between pages, there is no need to request this resource again, and the full text content of the site is accessable at any time.</p>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="../../../assets/javascripts/application.js"></script>
+</body>
+</html>
