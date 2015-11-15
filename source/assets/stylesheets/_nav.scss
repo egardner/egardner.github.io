@@ -1,0 +1,29 @@
+.nav {
+  @include outer-container;
+  border-bottom: $base-border;
+  padding: $base-spacing $small-spacing;
+}
+
+.nav-logo {
+  text-align: center;
+
+  @include media($medium-screen-up) {
+    @include span-columns(4);
+    text-align: left;
+  }
+}
+
+.nav-links {
+  text-align: center;
+
+  @include media($medium-screen-up) {
+    @include span-columns(8);
+    @include omega;
+    text-align: right;
+  }
+
+  li {
+    display: inline-block;
+    margin-left: $base-spacing;
+  }
+}

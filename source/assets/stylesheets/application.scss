@@ -1,7 +1,10 @@
 @import "vendor/normalize";
+@import "vendor/syntax.css";
 
 @import "bourbon";
 @import "base/base";
 @import "neat";
 
 @import "global";
+@import "nav";
+@import "page";

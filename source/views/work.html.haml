@@ -1,0 +1,7 @@
+---
+title: Work
+layout: page
+---
+%ul
+  - blog('projects').articles.each do |project|
+    %li= link_to project.title, project.url

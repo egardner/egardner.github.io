@@ -1,0 +1,47 @@
+%body-text {
+  margin: $base-spacing $small-spacing;
+
+  // Global type sizes
+  @for $i from 1 through 6 {
+    h#{$i} { font-size: modular-scale((6 - $i), 0.75em, $major-third); }
+  }
+
+  @include media($medium-screen-up) {
+    font-size: 1.125em;
+    margin: 0 auto;
+    max-width: 34em;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 2rem;
+    }
+  }
+
+  a {
+    border-bottom: 1px solid tint($action-color, 90%);
+    &:hover { border-bottom: 1px solid tint($action-color, 60%); }
+  }
+
+  ol { @extend %default-ol; }
+  ul { @extend %default-ul; }
+}
+
+.page-header {
+  @extend %body-text;
+  margin: ($base-spacing * 3) auto;
+  text-align: center;
+}
+
+.page-content {
+  @extend %body-text;
+
+  .highlight {
+    border-radius: $base-border-radius;
+    margin-bottom: $base-spacing;
+    padding: $small-spacing $base-spacing;
+  }
+}

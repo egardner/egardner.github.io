@@ -10,3 +10,4 @@ gem "bourbon"
 gem "neat"
 
 gem "middleman-blog"
+gem "middleman-syntax"

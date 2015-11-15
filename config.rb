@@ -1,20 +1,35 @@
 require "extensions/views"
 
+activate :blog do |blog|
+  blog.name = "posts"
+  blog.prefix = "posts"
+  blog.layout = "page"
+  blog.permalink = "/{year}/{title}.html"
+end
+
+activate :blog do |blog|
+  blog.name = "projects"
+  blog.prefix = "projects"
+  blog.permalink = "{title}.html"
+end
+
+page "/projects/*", :layout => "page"
+
 activate :views
 activate :directory_indexes
 activate :autoprefixer
+activate :syntax
 
-set :relative_links, true
-set :css_dir, "assets/stylesheets"
-set :js_dir, "assets/javascripts"
-set :images_dir, "assets/images"
-set :fonts_dir, "assets/fonts"
-set :layout, "layouts/application"
-
-activate :blog do |blog|
-  #set options here
-end
-
+set :markdown_engine, :kramdown
+set :markdown,        :parse_block_html => true
+set :haml,            :ugly => true
+set :relative_links,  true
+set :css_dir,         "assets/stylesheets"
+set :js_dir,          "assets/javascripts"
+set :images_dir,      "assets/images"
+set :fonts_dir,       "assets/fonts"
+set :partials_dir,    "partials"
+set :layout,          "layouts/application"
 
 configure :development do
  activate :livereload
