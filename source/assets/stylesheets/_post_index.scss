@@ -1,0 +1,20 @@
+.post-index {
+  @extend %body-text;
+
+  ul {
+    line-height: 2;
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
+
+.post-index-year {
+  border-bottom: $base-border;
+  font-weight: 400;
+  padding-bottom: $small-spacing;
+  text-align: center;
+}
+
+.post-index-item {
+  text-align: left;
+}

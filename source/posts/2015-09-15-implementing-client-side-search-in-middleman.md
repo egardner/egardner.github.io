@@ -1,6 +1,7 @@
 ---
 title: "Client-side Search in Middleman"
 date: "September 15, 2015"
+header: "bg-navy white"
 ---
 
 ### Tools Used
@@ -16,9 +17,9 @@ Static web publishing tools have come a long way in the last few years. For a lo
 Search is one feature that used to be a deal-breaker in building a static site. If the user expects to easily search through content at a granular level (an increasingly common expectation), what can you do without a database to query based on their requests?
 
 ### Client-side Search
-Client-side search tools are a way to provide this functionality without relying on a back-end to do the querying. There are several libraries for this; currently the best one available is [**Lunr.js**](http://lunrjs.com/), by Oliver Nightingale. Lunr is, in the words of it's creator "A bit like Solr, but much smaller and not as bright."
+Client-side search tools are a way to provide this functionality without relying on a back-end to do the querying. There are several libraries for this; currently the best one available is [**Lunr.js**](http://lunrjs.com/), by Oliver Nightingale. Lunr is, in the words of it's creator, “A bit like Solr, but much smaller and not as bright”.
 
-Lunr works by taking documents which you have added to its index, and making them searchable. Some algorithms are included behind the scenes to exclude very common words and to reduce related words to a common "stem", providing higher-quality results than just a dumb match would. All of this occurs directly inside the user's browser, so the process is very fast. It could even work off-line if you had an app set up in something like Cordova.
+Lunr works by taking documents which you have added to its index, and making them searchable. Some algorithms are included behind the scenes to exclude very common words and to reduce related words to a common “stem”, providing higher-quality results than just a dumb match would. All of this occurs directly inside the user's browser, so the process is very fast. It could even work off-line if you had an app set up in something like Cordova.
 
 The most simple implementation of Lunr looks like this (taken from the website). First, create an `index` with fields matching the documents you intend to add:
 
@@ -30,7 +31,7 @@ var index = lunr(function() {
 });
 ~~~
 
-Next, add "documents" to the Index – these are JSON representations of the content of your site. I'll describe my method for generating such an index later in this post.
+Next, add “documents” to the Index – these are JSON representations of the content of your site. I'll describe my method for generating such an index later in this post.
 
 ~~~ javascript
 index.add({

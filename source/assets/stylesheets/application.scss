@@ -2,9 +2,16 @@
 @import "vendor/syntax.css";
 
 @import "bourbon";
+@import "fonts";
 @import "base/base";
 @import "neat";
 
 @import "global";
 @import "nav";
 @import "page";
+@import "media";
+@import "cover";
+@import "project_grid";
+@import "post_index";
+
+@import "vendor/clrs_skins";

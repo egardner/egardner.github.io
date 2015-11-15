@@ -1,0 +1,18 @@
+.project-grid {
+  @include outer-container;
+  margin: 0 auto;
+}
+
+.project-grid-item {
+  margin-bottom: $base-spacing;
+  
+  @include media($small-screen) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+
+  @include media($medium-screen-up) {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+}

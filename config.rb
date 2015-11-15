@@ -13,7 +13,7 @@ activate :blog do |blog|
   blog.permalink = "{title}.html"
 end
 
-page "/projects/*", :layout => "page"
+page "/projects/*", :layout => "media"
 
 activate :views
 activate :directory_indexes
@@ -21,7 +21,8 @@ activate :autoprefixer
 activate :syntax
 
 set :markdown_engine, :kramdown
-set :markdown,        :parse_block_html => true
+set :markdown,        :parse_block_html => true,
+                      :smart_quotes => ["lsquo", "rsquo", "ldquo", "rdquo"]
 set :haml,            :ugly => true
 set :relative_links,  true
 set :css_dir,         "assets/stylesheets"

@@ -1,15 +1,16 @@
 %body-text {
+  // font-weight: $base-font-weight;
   margin: $base-spacing $small-spacing;
 
   // Global type sizes
   @for $i from 1 through 6 {
-    h#{$i} { font-size: modular-scale((6 - $i), 0.75em, $major-third); }
+    h#{$i} { font-size: modular-scale((6 - $i), 0.7em, $major-third); }
   }
 
   @include media($medium-screen-up) {
     font-size: 1.125em;
     margin: 0 auto;
-    max-width: 34em;
+    max-width: 32em;
 
     h1,
     h2,
@@ -22,18 +23,38 @@
   }
 
   a {
-    border-bottom: 1px solid tint($action-color, 90%);
-    &:hover { border-bottom: 1px solid tint($action-color, 60%); }
+    border-bottom: solid 2px tint($action-color, 90%);
+    color: $base-font-color;
+    // color: shade($action-color, 25%);
+    &:hover {
+      border-bottom: solid 2px $action-color;
+      color: $action-color;
+    }
   }
 
   ol { @extend %default-ol; }
   ul { @extend %default-ul; }
 }
 
+.page-header-wrapper {
+  margin-bottom: $base-spacing;
+  padding: $small-spacing 0;
+  width: 100%;
+}
+
 .page-header {
   @extend %body-text;
-  margin: ($base-spacing * 3) auto;
+  margin: ($base-spacing * 2) auto;
   text-align: center;
+
+  // h1, h2, h3, h4, h5, h6 {
+  //   font-weight: 400;
+  // }
+}
+
+.page-date {
+  font-weight: 400;
+  opacity: 0.65;
 }
 
 .page-content {

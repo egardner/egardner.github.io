@@ -1,0 +1,6 @@
+%ul.project-grid
+  - blog('projects').articles.each do |project|
+    %li.project-grid-item
+      = link_to project.url do
+        = image_tag project.data.thumbnail
+        %h4= project.title

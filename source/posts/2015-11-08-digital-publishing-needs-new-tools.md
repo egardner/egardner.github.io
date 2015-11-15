@@ -1,5 +1,6 @@
 ---
-title: Digital Publishing needs new tools
+title: Digital Publishing needs New&nbsp;Tools
+header: bg-maroon white
 ---
 
 I just attended the 2015 conference of the [Museum Computer Network](http://mcn.edu/) – my first time attending a conference specific to the museum world. This event was filled with interesting people and discussions, and it was a real pleasure to participate.

@@ -1,0 +1,7 @@
+%ul.post-index
+  - blog("posts").articles.group_by {|a| a.date.year }.each do |year, articles|
+    %li.post-index-year
+      %h4= year
+      %ul
+        - articles.each do |article|
+          %li.post-index-item= link_to article.title, article.url

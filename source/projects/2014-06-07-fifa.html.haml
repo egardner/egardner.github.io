@@ -1,0 +1,40 @@
+---
+title:  World Cup 2014
+categories: projects
+cover: worldcup_04.jpg
+thumbnail: worldcup_thumb.jpg
+client: Hammer Museum
+year: 2014
+role: Art Direction
+gallery:
+ - worldcup_04.jpg
+ - worldcup_01.jpg
+ - worldcup_02.jpg
+ - worldcup_03.jpg
+ - worldcup_05.jpg
+ - worldcup_06.jpg
+ - worldcup_07.jpg
+ - worldcup_08.jpg
+
+---
+.media-text-block
+  :markdown
+    The Hammer Museum hosted a series of screenings for the 2014 World Cup games
+    in June and July. In addition to being free, the museum had the distinction
+    of offering the biggest screen in the city for football-watching: the 35'
+    Billy Wilder Theater.
+
+= partial(:media_unit, :locals => { :media => [current_page.data.gallery[4]] })
+= partial(:media_unit, :locals => { :media => current_page.data.gallery[1..2] })
+
+.media-text-block
+  :markdown
+    I art-directed collateral for this event, inspired by the beautiful posters
+    that Otl Aicher produced for the [1972 Munich Olympics][1] as well as the
+    amazing identity from the 1968 games in Mexico City. Materials produced
+    included postcards, posters, menus, signage, interactive graphics, and more.
+
+    With Tara Morris (Design, Photography).
+
+    [1]: http://www.1972municholympics.co.uk/Posters/Poster_Sport_Section.php
+= partial(:media_unit, :locals => { :media => current_page.data.gallery[5..7] })

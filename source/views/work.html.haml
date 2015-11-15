@@ -1,7 +1,7 @@
 ---
-title: Work
-layout: page
+title: Selected Projects
+layout: application
+header: bg-navy white
 ---
-%ul
-  - blog('projects').articles.each do |project|
-    %li= link_to project.title, project.url
+= partial "page_header"
+= partial "project_grid"

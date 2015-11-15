@@ -1,11 +1,6 @@
 ---
 title: Writing
-layout: page
+header: bg-aqua navy
 ---
-%ul
-  - blog("posts").articles.group_by {|a| a.date.year }.each do |year, articles|
-    %li
-      %h5= year
-      %ul
-        - articles.each do |article|
-          %li= link_to article.title, article.url
+= partial "page_header"
+= partial "post_index"

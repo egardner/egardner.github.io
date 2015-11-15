@@ -1,0 +1,35 @@
+---
+title: Made in L.A. 2014
+categories: projects
+cover: mila_2014_02.jpg
+thumbnail: mila_2014_thumb.jpg
+client: Hammer Museum
+year: 2014
+role: Exhibition Design
+gallery:
+ - mila_2014_00.jpg
+ - mila_2014_01.jpg
+ - mila_2014_02.jpg
+ - mila_2014_03.jpg
+ - mila_2014_04.jpg
+ - mila_2014_05.jpg
+ - mila_2014_06.jpg
+ - mila_2014_07.jpg
+ - mila_2014_08.jpg
+ - mila_2014_09.jpg
+ - mila_2014_010.jpg
+---
+= partial(:media_unit, :locals => { :media => current_page.data.gallery[0, 2] })
+.media-text-block
+  :markdown
+    The Hammer Museum opened the summer of 2014 with the second edition of it's
+    biennial exhibition, _Made in L.A._ The show required an extensive set of
+    collateral, from signage, posters, and invitations to interactive voting kiosks
+    and merchandise.
+
+    Art direction: Julia Luke
+    Photos: Eric Gardner and Tara Morris
+= partial(:media_unit, :locals => { :media => current_page.data.gallery[3..4] })
+= partial(:media_unit, :locals => { :media => current_page.data.gallery[5..7] })
+= partial(:media_unit, :locals => { :media => ["mila_2014_02.jpg"] })
+= partial(:media_unit, :locals => { :media => current_page.data.gallery[8..10] })

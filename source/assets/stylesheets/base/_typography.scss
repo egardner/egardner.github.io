@@ -16,6 +16,7 @@ h5,
 h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
+  letter-spacing: $heading-letter-spacing;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
@@ -27,12 +28,12 @@ p {
 a {
   color: $action-color;
   text-decoration: none;
-  transition: color 0.1s linear;
+  transition: all 0.3s linear;
 
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 15%);
+    color: darken($action-color, 25%);
   }
 
   &:active,

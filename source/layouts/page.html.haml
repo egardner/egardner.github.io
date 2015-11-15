@@ -1,6 +1,4 @@
 = wrap_layout :application do
-  .page-header
-    %h1.page-title= current_page.data.title
-    %h4.page-date= current_page.data.date
+  = partial "page_header"
   .page-content
     = yield

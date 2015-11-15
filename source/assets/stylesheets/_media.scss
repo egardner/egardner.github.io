@@ -1,0 +1,18 @@
+.media {
+  @include outer-container;
+}
+
+.media-text-block {
+  @extend %body-text;
+  margin-bottom: $base-spacing;
+  margin-top: $base-spacing;
+}
+
+.media-unit {
+  @include display(flex);
+}
+
+.media-item {
+  @include flex(1);
+  border: solid 8px $white;
+}

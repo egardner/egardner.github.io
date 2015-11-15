@@ -1,6 +1,7 @@
 .nav {
   @include outer-container;
-  border-bottom: $base-border;
+  // border-bottom: $base-border;
+  font-family: $heading-font-family;
   padding: $base-spacing $small-spacing;
 }
 

@@ -1,0 +1,46 @@
+$cover-height: 60vh;
+$mobile-cover-height: 30vh;
+
+.cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: $cover-height;
+  margin-bottom: $base-spacing;
+
+  @include media($small-screen) {
+    height: $mobile-cover-height;
+  }
+}
+
+.cover-overlay {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+  @include background-image(linear-gradient(
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.75) 100%));
+  background-image: -moz-linear-gradient(
+    transparent 0%,
+    rgba(0, 0, 0, 0.75) 100%);
+  height: $cover-height;
+
+  @include media($small-screen) {
+    height: $mobile-cover-height;
+  }
+}
+
+.cover-inner {
+  @extend %body-text;
+  color: $white;
+  font-size: 1.5em;
+  text-align: center;
+
+  @include media($small-screen) {
+    font-size: 1em;
+  }
+
+  .page-title {
+    margin: 0;
+  }
+}

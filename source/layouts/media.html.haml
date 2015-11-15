@@ -1,0 +1,4 @@
+= wrap_layout :application do
+  = partial(:cover, :locals => {:image => current_page.data.cover })
+  .media
+    = yield
