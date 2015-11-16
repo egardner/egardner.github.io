@@ -714,48 +714,100 @@ html {
   max-width: 61.25em;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Karla";
-  padding: 1.725em 0.8625em; }
+  font-family: "Karla"; }
   /* line 20, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
   .nav::after {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 37.4375em) {
+    /* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+    .nav {
+      height: 3.75rem; }
+      /* line 7, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+      .nav.mobile-nav-active {
+        height: inherit; } }
+  @media screen and (min-width: 37.5em) {
+    /* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+    .nav {
+      padding: 1.725em 0.8625em; } }
 
-/* line 8, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+/* line 15, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
 .nav-logo {
-  text-align: center; }
-  @media screen and (min-width: 38.75em) {
-    /* line 8, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+  background-color: #fff;
+  line-height: 1.7;
+  position: relative;
+  text-align: left;
+  z-index: 100; }
+  @media screen and (max-width: 37.4375em) {
+    /* line 15, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+    .nav-logo {
+      margin-bottom: 0;
+      padding: 0.8625em; } }
+  @media screen and (min-width: 37.5em) {
+    /* line 15, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
     .nav-logo {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 31.76157%;
-      text-align: left; }
+      width: 31.76157%; }
       /* line 89, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       .nav-logo:last-child {
         margin-right: 0; } }
 
-/* line 17, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
-.nav-links {
-  text-align: center; }
-  @media screen and (min-width: 38.75em) {
-    /* line 17, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
-    .nav-links {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 65.88078%;
-      margin-right: 0;
-      text-align: right; }
-      /* line 89, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
-      .nav-links:last-child {
-        margin-right: 0; } }
-  /* line 26, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
-  .nav-links li {
-    display: inline-block;
-    margin-left: 1.725em; }
+@media screen and (max-width: 37.4375em) {
+  /* line 32, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+  .nav-links {
+    -webkit-transform: translateY(-150%);
+    -ms-transform: translateY(-150%);
+    transform: translateY(-150%);
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    z-index: 10; }
+    /* line 42, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+    .nav-links li {
+      background-color: #001F3F;
+      height: 0;
+      padding: 0.8625em; }
+    /* line 48, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+    .nav-links.mobile-nav-active {
+      -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      transform: translateY(0%); }
+      /* line 51, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+      .nav-links.mobile-nav-active li {
+        height: inherit; } }
+@media screen and (min-width: 37.5em) {
+  /* line 32, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+  .nav-links {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-right: 0;
+    text-align: right; }
+    /* line 89, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+    .nav-links:last-child {
+      margin-right: 0; }
+    /* line 60, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+    .nav-links li {
+      display: inline-block;
+      margin-left: 1.725em; } }
+
+/* line 67, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+.mobile-nav-icon {
+  position: absolute;
+  right: 0.8625em;
+  top: 0.8625em;
+  z-index: 200; }
+  @media screen and (min-width: 37.5em) {
+    /* line 67, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_nav.scss */
+    .mobile-nav-icon {
+      display: none; } }
 
 /* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
 .page-header, .page-content, .media-text-block, .cover-inner, .post-index {
@@ -778,7 +830,7 @@ html {
   /* line 7, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
   .page-header h6, .page-content h6, .media-text-block h6, .cover-inner h6, .post-index h6 {
     font-size: 0.7em; }
-  @media screen and (min-width: 38.75em) {
+  @media screen and (min-width: 37.5em) {
     /* line 1, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
     .page-header, .page-content, .media-text-block, .cover-inner, .post-index {
       font-size: 1.125em;
@@ -860,7 +912,7 @@ html {
   margin-top: 1.725em; }
 
 /* line 11, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
-.media-unit {
+.media-block {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -877,7 +929,8 @@ html {
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  border: solid 8px #fff; }
+  border: solid 8px #fff;
+  text-align: center; }
 
 /* line 4, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_cover.scss */
 .cover {
@@ -886,7 +939,7 @@ html {
   background-size: cover;
   height: 60vh;
   margin-bottom: 1.725em; }
-  @media screen and (max-width: 37.75em) {
+  @media screen and (max-width: 37.4375em) {
     /* line 4, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_cover.scss */
     .cover {
       height: 30vh; } }
@@ -921,7 +974,7 @@ html {
   background-image: linear-gradient(to   , rgba(0, 0, 0, 0.75) 100%);
   background-image: -moz-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.75) 100%);
   height: 60vh; }
-  @media screen and (max-width: 37.75em) {
+  @media screen and (max-width: 37.4375em) {
     /* line 16, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_cover.scss */
     .cover-overlay {
       height: 30vh; } }
@@ -931,7 +984,7 @@ html {
   color: #fff;
   font-size: 1.5em;
   text-align: center; }
-  @media screen and (max-width: 37.75em) {
+  @media screen and (max-width: 37.4375em) {
     /* line 33, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_cover.scss */
     .cover-inner {
       font-size: 1em; } }
@@ -954,7 +1007,7 @@ html {
 /* line 6, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_project_grid.scss */
 .project-grid-item {
   margin-bottom: 1.725em; }
-  @media screen and (max-width: 37.75em) {
+  @media screen and (max-width: 37.4375em) {
     /* line 6, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_project_grid.scss */
     .project-grid-item {
       float: left;
@@ -970,7 +1023,7 @@ html {
       /* line 83, /Users/eric/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
       .project-grid-item:nth-child(2n+1) {
         clear: left; } }
-  @media screen and (min-width: 38.75em) {
+  @media screen and (min-width: 37.5em) {
     /* line 6, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_project_grid.scss */
     .project-grid-item {
       float: left;
