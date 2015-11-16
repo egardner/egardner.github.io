@@ -1,5 +1,10 @@
 .media {
   @include outer-container;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .media-text-block {
