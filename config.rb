@@ -58,4 +58,14 @@ helpers do
     options[:class] << " active" if page_url == current_url
     link_to(link_text, page_url, options)
   end
+
+  def media_block(images)
+    if images.is_a? Array
+      partial(:media_block, :locals => { :media => images })
+    elsif images.is_a? String
+      partial(:media_block, :locals => { :media => [images] })
+    else
+      return false
+    end
+  end
 end

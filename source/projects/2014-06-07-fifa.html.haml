@@ -24,8 +24,8 @@ gallery:
     of offering the biggest screen in the city for football-watching: the 35'
     Billy Wilder Theater.
 
-= partial(:media_unit, :locals => { :media => [current_page.data.gallery[4]] })
-= partial(:media_unit, :locals => { :media => current_page.data.gallery[1..2] })
+= media_block(current_page.data.gallery[4])
+= media_block(current_page.data.gallery[1..2])
 
 .media-text-block
   :markdown
@@ -37,4 +37,5 @@ gallery:
     With Tara Morris (Design, Photography).
 
     [1]: http://www.1972municholympics.co.uk/Posters/Poster_Sport_Section.php
-= partial(:media_unit, :locals => { :media => current_page.data.gallery[5..7] })
+
+= media_block(current_page.data.gallery[5..7])

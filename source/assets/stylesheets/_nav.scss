@@ -1,30 +1,74 @@
 .nav {
   @include outer-container;
-  // border-bottom: $base-border;
   font-family: $heading-font-family;
-  padding: $base-spacing $small-spacing;
+
+  @include media($small-screen) {
+    height: 3.75rem;
+    &.mobile-nav-active { height: inherit; }
+  }
+
+  @include media($medium-screen-up) {
+    padding: $base-spacing $small-spacing;
+  }
 }
 
 .nav-logo {
-  text-align: center;
+  background-color: $base-background-color;
+  line-height: 1.7;
+  position: relative;
+  text-align: left;
+  z-index: 100;
+
+  @include media($small-screen) {
+    margin-bottom: 0;
+    padding: $small-spacing;
+  }
 
   @include media($medium-screen-up) {
     @include span-columns(4);
-    text-align: left;
   }
 }
 
 .nav-links {
-  text-align: center;
+  @include media($small-screen) {
+    @include transform(translateY(-150%));
+    @include transition(transform 0.2s ease-in-out);
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    z-index: 10;
+
+    li {
+      background-color: $navy;
+      height: 0;
+      padding: $small-spacing;
+    }
+
+    &.mobile-nav-active {
+      @include transform(translateY(0%));
+
+      li { height: inherit; }
+    }
+  }
 
   @include media($medium-screen-up) {
     @include span-columns(8);
     @include omega;
     text-align: right;
-  }
 
-  li {
-    display: inline-block;
-    margin-left: $base-spacing;
+    li {
+      display: inline-block;
+      margin-left: $base-spacing;
+    }
   }
+}
+
+.mobile-nav-icon {
+  position: absolute;
+  right: $small-spacing;
+  top: $small-spacing;
+  z-index: 200;
+
+  @include media($medium-screen-up) { display: none; }
 }

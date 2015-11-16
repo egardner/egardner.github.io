@@ -8,11 +8,12 @@
   margin-top: $base-spacing;
 }
 
-.media-unit {
+.media-block {
   @include display(flex);
 }
 
 .media-item {
   @include flex(1);
   border: solid 8px $white;
+  text-align: center;
 }

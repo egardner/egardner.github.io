@@ -23,8 +23,8 @@ gallery:
     artists took over the famous boardwalk to display their work to thousands of
     beachgoers &mdash; temporarily erasing any distinction between &quot;high art&quot;
     and &quot;street art.&quot;
-= partial(:media_unit, :locals => { :media => ["vbb_01.jpg", "vbb_03.jpg", "vbb_04.jpg"] })
-= partial(:media_unit, :locals => { :media => ["vbb_05.jpg", "vbb_07.jpg"] })
+= media_block(["vbb_01.jpg", "vbb_03.jpg", "vbb_04.jpg"])
+= media_block(["vbb_05.jpg", "vbb_07.jpg"])
 
 .media-text-block
   :markdown
@@ -32,4 +32,4 @@ gallery:
     The &quot;funky pussy&quot; illustration was adapted from artwork created by
     veteran boardwalk artist Arthure &quot;Art&quot; Moore. Materials included
     hand-printed silk-screened posters, apparel, giant balloons, and printed ephemera.
-= partial(:media_unit, :locals => { :media => ["vbb_06.jpg"] })
+= media_block("vbb_06.jpg")
