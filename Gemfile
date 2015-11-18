@@ -11,3 +11,4 @@ gem "neat"
 
 gem "middleman-blog"
 gem "middleman-syntax"
+gem "middleman-pry"

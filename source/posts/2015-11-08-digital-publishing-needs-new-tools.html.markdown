@@ -1,5 +1,6 @@
 ---
 title: Digital Publishing needs New&nbsp;Tools
+date: 2015-11-08
 header: bg-maroon white
 ---
 
