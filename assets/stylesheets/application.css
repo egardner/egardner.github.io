@@ -892,6 +892,7 @@ html {
 /* line 63, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_page.scss */
 .page-content .highlight {
   border-radius: 3px;
+  font-size: 0.85rem;
   margin-bottom: 1.725em;
   padding: 0.8625em 1.725em; }
 
@@ -905,13 +906,17 @@ html {
     clear: both;
     content: "";
     display: table; }
+  /* line 4, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
+  .media img {
+    height: auto;
+    width: 100%; }
 
-/* line 5, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
+/* line 10, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
 .media-text-block {
   margin-bottom: 1.725em;
   margin-top: 1.725em; }
 
-/* line 11, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
+/* line 16, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
 .media-block {
   display: -webkit-box;
   display: -moz-box;
@@ -921,7 +926,7 @@ html {
   display: -ms-flexbox;
   display: flex; }
 
-/* line 15, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
+/* line 20, /Users/eric/Sites/egardner.github.io/source/assets/stylesheets/_media.scss */
 .media-item {
   -webkit-box-flex: 1;
   box-flex: 1;

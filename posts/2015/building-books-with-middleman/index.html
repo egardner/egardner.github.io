@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>Building Books with Middleman Extensions</title>
+<link href="../../../assets/stylesheets/application.css" rel="stylesheet" />
+</head>
+<body class='posts posts_2015 posts_2015_building-books-with-middleman posts_2015_building-books-with-middleman_index'>
+<header class='nav'>
+<h2 class='nav-logo'><a href="/">Eric Gardner</a></h2>
+<a class='mobile-nav-icon' href='javascript:void(0);'>Menu</a>
+<ul class='nav-links'>
+<li><a class="" href="/work/">Work</a></li>
+<li><a class="" href="/photography/">Photography</a></li>
+<li><a class="" href="/writing/">Writing</a></li>
+</ul>
+</header>
+
+<div class='bg-olive page-header-wrapper white'>
+<div class='page-header'>
+<h1 class='page-title'>Building Books with Middleman Extensions</h1>
+<h4 class='page-date'>November 20, 2015</h4>
+</div>
+</div>
+
+<div class='page-content'>
+<p><img alt="Sample book spread" src="../../../assets/images/terracottas-print.png" />
+<em>Sample book spread – no InDesign required!</em></p>
+
+<h2 id="overview">Overview</h2>
+<p>At the Getty, I'm building a platform (working title: <em>Octavo</em>) for publishing
+digital art books. The goal is to generate multiple book formats (web, PDF,
+EPUB, print on demand) from a single set of text files. The backbone of the project
+is the <a href="www.middlemanapp.com">Middleman static site generator</a>.</p>
+
+<p>Middleman handles the web-based version of the book out of the box. In order to
+create the alternate formats, I knew that I'd need to write an <a href="https://middlemanapp.com/advanced/custom_extensions/">extension</a>.</p>
+
+<p>I had always assumed that writing an extension for Middleman would be fairly
+complicated, but the process was surprisingly straight-forward and only took a
+few hours. This extension is a short program that does the following:</p>
+
+<ul>
+  <li>Creates an alternate version of site pages that rely heaviliy on interactive
+elements, replacing them with content that will translate well into print.</li>
+  <li>Organizes all content for the print version of the website into a list, while
+preserving the desired order of pages</li>
+  <li>Feeds that list to the <a href="http://www.princexml.com/">Prince PDF generator</a> to convert a single PDF.</li>
+</ul>
+
+<h2 id="development-process">Development Process</h2>
+<p>Middleman's <a href="https://middlemanapp.com/advanced/custom_extensions/#callbacks">extension documentation</a> includes discussion of several different
+<strong>callbacks</strong>—places where you can hook into the build process to run custom
+code. I wasn't sure what actions needed to go where, so I relied on
+good-old trial and error to get a sense of which methods and objects were available
+at any given moment in the program's lifecycle. The <code>middleman console</code> command
+was invaluable. Some points worth remembering:</p>
+
+<ul>
+  <li>
+    <p>Many of the methods accessible in a <code>config.rb</code> file can be called via an <code>app</code>
+variable after an extension has been initialized. For example, the <code>proxy</code> method
+is available as <code>app.proxy</code>. Site-wide <code>data</code> objects are also available in the
+<code>after_configuration</code> callback and onward.</p>
+
+<pre class="highlight ruby"><code><span class="c1"># extensions/your_extension.rb</span>
+
+<span class="c1"># app is an instance of Middleman::Application</span>
+<span class="c1"># app.data represents the site-wide data-store object.</span>
+<span class="c1"># The contents of all data files under data/catalogue are passed to a private</span>
+<span class="c1"># method in order to generate print-specific pages for this content.</span>
+<span class="k">def</span> <span class="nf">after_configuration</span>
+  <span class="n">pdf_proxy</span><span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="nf">data</span><span class="p">.</span><span class="nf">catalogue</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="c1"># ...</span>
+<span class="c1"># Note the need to call app.proxy here; this is the same as</span>
+<span class="c1"># calling self.proxy inside of config.rb</span>
+<span class="kp">private</span>
+<span class="k">def</span> <span class="nf">pdf_proxy</span><span class="p">(</span><span class="n">collection</span><span class="p">)</span>
+  <span class="n">collection</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">cat</span><span class="p">,</span> <span class="n">entry</span><span class="o">|</span>
+    <span class="n">app</span><span class="p">.</span><span class="nf">proxy</span> <span class="s2">"/print-catalogue/</span><span class="si">#{</span><span class="n">cat</span><span class="si">}</span><span class="s2">.html"</span><span class="p">,</span> <span class="n">options</span><span class="p">.</span><span class="nf">print_template</span><span class="p">,</span>
+      <span class="ss">:locals</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:entry</span> <span class="o">=&gt;</span> <span class="n">entry</span> <span class="p">},</span> <span class="ss">:ignore</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+  </li>
+  <li>
+    <p>The <code>sitemap</code> is a very powerful tool. One pattern which I kept re-using was
+this one:</p>
+
+<pre class="highlight ruby"><code><span class="n">resources</span><span class="p">.</span><span class="nf">find_all</span> <span class="p">{</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="nb">p</span><span class="p">.</span><span class="nf">some_filter_criteria</span> <span class="p">}</span>
+</code></pre>
+
+    <p>By passing a code block to the <code>find_all</code> method here, you can create a test
+for virtually anything; the results will be a collection of all elements which
+passed the test. The other <code>Enumerable</code> methods like <code>sort_by</code>, <code>select</code>, etc.
+can also be used here.</p>
+  </li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+<p>This extension assumes the <a href="http://www.princexml.com/">Prince PDF generator</a> is
+being used (it has the best output of any command-line tool by far). However,
+you could swap out the command in the <code>after_build</code> callback to use any other
+program which can take a list of files as input.</p>
+
+<p>Creating a <a href="http://alistapart.com/article/building-books-with-css3">good print stylesheet</a> is also highly recommended.</p>
+
+<h2 id="usage">Usage</h2>
+<p>First, you must <code>require</code> the extension in <code>config.rb</code>. Default place for it to
+live is in <code>extensions/</code>. Then, define a template for the printed versions of
+any dynamic pages (this setup assumes that <a href="https://middlemanapp.com/advanced/dynamic_pages/">dynamic pages</a> are being used, and
+that the data lives in <code>data/catalogue/</code>). Using a separate template means
+that interactive elements can be replaced with things that make sense in a
+printed format (plain <code>img</code> elements instead of dynamic JS-enhanced versions, etc).</p>
+
+<p>The extension will automatically run when the <code>middleman build</code> command is given,
+and a PDF will appear in the <code>/pdf</code> folder when generation is complete.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+<p>This is a basic (but working) implementation of an automatic web-to-PDF conversion.
+While this works, a lot of custom code for templates and styling was still needed
+in order to get decent output. My ultimate goal is to simplify the interface and
+provide some good defaults, and then package the end result as a gem. That way,
+you could just add it to your Gemfile and add a few lines of configuration and
+the rest would be handled automatically.</p>
+
+<p>This is something I’m hoping to include as part of our <strong>Octavo</strong> platform for
+digital publishing at some point in 2016.</p>
+
+<p><strong>Questions? Suggestions?</strong>
+Let me know <a href="https://twitter.com/ecgardner">on twitter!</a></p>
+
+<h2 id="complete-code">Complete Code</h2>
+<p><a href="https://gist.github.com/egardner/e6f8cb683c5dc50132de">Available on Github here.</a></p>
+
+<script src="https://gist.github.com/egardner/e6f8cb683c5dc50132de.js"></script>
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="../../../assets/javascripts/application.js"></script>
+</body>
+</html>
