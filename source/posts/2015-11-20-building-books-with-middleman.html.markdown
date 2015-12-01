@@ -11,7 +11,7 @@ _Sample book spread – no InDesign required!_
 At the Getty, I'm building a platform (working title: _Octavo_) for publishing
 digital art books. The goal is to generate multiple book formats (web, PDF,
 EPUB, print on demand) from a single set of text files. The backbone of the project
-is the [Middleman static site generator](www.middlemanapp.com).
+is the [Middleman static site generator](http://middlemanapp.com).
 
 Middleman handles the web-based version of the book out of the box. In order to
 create the alternate formats, I knew that I'd need to write an [extension][1].
