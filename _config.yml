@@ -2,7 +2,7 @@
 #==================================
 title: Laurel Bybee
 email: gardner.ec@gmail.com
-description: Laurel Bybee's Website
+description: "Laurel Bybee's Website"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
@@ -12,7 +12,7 @@ markdown: redcarpet
 redcarpet: 
   extensions: ["smart", "strikethrough"]
 
-highlighter: pygments
+highlighter: rouge
 exclude: [Gemfile, Gemfile.lock, readme.md]
 
 # Permalinks
