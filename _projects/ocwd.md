@@ -23,4 +23,4 @@ order: 0
 
 The Orange County Water District (OCWD), an internationally recognized leader in the water industry, asked Cinnabar to design and build an interactive exhibit at their headquarters in Fountain Valley, CA. The purpose of the exhibit was to educate visitors about OCWD’s mission, current projects and goals for the future. The hands-on interactive elements guide the visitor through the world’s largest wastewater purification system.
 
-As a Designer at Cinnabar, I helped to create the initial comps and renderings for the exhibit design. As Graphics Manager, I worked with the in-house interactive developers, technical designers and a subcontractors to manage graphic production and installation. All exhibition graphics were fabricated and printed by local vendors in Los Angeles.
+As a Designer at Cinnabar, I helped to create the initial comps and renderings of the exhibit design. As Graphics Manager, I worked with the in-house interactive developers, technical designers and a subcontractors to manage graphic production and installation. All exhibition graphics were fabricated and printed by local vendors in Los Angeles.
