@@ -1,9 +1,12 @@
 {% if page.gallery %}
 <div class="masonry-grid">
   {% for item in page.gallery %}
-  <a class="masonry-item" data-featherlight="image" href="{{site.baseurl}}/{{site.image_dir}}/{{item.image}}" 
-    style="background-image:url({{site.baseurl}}/{{site.image_dir}}/{{item.image}});">
-  </a>
+  <div class="masonry-item">
+    <img alt="" src="{{site.baseurl}}/{{site.image_dir}}/{{item.image}}"/>
+  </div>
+  <!-- <a class="masonry-item" href="{{site.baseurl}}/{{site.image_dir}}/{{item.image}}"  -->
+  <!-- style="background-image:url({{site.baseurl}}/{{site.image_dir}}/{{item.image}});"> -->
+  <!-- </a> -->
   {% endfor %}
 </div>
 {% endif %}
