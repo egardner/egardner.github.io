@@ -1,6 +1,7 @@
 <div class="page-cover-slideshow">
-{% for project in site.projects %}
-  <div class="page-cover-slide" 
+{% assign sorted_projects = (site.projects | sort: 'order') %}
+{% for project in sorted_projects %}
+  <div class="page-cover-slide"
        style="background-image:url({{site.baseurl}}/{{site.image_dir}}/{{project.cover}});">
     <div class="page-cover-overlay">
     </div>
@@ -8,7 +9,7 @@
       <a href="{{project.url}}">
         <h1 class="page-title">{{project.title}}</h1>
       </a>
-    </div>    
+    </div>
   </div>
 {% endfor %}
 </div>
