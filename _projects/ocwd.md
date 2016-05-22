@@ -1,10 +1,10 @@
 ---
-title: Orange County Water District Exhibition
+title: Orange County Water District
 layout: project
 published: true
 thumbnail: ocwd_05.jpg
 cover: ocwd_05.jpg
-description: Exhibition at Orange County Water District Headquarters
+description: Exhibition at OCWD Headquarters
 year: 2016
 gallery:
   - image: ocwd_05.jpg
