@@ -22,5 +22,8 @@ $fonts-dir: "{{site.baseurl}}/assets/fonts";
 @import "components/post_list";
 @import "components/syntax";
 
+@import "vendor/photoswipe/photoswipe.css";
+@import "vendor/photoswipe/default-skin/default-skin.css";
+
 @import "vendor/slick";
-@import "vendor/featherlight.min.css";
+/* @import "vendor/featherlight.min.css"; */
