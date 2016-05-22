@@ -20,4 +20,4 @@ Inspired by the bestselling book _A Path Appears_, by Pulitzer Prize–winning j
 
 Cinnabar worked with C&G partners, wHY Architecture, Skirball Cultural Center, and the UCLA Fielding School of Public Health to fabricate A Path Appears: Actions for a Better World.
 
-As Graphics Manager at Cinnabar, I lead graphics production and installation.
+As Graphics Manager at Cinnabar, I lead graphics production and installation. All exhibition graphics were fabricated and printed by local vendors in Los Angeles.
