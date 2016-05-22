@@ -13,7 +13,7 @@ gallery:
   - image: ocwd_04.jpg
   - image: ocwd_01.jpg
   - image: ocwd_02.jpg
-order: 9
+order: 0
 ---
 
 > ”The interactive displays will become an integral part of school education and vocational training programs and the OCWD tour.”   

@@ -13,7 +13,7 @@ gallery:
  - image: aphrodite_06.jpg
  - image: aphrodite_07.jpg
  - image: aphrodite_hero.jpg
-order: 0
+order: 9
 ---
 
 > “Laurel’s creative flair and critical eye have been fundamental success of the
@@ -57,4 +57,3 @@ street banners, and site signage, to printed invitations, press packets, web
 banners, wall text, fabric gallery banners, object labels, museum store products
 and merchandising. I also worked with the lead designer on architectural
 drawings and assisted during installation.
-
