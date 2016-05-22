@@ -1,12 +1,12 @@
 ---
-title: Crosscurrents in LA 
+title: Crosscurrents in LA
 layout: project
 published: true
 thumbnail: pst_01.jpg
 cover: pst_01.jpg
 description: Exhibition at the J. Paul Getty Museum
 year: 2012
-gallery: 
+gallery:
   - image: pst_01.jpg
   - image: pst_02.jpg
   - image: pst_03.jpg
@@ -38,4 +38,3 @@ I contributed creatively during the initial brainstorming phases of the design
 process and assisted proofing and preparing the final graphic files to go out
 for print. In addition, I prepared the title wall architectural drawings package
 in Vectorworks.
-
