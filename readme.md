@@ -1,6 +1,16 @@
-# Jekyll Starter repo
+# laurelbybee.com Portfolio site
 
-This is a bare-bones Jekyll template for starting new projects. The file structure reflects my preferred way of working: neatly-organized assets directory, Sass preprocessing, Bourbon, Neat, and Bitters for front-end framework, and jQuery for basic JS needs. No fiddling around with NPM, Bower, Grunt, etc.
+Jekyll site for Laurel Bybee’s online portfolio.
+
+## Local Development
+
+To preview the site locally, open the project in Terminal and run:
+
+```
+jekyll server
+```
+
+Then you can view the site at `localhost:4000`. 
 
 ## Dependencies
 - jQuery 2.1.3 (included in repo)
