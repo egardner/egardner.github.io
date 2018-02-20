@@ -13,5 +13,6 @@ gallery:
 
 order: 1
 ---
+The purpose of this seasonal campaign report, is to inform high-level donors about the progress of a multi-million dollar capital campaign for a prestigious non-profit school's expansion. I created this accordion fold, digitally printed brochure to complement capital campaign fundraising materials. 
 
 My role: art direction, graphic design, project management, print production

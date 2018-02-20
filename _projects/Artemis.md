@@ -15,6 +15,4 @@ gallery:
 order: 1
 ---
 
-Printed on
-
 My role: art direction, graphic design, illustration, project management, print production
