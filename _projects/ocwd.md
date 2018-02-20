@@ -1,5 +1,6 @@
 ---
 title: Orange County Water District
+category: environment
 layout: project
 published: true
 thumbnail: ocwd_05.jpg

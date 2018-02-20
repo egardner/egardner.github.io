@@ -9,7 +9,7 @@ url: "" # the base hostname & protocol for your site
 # Build settings
 #==================================
 markdown: kramdown
-redcarpet: 
+redcarpet:
   extensions: ["smart", "strikethrough"]
 
 highlighter: rouge
@@ -35,6 +35,9 @@ collections:
     output: true
     permalink: /projects/:path/
 
+    #adding categories here
+    category:
+      output: true
 
 # Front-matter Defaults
 #==================================
@@ -55,6 +58,14 @@ defaults:
     values:
       layout: "project"
       order: 0
+
+  #default layout property to each category
+
+  - scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
 
 # Prose.io config
 #==================================

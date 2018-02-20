@@ -1,5 +1,6 @@
 ---
 title: "Campaign Report"
+category: print
 thumbnail: Report2.jpg
 cover: Report2.jpg
 description: Capital Campaign fundraising report

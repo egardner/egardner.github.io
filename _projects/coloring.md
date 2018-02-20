@@ -1,5 +1,6 @@
 ---
 title: "Coloring Book"
+category: print
 thumbnail: coloring_02.jpg
 cover: coloring_02.jpg
 description: Welcome gift for students and faculty
@@ -13,6 +14,6 @@ gallery:
 order: 1
 ---
 
-I designed this fun interactive welcome gift for new students and faculty. I created a suite of custom illustrations, inspired by favorite areas of the school and had this little pocket-sized coloring book produced by a local printer. We used an opaque white ink on a craft paper cover. 
+I designed this fun interactive welcome gift for new students and faculty. I created a suite of custom illustrations, inspired by favorite areas of the school and had this little pocket-sized coloring book produced by a local printer. We used an opaque white ink on a craft paper cover.
 
 My role: art direction, custom illustration, book design, print production

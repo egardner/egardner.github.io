@@ -1,12 +1,13 @@
 ---
 title: Luminous Paper
+category: environment
 layout: project
 published: true
 thumbnail: watercolor_01.jpg
 cover: watercolor_01.jpg
 description: Exhibition at the J. Paul Getty Villa
 year: 2011
-gallery: 
+gallery:
   - image: watercolor_01.jpg
   - image: watercolor_02.jpg
   - image: watercolor_03.jpg

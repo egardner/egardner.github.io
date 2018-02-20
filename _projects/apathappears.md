@@ -1,5 +1,6 @@
 ---
 title: "A Path Appears: Actions for a Better World"
+category: environment
 thumbnail: apa_02.jpg
 cover: apa_02.jpg
 description: Exhibition at the Skirball Cultural Center

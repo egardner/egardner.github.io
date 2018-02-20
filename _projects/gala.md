@@ -1,5 +1,6 @@
 ---
 title: "The Archer Affair"
+category: print
 thumbnail: affair_02.jpg
 cover: affair_02.jpg
 description: 2017 Fundraising Gala for <br>The Archer School for Girls
