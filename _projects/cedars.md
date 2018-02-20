@@ -1,5 +1,6 @@
 ---
 title: Cedars-Sinai Conservancy Exhibit
+category: environment
 thumbnail: cedars_01.jpg
 cover: cedars_01.jpg
 year: 2014

@@ -1,5 +1,6 @@
 ---
 title: "Impact Report"
+category: print
 thumbnail: impact_04.jpg
 cover: impact_04.jpg
 description: 2017 Impact Report <br>The Archer School for Girls

@@ -1,5 +1,6 @@
 ---
 title: In The Beginning Was The Word
+category: environment
 thumbnail: gos_hero.jpg
 cover: gos_hero.jpg
 description: Exhibition at the J. Paul Getty Villa

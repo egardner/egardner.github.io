@@ -1,5 +1,6 @@
 ---
 title: Crosscurrents in LA
+category: environment
 layout: project
 published: true
 thumbnail: pst_01.jpg

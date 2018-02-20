@@ -1,5 +1,6 @@
 ---
 title:  Aphrodite and the Gods of Love
+category: environment
 thumbnail: aphrodite_01.jpg
 cover: aphrodite_hero.jpg
 description: Exhibition at the J. Paul Getty Villa

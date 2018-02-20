@@ -1,6 +1,7 @@
 ---
 title: Making the Grade
 description: "Discovery Cube, Los Angeles <br>STEM Educational Exhibit"
+category: environment
 thumbnail: dsc_01.jpg
 cover: dsc_01.jpg
 year: 2015
@@ -23,7 +24,7 @@ order: 2
 > running off to join her classmates, Lleremas gave the new museum her review:
 > “It’s awesome.”  
 >   
-> &mdash; Los Angeles Times, 
+> &mdash; Los Angeles Times,
 > [San Fernando Valley’s Discovery Cube L.A. opens in once-vacant museum](http://www.latimes.com/local/
 > california/la-me-1114-valley-museum-20141114-story.html “link to article”)
 

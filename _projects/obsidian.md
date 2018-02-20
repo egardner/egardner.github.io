@@ -1,5 +1,6 @@
 ---
 title: Obsidian Mirror Travels
+category: environment
 thumbnail: obsidian_hero.jpg
 cover: obsidian_hero.jpg
 description: Exhibition at the Getty Research Institute

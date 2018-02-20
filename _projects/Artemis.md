@@ -1,5 +1,6 @@
 ---
 title: "Artemis"
+category: print
 thumbnail: Artemis2.jpg
 cover: Artemis2.jpg
 description: Biannual print magazine
