@@ -12,5 +12,6 @@ I work with museums, educational institutions, non-profits, and start-ups as a d
 
 When I'm not designing, I'm going on long bike rides, making small-batch cider, or playing with my dog, Laszlo.
 <br />
+
 I currently live and work in Portland, Oregon.
 <br />
