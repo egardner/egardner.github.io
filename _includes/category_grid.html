@@ -1,0 +1,16 @@
+<div class="grid-container">
+  <ul class="project-grid">
+    {% assign sorted_projects = (site.projects | where: "category", include.category  | sort: 'order') %}
+    {% for project in sorted_projects %}
+    <li class="project-item">
+      <a href="{{project.url}}">
+        <img src="{{site.baseurl}}/{{site.image_dir}}/{{project.thumbnail}}">
+      </a>
+      <a href="{{project.url}}">
+        <h2 class="project-title">{{project.title}}</h2>
+        <h3 class="project-subtitle">{{project.description}}</h3>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

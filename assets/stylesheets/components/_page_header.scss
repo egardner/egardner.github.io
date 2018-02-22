@@ -1,63 +1,59 @@
 .page-header {
   @extend %fadein--slow;
   @include background-image(linear-gradient(
-    hsla(0, 0%, 0%, 0.5) 0%, 
+    hsla(0, 0%, 0%, 0.5) 0%,
     hsla(0, 0%, 0%, 0) 100%));
   color: #fff;
   position: absolute;
   background-color: transparent;
   z-index: 50;
 
-  @include media($medium-screen-up) { 
+  @include media($medium-screen-up) {
     height: 200px;
     position: absolute;
   }
+
   a { @extend %inverse-link; }
 }
 
 .page-header-inner {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include align-items(baseline);
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
   padding: $gutter $gutter * 2;
-  //margin-bottom: $gutter / 2;
-  //margin-top: 1rem;
+
   @include media($small-screen) {
     padding: $gutter;
   }
 }
 
 .site-title {
-  @include flex(0 0 70%);
+  flex: 100%;
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 
-  @include media ($medium-screen-up) {
-    @include flex(0 0 60%);
+  @include media($medium-screen-up) {
+    flex: 1;
     font-size: 1.35rem;
   }
 }
 
 .page-header-links {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include align-content(flex-end);
-  @include flex(0 0 30%);
-  @include media($medium-screen-up) {
-    @include flex(0 0 40%);
-  }
-}
-
-.page-header-links-item {
-  @include flex(0 0 100%);
-  font-size: 1.125rem;
-  text-align: right;
-  line-height: 2;
+  display: flex;
+  flex: 100%;
+  justify-content: space-between;
 
   @include media($medium-screen-up) {
-    @include flex(1);
-    text-align: right;
+    flex: 0 1 auto;
   }
 
+  &__item {
+    display: inline-flex;
+    flex: 0 1 auto;
+    margin: 0 $base-spacing;
+
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+  }
 }
