@@ -7,9 +7,10 @@ video: true
 ---
 
 <br />
+I work with museums, educational institutions, non-profits, and start-ups as a designer and project manager. From concept to execution, I bring a broad set of skills to projects & creative teams. I hold a BA from UCLA in Design | Media Arts and a certificate of Web and Interaction design from UCLA Extension. I love finding ways to tell compelling stories using typography, illustration, and photography.
+<br />
 
-I work with non-profits, cultural institutions, and artists as a designer and project manager. From concept to execution, I bring a broad set of skills to projects & creative teams. For non-profit organizations I follow the <a href="http://givehalf.co/">Give Half</a> business model where I provide pro-bono design work.
-
-In addition to my work in the field of design, I’m a passionate maker and educator. I currently live and work in Portland Oregon.
-
+When I'm not designing, I'm going on long bike rides, making small-batch cider, or playing with my dog, Laszlo.
+<br />
+I currently live and work in Portland, Oregon.
 <br />
