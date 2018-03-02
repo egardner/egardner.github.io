@@ -1,5 +1,5 @@
 ---
-title: "Artemis"
+title: "Artemis Magazine"
 category: print
 thumbnail: Artemis2.jpg
 cover: Artemis2.jpg
@@ -15,4 +15,4 @@ gallery:
 order: 1
 ---
 
-My role: art direction, graphic design, illustration, project management, print production
+<!-- My role: art direction, graphic design, illustration, project management, print production -->

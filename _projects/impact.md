@@ -16,6 +16,6 @@ gallery:
 order: 1
 ---
 
-2017 Impact Report for a prestigious non-profit school highlighting fundraising, academics, athletics, and arts through photographic illustrations.
+<!-- 2017 Impact Report for a prestigious non-profit school highlighting fundraising, academics, athletics, and arts through photographic illustrations.
 
-My role: art direction, graphic design, project management, print production
+My role: art direction, graphic design, project management, print production -->

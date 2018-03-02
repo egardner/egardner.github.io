@@ -16,8 +16,8 @@ gallery:
 order: 1
 ---
 
-Each year, the Archer School for Girls hosts a fundraising gala for the Archer community. Guests are invited to participate in an auction, seated dinner, and dancing. All proceeds are contributed to the Archer Fund, a flexible tuition program for students.
+<!-- Each year, the Archer School for Girls hosts a fundraising gala for the Archer community. Guests are invited to participate in an auction, seated dinner, and dancing. All proceeds are contributed to the Archer Fund, a flexible tuition program for students.
 
 I worked closely with the Advancement team and leadership of the Parent Association to develop a custom illustrated invitation suite including save the date cards, invitations, an auction catalog, event signage, and menu cards. Cards are printed on pearlescent paper with copper metallic ink.
 
-My role: art direction, invitation design, illustration, print production
+My role: art direction, invitation design, illustration, print production -->
