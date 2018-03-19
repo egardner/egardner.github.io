@@ -1,24 +1,7 @@
 ---
-# Layouts must stay in HTML
+layout: default
 ---
-<!DOCTYPE html>
-<html lang="en">
-  {% include head.html %}
-  <body class="cover">
-    <ul id="cover-list">
-      {% for image in site.data.covers %}
-      <li data-cover-image="{{site.baseurl}}/{{site.image_dir}}/{{image.url}}" data-cover-desc="{{image.desc}}"></li>
-      {% endfor %}
-    </ul>
-    <div class="page">
-      <div class="page-header">
-        {% include page_header.html %}
-      </div>
-      <div class="page-cover" id="cover">
-        <div class="page-cover-inner">
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript" src="{{site.baseurl}}/{{site.js_dir}}/application.js"></script>
-  </body>
-</html>
+<article class="page-content-text">
+  {% if page.date %}<h4 class="page-date">{{page.date | date_to_long_string}}</h4>{% endif %}
+  {{ content }}
+</article>

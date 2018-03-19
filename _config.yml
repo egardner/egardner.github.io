@@ -5,6 +5,13 @@ email: gardner.ec@gmail.com
 description: "Laurel Bybee's Website"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
+nav_links:
+  - href: "/print/"
+    name: Print
+  - href: "/environment/"
+    name: Environment
+  - href: "/assets/files/Laurel_Resume_2016_detail.pdf"
+    name: Resume
 
 # Build settings
 #==================================

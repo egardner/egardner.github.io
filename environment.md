@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-no-banner
 title: Environmental Work
 slideshow: false
 permalink: /environment/

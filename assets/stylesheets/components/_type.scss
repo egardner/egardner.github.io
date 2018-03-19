@@ -36,6 +36,23 @@
   h5 {font-size: 2em}
 }
 
+%default-link {
+  color: $action-color;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 100%);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
 %inverse-link {
   color: $inverse-color;
   text-decoration: none;

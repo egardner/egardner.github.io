@@ -5,13 +5,38 @@
 
 .project-grid {
   @extend %grid;
-  @extend %grid--padding;
+  @extend %grid--padding !optional;
 }
 
 .project-item {
   @extend %fadein;
   @extend %grid-item;
   @extend %grid-item--padding;
+  position: relative;
+
+  &__info {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - #{$gutter});
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 400ms cubic-bezier(.33,0,.2,1);
+    text-align: center;
+    width: calc(100% - #{$gutter});
+
+    @include media($large-screen-up) {
+      width: calc(100% - (#{$gutter} * 2));
+    }
+  }
+
+  &:hover {
+    .project-item__info {
+      opacity: 1;
+    }
+  }
 }
 
 .project-title {
@@ -22,8 +47,13 @@
 
 .project-subtitle {
   font-size: 1.125rem;
-  font-family: "Libre Bodoni";
+  font-family: $base-font-family;
   font-style: italic;
   margin-top: 0.25rem;
   font-weight: 400;
+}
+
+.project-image {
+  margin: $gutter 0;
+  text-align: center;
 }

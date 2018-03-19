@@ -1,7 +1,13 @@
 ---
-layout: default
+layout: default-no-banner
 ---
 <article class="page-content-main">
-  {{content}}
-  {% include masonry_grid.html %}
+  {% for item in page.gallery %}
+  <div class="project-image">
+    <img alt="" src="{{site.baseurl}}/{{site.image_dir}}/{{item.image}}"/>
+  </div>
+  {% endfor %}
+  <div class="page-content-text">
+    {{content}}
+  </div>
 </article>

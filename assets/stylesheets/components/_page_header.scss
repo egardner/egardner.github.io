@@ -16,15 +16,21 @@
   a { @extend %inverse-link; }
 }
 
+.layout--no-banner .page-header {
+  background-image: none;
+  color: $base-font-color;
+  height: initial;
+  position: static;
+
+  a { @extend %default-link; }
+}
+
 .page-header-inner {
   align-items: baseline;
   display: flex;
   flex-wrap: wrap;
-  padding: $gutter $gutter * 2;
-
-  @include media($small-screen) {
-    padding: $gutter;
-  }
+  padding: $gutter $gutter 0;
+  @include media($large-screen-up) { padding: $gutter ($gutter * 2) 0; }
 }
 
 .site-title {
@@ -51,7 +57,7 @@
   &__item {
     display: inline-flex;
     flex: 0 1 auto;
-    margin: 0 $base-spacing;
+    margin: 0 $base-spacing / 2;
 
     &:first-child { margin-left: 0; }
     &:last-child { margin-right: 0; }

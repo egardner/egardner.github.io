@@ -1,0 +1,25 @@
+---
+# Layouts must stay in HTML
+---
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body class="layout--no-banner">
+    {% include page_header.html %}
+    <!-- begin page content -->
+    <div class="page-content" id="main">
+      <div class="page-content-inner">
+        {{content}}
+      </div>
+    </div>
+    <!-- end page content -->
+    <!-- <div class="page-footer">
+         <div class="page-footer-inner">
+         </div>
+         </div> -->
+    {% include photoswipe.html %}
+    <script type="text/javascript"
+            src="{{site.baseurl}}/assets/javascripts/application.js">
+    </script>
+  </body>
+</html>

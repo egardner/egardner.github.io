@@ -1,5 +1,4 @@
 $max-width: 960px;
-$gutter: 1.5rem;
 
 %block {
   width: 100%;
@@ -13,6 +12,7 @@ $gutter: 1.5rem;
 
 %grid-container {
   margin-right: $gutter;
+  @include media($large-screen-up) { margin-right: $gutter * 2;}
 }
 
 %grid {
@@ -22,6 +22,9 @@ $gutter: 1.5rem;
 
 %grid--padding {
   margin: -$gutter 0 $gutter -$gutter;
+  // @include media ($large-screen-up) {
+    // margin: -($gutter * 2) 0 ($gutter * 2) -($gutter * 2);
+  // }
 }
 
 %grid-item {
@@ -42,4 +45,6 @@ $gutter: 1.5rem;
 
 %grid-item--padding {
   padding: $gutter 0 0 $gutter;
+
+  @include media($large-screen-up) { padding-left: $gutter * 2; }
 }

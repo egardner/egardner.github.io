@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-no-banner
 title: Print Work
 slideshow: false
 permalink: /print/

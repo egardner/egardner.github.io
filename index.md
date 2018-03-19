@@ -1,7 +1,7 @@
 ---
 title:
 description: I am a multidisciplinary designer. <br/> My passion is to find exciting ways to create educational experiences for nonprofits and cultural institutions.
-layout: page
+layout: cover
 permalink: /
 video: true
 ---

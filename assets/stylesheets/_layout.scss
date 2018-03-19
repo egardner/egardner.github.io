@@ -13,29 +13,31 @@ body {
   @extend %block;
 }
 
-.page-header-inner,
-.page-content-inner {
-  @extend %block-inner;
-}
+// .page-header-inner,
+// .page-content-inner {
+//   @extend %block-inner;
+// }
 
 .page-title {
   font-size: 3.25rem;
   letter-spacing: 8px;
   text-transform: uppercase;
   margin-bottom: 0rem;
+
   @include media($small-screen) {
     font-size: 1.75rem;
   }
 }
 
 .page-subtitle {
-  font-family: "Libre Bodoni";
+  font-family: $base-font-family;
   font-style: italic;
   line-height: 1.4;
   font-weight: 400;
   margin-top: 0.5rem;
-  font-size: 2.125rem;
+  font-size: 2.25rem;
   letter-spacing: 1px;
+
   @include media($small-screen) {
     font-size: 1.5rem;
   }
@@ -137,9 +139,18 @@ body {
 }
 
 .page-content-main {
+  // @extend %body-text;
+  margin: 0 $gutter;
+
+  @include media($large-screen-up) { margin: 0 ($gutter * 2)}
+}
+
+.page-content-text {
   @extend %body-text;
   margin: 0 $gutter;
+  @include media($large-screen-up) { margin: 0 ($gutter * 2)}
 }
+
 
 .page-footer {
   @extend %fadein;
